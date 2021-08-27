@@ -1,0 +1,87 @@
+site_name: Docs Name
+site_description: Description...
+
+docs_dir: '../../docs/es'                          # Where to find the English markdown files
+site_dir: '../../public/es'                        # Where to put the English HTML files
+
+repo_url: https://gitlab.com/docsss/mkdocs-material/
+edit_uri: edit/main/docs/
+
+nav:
+  - Inicio: index.md
+  - ¿Qué es HelpButtons?: helpbuttons.md
+  - Instalaciones: installation.md
+
+theme:
+  name: material
+  language: es
+  custom_dir: '../../overrides/'                  # This is where the customization of the theme lives
+  logo: assets/images/logo-red.svg                    # The logo is shared by all languages
+  favicon: assets/images/favicon.ico              # The favicon is shared by all languages
+  include_search_page: true
+  search_index_only: true
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+#  features:
+#    - toc.integrate
+
+
+plugins:
+  - search
+#  - minify:
+#      minify_html: true
+#      minify_js: true
+#      htmlmin_opts:
+#          remove_comments: true
+  - pandoc:
+      enabled_if_env: ENABLE_PANDOC_EXPORT
+      combined: true
+      combined_output_path: docs.pdf
+#  - git-revision-date-localized:
+#      timezone: Europe/Madrid
+#      locale: es
+#      fallback_to_build_date: false
+#      enable_creation_date: true
+#      exclude:
+#          - index.md
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+  - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/hb-dev/
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/repo
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/hb-dev
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/helpbuttons
+  alternate:
+  - link: /mkdocs-material/
+    name: es - Castellano
+    lang: es
+  - link: /mkdocs-material/en/
+    name: en - English
+    lang: en
