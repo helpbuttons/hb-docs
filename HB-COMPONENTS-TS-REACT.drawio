@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-27T20:36:06.713Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="vTwheAc06LfkRCzl4LNy" version="15.0.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-08-27T20:38:23.555Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="Q9KdBo8MtW9vrmJ8GuER" version="15.0.3" type="github" pages="3">
   <diagram id="t38jk_ocBPQWtQ-bKiNd" name="front">
     <mxGraphModel dx="3199" dy="2655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1152,11 +1152,11 @@
         <mxCell id="BM_rTrHoWLy77DD-r0TW-98" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : BUTTONS&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
           <mxGeometry x="7.8700000000000045" y="-1590.0900000000001" width="165" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="BM_rTrHoWLy77DD-r0TW-99" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : NETS - name&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
+        <mxCell id="BM_rTrHoWLy77DD-r0TW-99" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : NETS&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
           <mxGeometry x="-149.07999999999998" y="-1515.36" width="165" height="20" as="geometry" />
         </mxCell>
         <mxCell id="BM_rTrHoWLy77DD-r0TW-100" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : BUTTONS&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
-          <mxGeometry x="320" y="-1457.18" width="165" height="20" as="geometry" />
+          <mxGeometry x="-120.23999999999998" y="-1420" width="165" height="20" as="geometry" />
         </mxCell>
         <mxCell id="BM_rTrHoWLy77DD-r0TW-101" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : MAP INFO&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
           <mxGeometry x="320" y="-1484.0900000000001" width="165" height="20" as="geometry" />
@@ -1249,7 +1249,7 @@
           <mxGeometry x="137.5" y="-1241.73" width="165" height="20" as="geometry" />
         </mxCell>
         <mxCell id="BM_rTrHoWLy77DD-r0TW-133" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;POST : NETS&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
-          <mxGeometry x="-142.26" y="-1351.1799999999998" width="165" height="20" as="geometry" />
+          <mxGeometry x="-151.76" y="-1344.2699999999998" width="165" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
