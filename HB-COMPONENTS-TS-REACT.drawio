@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-28T11:14:09.928Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="G4-xukJHQnw8_Sx3saGc" version="15.0.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-08-28T11:15:54.663Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="NQvHGORZmRyWcf0DJUgq" version="15.0.3" type="github" pages="3">
   <diagram id="t38jk_ocBPQWtQ-bKiNd" name="front">
     <mxGraphModel dx="3199" dy="2655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -832,7 +832,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Yr60KHyh1Y13ym0hm4K4" name="FRONT-BACK CALLS">
-    <mxGraphModel dx="3815" dy="4058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2827" dy="3438" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="HEpiA0fvTPQgkkLMlnzJ-0" />
         <mxCell id="HEpiA0fvTPQgkkLMlnzJ-1" parent="HEpiA0fvTPQgkkLMlnzJ-0" />
@@ -1207,11 +1207,11 @@
         <mxCell id="BM_rTrHoWLy77DD-r0TW-123" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;PUT: {email} authToken&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
           <mxGeometry x="-177.91000000000003" y="-1066.2699999999998" width="165" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="BM_rTrHoWLy77DD-r0TW-124" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : {} TAGS ()&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
+        <mxCell id="BM_rTrHoWLy77DD-r0TW-124" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : {} TAGS, BUTTONS ()&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
           <mxGeometry x="-179.48000000000002" y="-762.0899999999998" width="165" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="BM_rTrHoWLy77DD-r0TW-125" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : {} DATE OPTIONS ()&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
-          <mxGeometry x="-177.91000000000003" y="-709.9999999999998" width="165" height="20" as="geometry" />
+        <mxCell id="BM_rTrHoWLy77DD-r0TW-125" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : {} BUTTONS, DATE OPTIONS ()&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
+          <mxGeometry x="-177.91" y="-710" width="277.91" height="20" as="geometry" />
         </mxCell>
         <mxCell id="BM_rTrHoWLy77DD-r0TW-126" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;GET : {} MAP INFO ()&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HEpiA0fvTPQgkkLMlnzJ-1">
           <mxGeometry x="-177.91000000000003" y="-659.9999999999998" width="165" height="20" as="geometry" />
