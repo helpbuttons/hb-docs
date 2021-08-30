@@ -1,5 +1,6 @@
 
 # serve documentation
-docker-compose up
+`$ docker-compose up serve`
 
 # build documentation
+`$ docker-compose up build`
