@@ -1,0 +1,138 @@
+openapi: 3.0.0
+info:
+  title: helpbuttons.org
+  description: API description
+  version: 2.0.0
+paths:
+  /users/register:
+    post:
+      summary: register a new user
+      description: As a visitor, you can use this API to open an account (if registrations are open on that PeerTube instance). As an admin, you should use the dedicated User creation API instead.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: a new user
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: email of the user, used for login or service communications
+                password:
+                  type: string
+                  description: password
+                username:
+                  type: string
+                  description: immutable name of the user, used to find or mention its actor
+                displayName:
+                  type: string
+                  description: editable name of the user, displayed in its representations
+      responses:
+        200:
+          description: OK
+  /users/{id}/verify-email:
+    post:
+      summary: verify a user
+      description: Following a user registration, the new user will receive an email asking to click a link containing a secret.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: user id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                verificationString:
+                  type: string
+      responses:
+        200:
+          description: OK
+  /users/{id}/resend-verification-link:
+    post:
+      summary: resend verification link to a user
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: user id
+      responses:
+        200:
+          description: OK
+  /oauth-clients/local:
+    get:
+      summary: You need to retrieve a client id and secret before logging in.
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  client_id:
+                    type: string
+                  client_secret:
+                    type: string
+                  expires_in:
+                    type: integer
+                    description: number of seconds to expire the token
+              examples:
+                token:
+                  summary: example token
+                  value:
+                    client_id: 90286a0bdf0f7315d9d3fe8dabf9e1d2be9c97d0
+                    client_secret: 2e0d675df9fc96d2e4ec8a3ebbbf45eca9137bb7
+                    expires_in: 14399
+  /users/token:
+    post:
+      summary: login
+      description: With your client id and secret, you can retrieve an access and refresh tokens.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: login
+              type: object
+              properties:
+                client_id:
+                  type: string
+                client_secret:
+                  type: string
+                username:
+                  type: string
+                  description: immutable name of the user, used to find or mention its actor
+                password:
+                  type: string
+      responses:
+        200:
+          description: OK
+  /users/revoke-token:
+    post:
+        summary: logout
+        description: 
+        requestBody:
+          content:
+            application/json:
+              schema:
+                title: login
+                type: object
+                properties:
+                  access_token:
+                    type: string
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: integer
