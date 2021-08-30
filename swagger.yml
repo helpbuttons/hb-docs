@@ -90,7 +90,7 @@ paths:
                     client_id: 90286a0bdf0f7315d9d3fe8dabf9e1d2be9c97d0
                     client_secret: 2e0d675df9fc96d2e4ec8a3ebbbf45eca9137bb7
                     expires_in: 14399
-  /users/token:
+  /users/login:
     post:
       summary: login
       description: With your client id and secret, you can retrieve an access and refresh tokens.
@@ -113,7 +113,7 @@ paths:
       responses:
         200:
           description: OK
-  /users/revoke-token:
+  /users/logout:
     post:
         summary: logout
         description: 
