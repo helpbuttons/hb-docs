@@ -4,9 +4,37 @@ info:
   description: API description
   version: 2.0.0
 paths:
+  /oauth-clients/local:
+    get:
+      summary: request a new oauth2 token
+      description: You need to retrieve a client id and secret before logging in.
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  client_id:
+                    type: string
+                  client_secret:
+                    type: string
+                  expires_in:
+                    type: integer
+                    description: number of seconds to expire the token
+              examples:
+                token:
+                  summary: example token
+                  value:
+                    client_id: 90286a0bdf0f7315d9d3fe8dabf9e1d2be9c97d0
+                    client_secret: 2e0d675df9fc96d2e4ec8a3ebbbf45eca9137bb7
+                    expires_in: 14399
   /users/register:
     post:
-      summary: register a new user
+      summary: register a new account
+      tags: 
+        - users
       description: As a visitor, you can use this API to open an account (if registrations are open on that PeerTube instance). As an admin, you should use the dedicated User creation API instead.
       requestBody:
         content:
@@ -32,7 +60,9 @@ paths:
           description: OK
   /users/{id}/verify-email:
     post:
-      summary: verify a user
+      summary: verify an email
+      tags: 
+        - users
       description: Following a user registration, the new user will receive an email asking to click a link containing a secret.
       parameters:
         - in: path
@@ -54,7 +84,9 @@ paths:
           description: OK
   /users/{id}/resend-verification-link:
     post:
-      summary: resend verification link to a user
+      summary: resend verification link
+      tags: 
+        - users
       parameters:
         - in: path
           name: id
@@ -65,34 +97,11 @@ paths:
       responses:
         200:
           description: OK
-  /oauth-clients/local:
-    get:
-      summary: You need to retrieve a client id and secret before logging in.
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  client_id:
-                    type: string
-                  client_secret:
-                    type: string
-                  expires_in:
-                    type: integer
-                    description: number of seconds to expire the token
-              examples:
-                token:
-                  summary: example token
-                  value:
-                    client_id: 90286a0bdf0f7315d9d3fe8dabf9e1d2be9c97d0
-                    client_secret: 2e0d675df9fc96d2e4ec8a3ebbbf45eca9137bb7
-                    expires_in: 14399
   /users/login:
     post:
-      summary: login
+      summary: Login to your account
+      tags: 
+        - users
       description: With your client id and secret, you can retrieve an access and refresh tokens.
       requestBody:
         content:
@@ -115,8 +124,9 @@ paths:
           description: OK
   /users/logout:
     post:
-        summary: logout
-        description: Logout 
+        summary: Logout
+        tags: 
+          - users
         requestBody:
           content:
             application/json:
@@ -136,3 +146,117 @@ paths:
                   properties:
                     status:
                       type: integer
+  /users/recover-account:
+    post:
+        summary: Recover an account
+        tags: 
+          - users
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  email:
+                    type: string
+        responses:
+          200:
+            description: OK
+  /networks/create:
+    post:
+        summary: Create a new network
+        tags: 
+          - networks
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  location:
+                    title: coordinates
+                    type: array
+                    items:
+                      type: integer
+                    minItems: 2
+                    maxItems: 2
+              examples:
+                network:
+                  summary: example network
+                  value:
+                    name: 'Pet Adoption Network'
+                    coordinates: [ -9.1790771484375,38.81831117374662]
+        responses:
+          200:
+            description: OK
+  /networks/destroy:
+    post:
+        summary: destruction a network
+        tags: 
+          - networks
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /networks/edit:
+    post:
+        summary: edit a network
+        tags: 
+          - networks
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /buttons/create:
+    post:
+        summary: Create a new network
+        tags: 
+          - networks
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  location:
+                    title: coordinates
+                    type: array
+                    items:
+                      type: integer
+                    minItems: 2
+                    maxItems: 2
+              examples:
+                network:
+                  summary: example network
+                  value:
+                    name: 'Pet Adoption Network'
+                    coordinates: [ -9.1790771484375,38.81831117374662]
+        responses:
+          200:
+            description: OK
+  /buttons/destroy:
+    post:
+        summary: destruction a network
+        tags: 
+          - networks
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /buttons/edit:
+    post:
+        summary: edit a network
+        tags: 
+          - networks
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
