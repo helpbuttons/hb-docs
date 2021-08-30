@@ -1,8 +1,15 @@
 version: '3'
 services:
-  mkdocs:
+  serve:
     build: .
     ports:
       - "8000:8000"
     volumes:
      - ./:/docs/:ro
+  build:
+    build: .
+    ports:
+      - "8000:8000"
+    entrypoint: mkdocs build
+    volumes:
+     - ./:/docs/:rw
