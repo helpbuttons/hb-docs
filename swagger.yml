@@ -33,7 +33,7 @@ paths:
   /users/register:
     post:
       summary: register a new account
-      tags: 
+      tags:
         - users
       description: As a visitor, you can use this API to open an account (if registrations are open on that PeerTube instance). As an admin, you should use the dedicated User creation API instead.
       requestBody:
@@ -61,7 +61,7 @@ paths:
   /users/{id}/verify-email:
     post:
       summary: verify an email
-      tags: 
+      tags:
         - users
       description: Following a user registration, the new user will receive an email asking to click a link containing a secret.
       parameters:
@@ -85,7 +85,22 @@ paths:
   /users/{id}/resend-verification-link:
     post:
       summary: resend verification link
-      tags: 
+      tags:
+        - users
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: user id
+      responses:
+        200:
+          description: OK
+  /users/{id}/destroy:
+    delete:
+      summary: delete user account
+      tags:
         - users
       parameters:
         - in: path
@@ -100,7 +115,7 @@ paths:
   /users/login:
     post:
       summary: Login to your account
-      tags: 
+      tags:
         - users
       description: With your client id and secret, you can retrieve an access and refresh tokens.
       requestBody:
@@ -125,7 +140,7 @@ paths:
   /users/logout:
     post:
         summary: Logout
-        tags: 
+        tags:
           - users
         requestBody:
           content:
@@ -149,7 +164,7 @@ paths:
   /users/recover-account:
     post:
         summary: Recover an account
-        tags: 
+        tags:
           - users
         requestBody:
           content:
@@ -165,7 +180,7 @@ paths:
   /networks/create:
     post:
         summary: Create a new network
-        tags: 
+        tags:
           - networks
         requestBody:
           content:
@@ -192,9 +207,9 @@ paths:
           200:
             description: OK
   /networks/destroy:
-    post:
+    delete:
         summary: destruction a network
-        tags: 
+        tags:
           - networks
         responses:
           200:
@@ -202,9 +217,9 @@ paths:
           401:
             description: Unauthorized
   /networks/edit:
-    post:
+    put:
         summary: edit a network
-        tags: 
+        tags:
           - networks
         responses:
           200:
@@ -213,17 +228,19 @@ paths:
             description: Unauthorized
   /buttons/create:
     post:
-        summary: Create a new network
-        tags: 
-          - networks
+        summary: Create a new button
+        tags:
+          - buttons
         requestBody:
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  name:
-                    type: string
+                  type:
+                    type: int
+                  is_active:
+                    type: boolean
                   location:
                     title: coordinates
                     type: array
@@ -231,30 +248,68 @@ paths:
                       type: integer
                     minItems: 2
                     maxItems: 2
+                  latitude:
+                    type: array
+                    items:
+                      type: float
+                  longitude:
+                    type: array
+                    items:
+                      type: float
+                  description:
+                    type: array
+                    items:
+                      type: string
+                  tags:
+                    type: array
+                    items:
+                      type: tags
+                  chats:
+                    type: array
+                    items:
+                      type: integer
+                  date:
+                    type: array
+                    items:
+                      type: integer
+                  created_at:
+                    type: datetime
+                  updated_at:
+                    type: datetime
               examples:
-                network:
-                  summary: example network
+                button:
+                  summary: example button
                   value:
-                    name: 'Pet Adoption Network'
+                    type: 1
+                    is_active: boolean
+                    latitude: [-0.2323]
+                    longitude: [9.878788]
+                    description: 'NEcesito ayuda para estto y esto'
+                    tags: [tag1,tag2,tag3]
+                    chats: [1,2,3]
+                    date: Lunes, Martes y Miercoles
+                    created_at: Nov,10,2020
+                    updated_at: Nov,10,2020
+
                     coordinates: [ -9.1790771484375,38.81831117374662]
         responses:
           200:
             description: OK
   /buttons/destroy:
-    post:
-        summary: destruction a network
-        tags: 
-          - networks
+    delete:
+        summary: destroy a button
+        tags:
+          - buttons
         responses:
           200:
             description: OK
           401:
             description: Unauthorized
   /buttons/edit:
-    post:
-        summary: edit a network
-        tags: 
-          - networks
+    put:
+        summary: edit a button
+        tags:
+          - buttons
         responses:
           200:
             description: OK
