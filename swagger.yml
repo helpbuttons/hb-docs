@@ -116,7 +116,7 @@ paths:
   /users/logout:
     post:
         summary: logout
-        description: 
+        description: Logout 
         requestBody:
           content:
             application/json:
