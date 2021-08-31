@@ -190,6 +190,20 @@ paths:
                 properties:
                   name:
                     type: string
+                  creator_id:
+                    type: int
+                  net_url:
+                    type: string
+                  avatar:
+                    type: string
+                  is_private:
+                    type: boolean
+                  created_at:
+                    type: datetime
+                  updated_at:
+                    type: datetime
+                  location_name:
+                    type: string
                   location:
                     title: coordinates
                     type: array
@@ -295,6 +309,75 @@ paths:
         responses:
           200:
             description: OK
+  /buttonTools/create:
+    post:
+        summary: Create a button extra options
+        tags:
+          - buttonTools
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: int
+                  is_active:
+                    type: boolean
+                  location:
+                    title: coordinates
+                    type: array
+                    items:
+                      type: integer
+                    minItems: 2
+                    maxItems: 2
+                  latitude:
+                    type: array
+                    items:
+                      type: float
+                  longitude:
+                    type: array
+                    items:
+                      type: float
+                  description:
+                    type: array
+                    items:
+                      type: string
+                  tags:
+                    type: array
+                    items:
+                      type: tags
+                  chats:
+                    type: array
+                    items:
+                      type: integer
+                  date:
+                    type: array
+                    items:
+                      type: integer
+                  created_at:
+                    type: datetime
+                  updated_at:
+                    type: datetime
+              examples:
+                button:
+                  summary: example button
+                  value:
+                    type: 1
+                    is_active: boolean
+                    latitude: [-0.2323]
+                    longitude: [9.878788]
+                    description: 'NEcesito ayuda para estto y esto'
+                    tags: [tag1,tag2,tag3]
+                    chats: [1,2,3]
+                    date: Lunes, Martes y Miercoles
+                    created_at: Nov,10,2020
+                    updated_at: Nov,10,2020
+
+                    coordinates: [ -9.1790771484375,38.81831117374662]
+        responses:
+          200:
+            description: OK
   /buttons/destroy:
     delete:
         summary: destroy a button
@@ -310,6 +393,66 @@ paths:
         summary: edit a button
         tags:
           - buttons
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /chats/create:
+    post:
+        summary: create a chat
+        tags:
+          - chats
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /messages/create:
+    post:
+        summary: create a message
+        tags:
+          - messages
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /images/create:
+    post:
+        summary: create a message
+        tags:
+          - messages
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /languages/create:
+    post:
+        summary: create a language
+        tags:
+          - languages
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /tags/create:
+    post:
+        summary: create a language
+        tags:
+          - languages
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /interest/create:
+    post:
+        summary: create a language
+        tags:
+          - languages
         responses:
           200:
             description: OK
