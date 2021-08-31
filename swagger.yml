@@ -198,10 +198,6 @@ paths:
                     type: string
                   is_private:
                     type: boolean
-                  created_at:
-                    type: datetime
-                  updated_at:
-                    type: datetime
                   location_name:
                     type: string
                   location:
@@ -211,6 +207,10 @@ paths:
                       type: integer
                     minItems: 2
                     maxItems: 2
+                  created_at:
+                    type: datetime
+                  updated_at:
+                    type: datetime
               examples:
                 network:
                   summary: example network
@@ -220,6 +220,106 @@ paths:
         responses:
           200:
             description: OK
+  /networks/netInfo/create:
+    post:
+        summary: modify net info
+        tags:
+          - networks
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  description:
+                    type: string
+                  button_name:
+                    type: string
+                  net_modules:
+                    type: array
+                    items:
+                      type: int
+                  tags:
+                    type: array
+                    items:
+                      type: tags
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+
+  /networks/netModerateList/create:
+    post:
+        summary: create net moderation list
+        tags:
+          - networks
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  net_id:
+                    type: int
+                  blocked_users:
+                    type: array
+                    items:
+                      type: int
+                  allowed_users:
+                    type: array
+                    items:
+                      types: int
+                  roles:
+                    type: array
+                    items:
+                      type: roles
+                  friend_nets:
+                    type: array
+                    items:
+                      type: int
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+
+  /networks/netModerateList/edit:
+    put:
+        summary: modify net moderation list
+        tags:
+          - networks
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  net_id:
+                    type: int
+                  blocked_users:
+                    type: array
+                    items:
+                      type: int
+                  allowed_users:
+                    type: array
+                    items:
+                      types: int
+                  roles:
+                    type: array
+                    items:
+                      type: roles
+                  friend_nets:
+                    type: array
+                    items:
+                      type: int
+
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+
   /networks/destroy:
     delete:
         summary: destruction a network
@@ -329,11 +429,11 @@ paths:
             description: OK
           401:
             description: Unauthorized
-  /buttonTools/create:
+  /buttons/buttonTools/create:
     post:
         summary: Create a button extra options
         tags:
-          - buttonTools
+          - buttons
         requestBody:
           content:
             application/json:
@@ -344,25 +444,13 @@ paths:
                     type: int
                   is_active:
                     type: boolean
-                  location:
-                    title: coordinates
-                    type: array
-                    items:
-                      type: integer
-                    minItems: 2
-                    maxItems: 2
-                  latitude:
-                    type: array
-                    items:
-                      type: float
-
                   created_at:
                     type: datetime
                   updated_at:
                     type: datetime
               examples:
-                button:
-                  summary: example button
+                buttonTools:
+                  summary: example buttonTools
                   value:
                     type: 1
 
@@ -370,21 +458,21 @@ paths:
         responses:
           200:
             description: OK
-  /buttonTools/destroy:
+  /buttons/buttonTools/destroy:
     delete:
-        summary: clear a button extra options
+        summary: Clear a button extra options
         tags:
-          - buttonTools
+          - buttons
         responses:
           200:
             description: OK
           401:
             description: Unauthorized
-  /buttonTools/edit:
+  /buttons/buttonTools/edit:
     put:
         summary: Edit button extra options
         tags:
-          - buttonTools
+          - buttons
         responses:
           200:
             description: OK
@@ -515,6 +603,38 @@ paths:
         summary: Edit an user interest
         tags:
           - interests
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /roles/create:
+    post:
+        summary: create a role
+        tags:
+          - roles
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  net_id:
+                    type: array
+                    items:
+                      type: int
+                  description:
+                    type: string
+              examples:
+                roles:
+                  summary: example role
+                  value:
+                    name: string
+                    net_id: int
+                    description: string
+
         responses:
           200:
             description: OK
