@@ -1,15 +1,15 @@
 
-### User stories
-#Maria wants to help animals
+# User stories
+##Maria wants to help animals
 
 Maria found several animals in their neighbourhood and wants to connect the local animal refuge with the neighbours. She creates a net in helpbuttons and ask some friends to register too in order to administrate the community. While creating the net she selects her region in Murcia as starting area for the network (so when a person visit the URL the map zooms into her region), add her friends as administrators, selects an animal rescue module developed by the community and adds it to the network.
 During the next weeks she and her friends start posting buttons(she called them 'animals' in their network) when they receive notifications or whenever they find them on the streets. Their post have place for adding tags like 'dog', 'ill', cat', 'hungry'; also they can add images or an 'attended' tag in order to track which ones were assisted. They also decided to make the chats in their buttons 'group chats',so they can all be synced in what's happening in each new button.
 
-#Irene wants to make a net with local home-kitchen owners
+##Irene wants to make a net with local home-kitchen owners
 
 Irene is a delivery assitant that also works in a kitchen that want to sell its products directly to homes. They don't want to follow the conditions of bigger delivery companies and want to develop a solution for their city together with other delivery workers. She installs helpbuttons in her own server and configures the site with some net modules special for delivery options. They call the buttons 'drivers' or 'kitchens' and can add products in the form. They also add a module to track different drivers positions and help people to ask for help. They're thinking about developing a payment module but for now they manage with 3rd party apps and payment on hand. She wants people from other nets to see their project so publish their net in helpbuttons.org platform.
 
-#Manuel thinks about helping elders in Seville
+##Manuel thinks about helping elders in Seville
 
 Manuel is a social worker who needs assistance in his home town. He thinks that by joining neighbours they can afford solving the increasing problem of lonely elders at their homes. He sees there are some helping networks in helpbuttons but want to make a specific one for elders but joining the support of the rest. He creates a net called 'ayuda_mayores' and start publishing buttons with cases he knows in the town. He wants to preserve privacy of these people so he selects a net module for showing the search result in areas instead showing the points. Also he sets a group of networks admins so they can have access to the conversations in buttons and moderate the community.
 
