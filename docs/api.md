@@ -1,2 +1,2 @@
 # Api documentation
-!!swagger swagger.yml!!
+!!swagger swagger.yaml!!
