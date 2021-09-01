@@ -1,0 +1,709 @@
+openapi: 3.0.0
+info:
+  title: helpbuttons.org
+  description: API description
+  version: 2.0.0
+
+paths:
+  # /oauth-clients/local:
+  #   get:
+  #     summary: request a new oauth2 token
+  #     description: You need to retrieve a client id and secret before logging in.
+  #     responses:
+  #       200:
+  #         description: OK
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 client_id:
+  #                   type: string
+  #                 client_secret:
+  #                   type: string
+  #                 expires_in:
+  #                   type: integer
+  #                   description: number of seconds to expire the token
+  #             examples:
+  #               token:
+  #                 summary: example token
+  #                 value:
+  #                   client_id: 90286a0bdf0f7315d9d3fe8dabf9e1d2be9c97d0
+  #                   client_secret: 2e0d675df9fc96d2e4ec8a3ebbbf45eca9137bb7
+  #                   expires_in: 14399
+  /users/login:
+    post:
+      summary: Login to your account
+      tags:
+        - users
+      description: With your client id and secret, you can retrieve an access and refresh tokens.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: login
+              type: object
+              properties:
+                client_id:
+                  type: string
+                client_secret:
+                  type: string
+                username:
+                  type: string
+                  description: immutable name of the user, used to find or mention its actor
+                password:
+                  type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: 2e0d675df9fc96d2e4ec8a3ebbbf45eca917t8dsab7
+        404:
+          description: User not found
+        401: 
+          description: Unauthorized
+  /users/register:
+    post:
+      summary: register a new account
+      tags:
+        - users
+      description: As a visitor, you can use this API to open an account (if registrations are open on that PeerTube instance). As an admin, you should use the dedicated User creation API instead.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: a new user
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: email of the user, used for login or service communications
+                password:
+                  type: string
+                  description: password
+                username:
+                  type: string
+                  description: immutable name of the user, used to find or mention its actor
+                displayName:
+                  type: string
+                  description: editable name of the user, displayed in its representations
+      responses:
+        200:
+          description: OK
+  /users/{id}/verify-email:
+    post:
+      summary: verify an email
+      tags:
+        - users
+      description: Following a user registration, the new user will receive an email asking to click a link containing a secret.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: user id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                verificationString:
+                  type: string
+      responses:
+        200:
+          description: OK
+  /users/{username}/resend-verification-link:
+    post:
+      summary: resend verification link
+      tags:
+        - users
+      parameters:
+        - in: path
+          name: username
+          schema:
+            type: string
+          required: true
+          description: username
+      responses:
+        200:
+          description: OK
+  /users/destroy:
+    delete:
+      summary: delete user account
+      tags:
+        - users
+      security: 
+        - tokenAuth: []
+      responses:
+        200:
+          description: OK
+        401:
+          $ref: "#/components/responses/UnauthorizedError"
+  /users/logout:
+    post:
+        summary: Logout
+        tags:
+          - users
+        security:
+          - tokenAuth: []
+        requestBody:
+          content:
+            application/json:
+              schema:
+                title: login
+                type: object
+                properties:
+                  access_token:
+                    type: string
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    status:
+                      type: integer
+          401:
+            $ref: "#/components/responses/UnauthorizedError"
+  /users/recover-account:
+    post:
+        summary: Recover an account [TO REVIEW]
+        tags:
+          - users
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  email:
+                    type: string
+        responses:
+          200:
+            description: OK
+          401:
+            $ref: "#/components/responses/UnauthorizedError"
+  /networks/new:
+    post:
+        summary: Create a new network
+        tags:
+          - networks
+        security: 
+          - tokenAuth: []
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  url:
+                    type: string
+                  avatar:
+                    type: string
+                  description:
+                    type: string
+                  privacy:
+                    type: string
+                    enum:
+                      - private
+                      - public
+                  place:
+                    type: string
+                  latitude:
+                    type: number
+                  longitude:
+                    type: number
+                  radius:
+                    type: number
+                  template:
+                    type: string
+              examples:
+                network:
+                  summary: example of a new network
+                  value:
+                    name: "Network of animal support Andalucia"
+                    url: "https://andaluciaanimal.org"
+                    avatar: "/image/gfdusigfsdg7f8dsf"
+                    description: "a network where you can support animals in need in andalucia and report animals that need support"
+                    privacy: "private"
+                    place: "Andalucia"
+                    latitude: -9.1790771484375
+                    longitude: 38.81831117374662
+                    radius: "50km"
+                    template: "toBeDefinedByFrontend"
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                      example: 'network_of_animal_support_andalucia'
+          401:
+            $ref: "#/components/responses/UnauthorizedError"
+  /networks/destroy:
+    delete:
+        summary: destroy a network
+        tags:
+          - networks
+        security: 
+          - tokenAuth: []
+        responses:
+          200:
+            description: OK
+          401:
+            $ref: "#/components/responses/UnauthorizedError"
+  # /networks/edit:
+  #   put:
+  #       summary: edit a network
+  #       tags:
+  #         - networks
+  #       security: 
+  #         - tokenAuth: []
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           $ref: "#/components/responses/UnauthorizedError"
+  /buttons/new/{networkSlug}/{type}:
+    post:
+        summary: Create a new button
+        tags:
+          - buttons
+        security: 
+          - tokenAuth: []
+        parameters:
+        - in: path
+          name: networkSlug
+          schema:
+            type: string
+          required: true
+          description: slug of the network to add this button
+        - in: path
+          name: type
+          schema:
+            type: string
+            enum: 
+              - offer
+              - need
+              - exchange
+          required: true
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tags:
+                    type: array
+                    items:
+                      type: string  
+                  description:
+                    type: string
+                  latitude:
+                    type: number
+                  longitude:
+                    type: number
+                  templateData:
+                    type: string
+              examples:
+                button:
+                  summary: example button
+                  value:
+                    name: 'dog help'
+                    type: 'need'
+                    tags: ['people','dog', 'abandoned', 'food']
+                    description: 'Im out of the neighborhood during next weeks, and i cant feed the dog'
+                    latitude: -0.2323
+                    longitude: 9.878788
+                    network: 'network_of_animal_support_andalucia'
+                    templateData: {
+  "date": "\"2021-09-01T12:12:00.000Z\"",
+  "coordinates_radius": "10km",
+  "description": "there is this lonely dog without any leash needing food",
+  "history_of_status": [
+    {
+      "status": "the dog was fed with food",
+      "date": "\"2021-09-01T12:12:00.000Z\"",
+      "latitude": "12.032",
+      "longitude": "89372932.3"
+    },
+    {
+      "status": "i didnt had any food for the dog, if some1 can check on him later",
+      "date": "\"2021-09-01T09:12:00.000Z\"",
+      "latitude": "12.032",
+      "longitude": "89372932.3"
+    }
+  ]
+}
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                      example: 'dog_help'
+          401:
+            $ref: "#/components/responses/UnauthorizedError"
+  /buttons/destroy:
+    delete:
+        summary: destroy a button
+        tags:
+          - buttons
+        security: 
+          - tokenAuth: []
+        responses:
+          200:
+            description: OK
+          401:
+            $ref: "#/components/responses/UnauthorizedError"
+  # /buttons/edit:
+  #   put:
+  #       summary: edit a button
+  #       tags:
+  #         - buttons
+  #       security: 
+  #         - tokenAuth: []
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           $ref: "#/components/responses/UnauthorizedError"
+  /images/new:
+    post:
+        summary: uploads a new image
+        tags:
+          - images
+        security: 
+          - tokenAuth: []
+        requestBody:
+          content:
+            image/*:
+              schema:
+                type: string
+                format: binary
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  /images/destroy:
+    delete:
+        summary: delete an image
+        tags:
+          - images
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  
+components:
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: query
+      name: token
+  responses:
+    UnauthorizedError:
+      description: token is missing, please login to get a token
+  # /buttons/buttonTools/new:
+  #   post:
+  #       summary: Create a button extra options
+  #       tags:
+  #         - buttons
+  #       requestBody:
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 type:
+  #                   type: int
+  #                 is_active:
+  #                   type: boolean
+  #                 created_at:
+  #                   type: datetime
+  #                 updated_at:
+  #                   type: datetime
+  #             examples:
+  #               buttonTools:
+  #                 summary: example buttonTools
+  #                 value:
+  #                   type: 1
+
+  #                   coordinates: [ -9.1790771484375,38.81831117374662]
+  #       responses:
+  #         200:
+  #           description: OK
+  # /buttons/buttonTools/destroy:
+  #   delete:
+  #       summary: Clear a button extra options
+  #       tags:
+  #         - buttons
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /buttons/buttonTools/edit:
+  #   put:
+  #       summary: Edit button extra options
+  #       tags:
+  #         - buttons
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /chats/new:
+  #   post:
+  #       summary: create a chat
+  #       tags:
+  #         - chats
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /chats/destroy:
+  #   delete:
+  #       summary: delete a chat
+  #       tags:
+  #         - chats
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /chats/edit:
+  #   put:
+  #       summary: Edit a chat
+  #       tags:
+  #         - chats
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /messages/new:
+  #   post:
+  #       summary: create a message
+  #       tags:
+  #         - messages
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /languages/destroy:
+  #   delete:
+  #       summary: delete a language
+  #       tags:
+  #         - languages
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /tags/new:
+  #   post:
+  #       summary: create a tag
+  #       tags:
+  #         - tags
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /tags/destroy:
+  #   delete:
+  #       summary: delete a tag
+  #       tags:
+  #         - tags
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /interests/new:
+  #   post:
+  #       summary: create an user interest
+  #       tags:
+  #         - interests
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /interests/destroy:
+  #   delete:
+  #       summary: delete an user interest
+  #       tags:
+  #         - interests
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /interests/edit:
+  #   put:
+  #       summary: Edit an user interest
+  #       tags:
+  #         - interests
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+  # /roles/new:
+  #   post:
+  #       summary: create a role
+  #       tags:
+  #         - roles
+  #       requestBody:
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 name:
+  #                   type: string
+  #                 net_id:
+  #                   type: array
+  #                   items:
+  #                     type: int
+  #                 description:
+  #                   type: string
+  #             examples:
+  #               roles:
+  #                 summary: example role
+  #                 value:
+  #                   name: string
+  #                   net_id: int
+  #                   description: string
+
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+
+  # /networks/edit:
+  #   post:
+  #       summary: modify net info
+  #       tags:
+  #         - networks
+  #       requestBody:
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 description:
+  #                   type: string
+  #                 button_name:
+  #                   type: string
+  #                 net_modules:
+  #                   type: array
+  #                   items:
+  #                     type: integer
+  #                 tags:
+  #                   type: array
+  #                   items:
+  #                     type: tags
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+
+  # /networks/netModerateList/new:
+  #   post:
+  #       summary: create net moderation list
+  #       tags:
+  #         - networks
+  #       requestBody:
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 net_id:
+  #                   type: int
+  #                 blocked_users:
+  #                   type: array
+  #                   items:
+  #                     type: int
+  #                 allowed_users:
+  #                   type: array
+  #                   items:
+  #                     types: int
+  #                 roles:
+  #                   type: array
+  #                   items:
+  #                     type: roles
+  #                 friend_nets:
+  #                   type: array
+  #                   items:
+  #                     type: int
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
+
+  # /networks/netModerateList/edit:
+  #   put:
+  #       summary: modify net moderation list
+  #       tags:
+  #         - networks
+  #       requestBody:
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 net_id:
+  #                   type: int
+  #                 blocked_users:
+  #                   type: array
+  #                   items:
+  #                     type: int
+  #                 allowed_users:
+  #                   type: array
+  #                   items:
+  #                     types: int
+  #                 roles:
+  #                   type: array
+  #                   items:
+  #                     type: roles
+  #                 friend_nets:
+  #                   type: array
+  #                   items:
+  #                     type: int
+
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           description: Unauthorized
