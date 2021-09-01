@@ -193,7 +193,7 @@ paths:
             description: OK
           401:
             $ref: "#/components/responses/UnauthorizedError"
-  /networks/create:
+  /networks/new:
     post:
         summary: Create a new network
         tags:
@@ -208,37 +208,57 @@ paths:
                 properties:
                   name:
                     type: string
-                  creator_id:
-                    type: integer
-                  net_url:
+                  url:
                     type: string
                   avatar:
                     type: string
-                  is_private:
-                    type: boolean
-                  location_name:
+                  description:
                     type: string
-                  location:
-                    title: coordinates
-                    type: array
-                    items:
-                      type: integer
-                    minItems: 2
-                    maxItems: 2
+                  privacy:
+                    type: string
+                    enum:
+                      - private
+                      - public
+                  place:
+                    type: string
+                  latitude:
+                    type: number
+                  longitude:
+                    type: number
+                  radius:
+                    type: number
+                  template:
+                    type: string
               examples:
                 network:
-                  summary: example network
+                  summary: example of a new network
                   value:
-                    name: 'Pet Adoption Network'
-                    coordinates: [ -9.1790771484375,38.81831117374662]
+                    name: "Network of animal support Andalucia"
+                    url: "https://andaluciaanimal.org"
+                    avatar: "/image/gfdusigfsdg7f8dsf"
+                    description: "a network where you can support animals in need in andalucia and report animals that need support"
+                    privacy: "private"
+                    place: "Andalucia"
+                    latitude: -9.1790771484375
+                    longitude: 38.81831117374662
+                    radius: "50km"
+                    template: "toBeDefinedByFrontend"
         responses:
           200:
             description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                      example: 'network_of_animal_support_andalucia'
           401:
             $ref: "#/components/responses/UnauthorizedError"
   /networks/destroy:
     delete:
-        summary: destruction a network
+        summary: destroy a network
         tags:
           - networks
         security: 
@@ -248,19 +268,19 @@ paths:
             description: OK
           401:
             $ref: "#/components/responses/UnauthorizedError"
-  /networks/edit:
-    put:
-        summary: edit a network
-        tags:
-          - networks
-        security: 
-          - tokenAuth: []
-        responses:
-          200:
-            description: OK
-          401:
-            $ref: "#/components/responses/UnauthorizedError"
-  /buttons/create/{networkSlug}/{type}:
+  # /networks/edit:
+  #   put:
+  #       summary: edit a network
+  #       tags:
+  #         - networks
+  #       security: 
+  #         - tokenAuth: []
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           $ref: "#/components/responses/UnauthorizedError"
+  /buttons/new/{networkSlug}/{type}:
     post:
         summary: Create a new button
         tags:
@@ -305,6 +325,7 @@ paths:
                 button:
                   summary: example button
                   value:
+                    name: 'dog help'
                     type: 'need'
                     tags: ['people','dog', 'abandoned', 'food']
                     description: 'Im out of the neighborhood during next weeks, and i cant feed the dog'
@@ -333,6 +354,14 @@ paths:
         responses:
           200:
             description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    slug:
+                      type: string
+                      example: 'dog_help'
           401:
             $ref: "#/components/responses/UnauthorizedError"
   /buttons/destroy:
@@ -347,18 +376,47 @@ paths:
             description: OK
           401:
             $ref: "#/components/responses/UnauthorizedError"
-  /buttons/edit:
-    put:
-        summary: edit a button
+  # /buttons/edit:
+  #   put:
+  #       summary: edit a button
+  #       tags:
+  #         - buttons
+  #       security: 
+  #         - tokenAuth: []
+  #       responses:
+  #         200:
+  #           description: OK
+  #         401:
+  #           $ref: "#/components/responses/UnauthorizedError"
+  /images/new:
+    post:
+        summary: uploads a new image
         tags:
-          - buttons
+          - images
         security: 
           - tokenAuth: []
+        requestBody:
+          content:
+            image/*:
+              schema:
+                type: string
+                format: binary
         responses:
           200:
             description: OK
           401:
-            $ref: "#/components/responses/UnauthorizedError"
+            description: Unauthorized
+  /images/destroy:
+    delete:
+        summary: delete an image
+        tags:
+          - images
+        responses:
+          200:
+            description: OK
+          401:
+            description: Unauthorized
+  
 components:
   securitySchemes:
     tokenAuth:
@@ -368,7 +426,7 @@ components:
   responses:
     UnauthorizedError:
       description: token is missing, please login to get a token
-  # /buttons/buttonTools/create:
+  # /buttons/buttonTools/new:
   #   post:
   #       summary: Create a button extra options
   #       tags:
@@ -417,7 +475,7 @@ components:
   #           description: OK
   #         401:
   #           description: Unauthorized
-  # /chats/create:
+  # /chats/new:
   #   post:
   #       summary: create a chat
   #       tags:
@@ -447,41 +505,11 @@ components:
   #           description: OK
   #         401:
   #           description: Unauthorized
-  # /messages/create:
+  # /messages/new:
   #   post:
   #       summary: create a message
   #       tags:
   #         - messages
-  #       responses:
-  #         200:
-  #           description: OK
-  #         401:
-  #           description: Unauthorized
-  # /images/create:
-  #   post:
-  #       summary: create a message
-  #       tags:
-  #         - images
-  #       responses:
-  #         200:
-  #           description: OK
-  #         401:
-  #           description: Unauthorized
-  # /images/destroy:
-  #   delete:
-  #       summary: delete an image
-  #       tags:
-  #         - images
-  #       responses:
-  #         200:
-  #           description: OK
-  #         401:
-  #           description: Unauthorized
-  # /languages/create:
-  #   post:
-  #       summary: create a language
-  #       tags:
-  #         - languages
   #       responses:
   #         200:
   #           description: OK
@@ -497,7 +525,7 @@ components:
   #           description: OK
   #         401:
   #           description: Unauthorized
-  # /tags/create:
+  # /tags/new:
   #   post:
   #       summary: create a tag
   #       tags:
@@ -517,7 +545,7 @@ components:
   #           description: OK
   #         401:
   #           description: Unauthorized
-  # /interests/create:
+  # /interests/new:
   #   post:
   #       summary: create an user interest
   #       tags:
@@ -547,7 +575,7 @@ components:
   #           description: OK
   #         401:
   #           description: Unauthorized
-  # /roles/create:
+  # /roles/new:
   #   post:
   #       summary: create a role
   #       tags:
@@ -609,7 +637,7 @@ components:
   #         401:
   #           description: Unauthorized
 
-  # /networks/netModerateList/create:
+  # /networks/netModerateList/new:
   #   post:
   #       summary: create net moderation list
   #       tags:
