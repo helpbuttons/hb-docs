@@ -29,3 +29,8 @@ Ramon is a fireman specialiced in web programming that want to integrate a solut
 ## Pepa is an uber driver in a middle-size town tired of company condition
 
 She wants to try to make a platform with other drivers, controlled by them . They install helpbuttons in their own server and conifgure it with a new car-sharing module that the community developed. With this module she can offer 'drivers' that are being tracked on the map and the 'riders' can publish their need or ask directly to them. The platform is totally transparent and shows an alert to the closest driver in the map. They promote the new tool with the custormers and with the city associations and plan to federate with other similar networks in other cities with the same system.
+
+
+## Ricardo wants to meet with locals to play chess
+
+Ricardo is a sportsman that plays basketball with passion. He moved to another town and he cannot find people to play his favourite sport. He also realised there are no many cooperative tools to practice games together so he tries to make his own net with Helpbuttons. He calls it "Sport meet Cordoba" and place it in his town. He also creates a button asking for people and adds a periodic date for Mondays, Tuesdays and Sundays so people that take part in it receive a notification for those days. The following days he informs about the created net to his wife and friends, that likes to make mountain bike, and start tracking routes with her own net module.The net sports net become bigger by making all this nets "friend nets" in the user preferences and they can see other net buttons in the same map. 
