@@ -242,7 +242,7 @@ paths:
             description: OK
           401:
             $ref: "#/components/responses/UnauthorizedError"
-  /buttons/new/{networkSlug}/{type}:
+  /buttons/new/{type}:
     post:
         summary: Create a new button
         tags:
@@ -250,21 +250,15 @@ paths:
         security: 
           - tokenAuth: []
         parameters:
-        - in: path
-          name: networkSlug
-          schema:
-            type: string
-          required: true
-          description: slug of the network to add this button
-        - in: path
-          name: type
-          schema:
-            type: string
-            enum: 
-              - offer
-              - need
-              - exchange
-          required: true
+          - in: path
+            name: type
+            schema:
+              type: string
+              enum: 
+                - offer
+                - need
+                - exchange
+            required: true
         requestBody:
           content:
             application/json:
@@ -287,13 +281,12 @@ paths:
                 button:
                   summary: example button
                   value:
-                    name: 'dog help'
+                    networks: ['network_of_animal_support_andalucia', 'yet_another_network']
                     type: 'need'
                     tags: ['people','dog', 'abandoned', 'food']
                     description: 'Im out of the neighborhood during next weeks, and i cant feed the dog'
                     latitude: -0.2323
                     longitude: 9.878788
-                    network: 'network_of_animal_support_andalucia'
                     templateData: {
   "date": "\"2021-09-01T12:12:00.000Z\"",
   "coordinates_radius": "10km",
