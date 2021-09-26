@@ -1,73 +1,28 @@
-# Instalaciones de Help Buttons 
+# Instalaciones de Help Buttons
 
 ## En GNU/Linux
 
 Referencias seguidas:
 
-- [Documentación oficial de la instalación de Ruby on Rails en castellano](https://rubyonrails.org.es/instala.html)
-- [Documentación oficial de RVM](https://rvm.io/rvm/install)
+Para realizar la instalación de Node en Debian o derivados (Ubuntu) existen los siguientes requisitos:
 
-Para realizar la instalación de Ruby on Rails (RoR) en Debian o derivados (Ubuntu) existen los siguientes requisitos:
-
-- RVM
-- PostgreSQL
+- PostgreSQL para PostGIS
+- Docker
 - Nodejs
-- Yarn
+- Yarn o NPM
 
-### Instalación de RVM (Ruby Version Manager)
+En el front:
+- npm install
+- npm run dev
 
-Instalamos los paquetes del sistema operativo requeritos por RVM: 
-```bash
-sudo apt install -y git-core subversion gnupg2 curl
-```
-Añadimos la firma del repositorio de RVM que se puede encontrar en su [página oficial](https://rvm.io/rvm/install):
-```bash
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-```
+(http://localhost:3000/)
 
-Instalamos la versión estable de RVM:
-```bash
-curl -sSL https://get.rvm.io | bash -s stable --ruby
-```
+En el back:
+- npm install
+- npm start
 
-Este comando instala las últimas versiones estables de **rvm, ruby y rails**. Al ejecutarlo se devuelve muchos mensajes por pantalla. 
+(http://localhost:3001/)
 
-Una vez finalizado este proceso, RVM nos dice que ejecutemos el siguiente comando o que reiniciemos las shells abiertas. También ejecutaremos este comando en caso de obtener un error diciendo que no se ha encontrado el comando bundle [`bash: bundle: command not found`](#command-not-found)
-```bash
-source /home/$USER/.rvm/scripts/rvm
-```
-
-Se comprueba la configuración de rvm mediante la siguiente orden:
-```bash
-type rvm | head -n 1
-```
-
-La cual nos devolverá que `rvm is a function`. En caso de no ser así, rvm no está configurado adecuadamente. En tal caso habrá que consultar la documentación en https://rvm.io/rvm/install y solicitar ayuda. 
-
-A continuación, comprobamos los comandos: rvm, ruby, irb, gem.
-```bash
-rvm list
-ruby -v
-irb -v
-gem -v
-```
-
-### Instalación de la versión de ruby del proyecto
-
-Bundle es una gema de ruby que lleva la cuenta e instala las diferentes versiones de las gemas que necesitamos. Ya tenemos el entorno instalado y disponible para trabajar con él. 
-
-Al intentar instalar el bundle con el comando a continuación, seguramente nos encontremos con un error `Your Ruby version is Y.Y.Y, but your Gemfile specified X.X.X`.
-```bash
-bundle install
-```
-
-Para resolverlo, se necesita instalar y usar la versión X.X.X. adecuada. 
-```bash
-rvm install X.X.X
-rvm use X.X.X
-```
-
-Si volvemos a ejecutar el comando `bundle install` nos aparecerá otro error indicando que falta instalar la base de datos PostgreSQL. 
 
 ### Instalación y configuración de PostgreSQL
 
@@ -75,13 +30,11 @@ Se instalan los paquetes necesarios para la instalación de PostgreSQL:
 ```bash
 sudo apt install postgresql postgresql-contrib libpq-dev -y
 ```
-
 Se levantan el servicio con:
 ```
 systemctl start postgresql
 systemctl enable postgresql
 ```
-
 Se abre una consola en PostgreSQL para modificar la contraseña del usuario `postgres`:
 ```bash
 sudo -i -u postgres psql
@@ -102,7 +55,7 @@ Se muestran los usuarios de PostgreSQL con:
 \du
 ```
 
-Escribe `exit` para salir de la consola de PostgreSQL. 
+Escribe `exit` para salir de la consola de PostgreSQL.
 
 Volvemos a ejecutar `bundle install` para continuar con la instalación.
 ```bash
@@ -144,88 +97,23 @@ Instalamos yarn:
 sudo apt update && sudo apt install yarn
 ```
 
+### Instalación de la versión de Node del proyecto. Problemas comunes.
+
 ## Ejecución del proyecto
 
-### Hb-backend
+### hb-back
 
-Creamos el archivo de configuración de la base de datos `config/database.yml` con vim o nano (se recomienda nano en caso de no saber utilizar vim):
-```
-vim config/database.yml
-```
-
-Por defecto, no existirá este fichero porque se incluye en el `.gitgignore`. Por lo tanto, se puede coger una plantilla y añadir las siguientes secciones o añadir el documento entero como se expone un poco más abajo:
-- En la sección **development**, añade la configuración de PostgreSQL:
-```
-development:
-  <<: *default
-  database: test_project_development
-  username: hb_dev
-  password: aq1234567890
-  host: localhost
-  port: 5432
-```
-
-- En la sección **testing**, añade la configuración de PostgreSQL:
-```
-test:
-  <<: *default
-  database: test_project_test
-  host: localhost
-  port: 5432
-  username: hb_dev
-  password: aq1234567890
-```
-
-Un ejemplo del archivo final de `config/database.yml` será el siguiente:
-```
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
-development:
-  <<: *default
-  database: test_project_development
-  username: hb_dev
-  password: aq1234567890
-  host: localhost
-  port: 5432
-
-test:
-  <<: *default
-  database: test_project_test
-  username: hb_dev
-  password: aq1234567890
-  host: localhost
-  port: 5432
-
-production:
-  <<: *default
-  database: test_project_production
-  username: test_project
-  password: <%= ENV['TEST_PROJECT_DATABASE_PASSWORD'] %>
-```
 
 Guarda los cambios y sal del editor.
 
-Lo siguiente será generar el esquema de la base de datos PostgreSQL ejecutando:
-```bash
-rake db:setup
-```
-O alternativamente:
-```bash
-rails db:setup
-rails db:migrate
-```
-
 Por último, levanta el servidor en local y accede a la dirección [`http://localhost:3000/`](http://localhost:3000/).
 ```bash
-rails s 
+rails s
 ```
 
-### Hb-frontend
+### Hb-front
 
-Instalamos ember glabalmente: 
+Instalamos ember glabalmente:
 ```bash
 npm install -g ember-cli
 ```
@@ -248,33 +136,3 @@ ember s
 ## Posibles errores durante la instalación
 
 ### Command not found
-- **Bundle**: Si al ejecutar `bundle install` nos devuelve el error `bash: bundle: command not found` será necesario volver a ejecutar:
-```bash
-source /home/$USER/.rvm/scripts/rvm
-```
-
-- **Rails**: Si al ejecutar `rails db:setup` nos devuelve el error `bash: rails: command not found` será necesario volver a ejecutar:
-```bash
-source /home/$USER/.rvm/scripts/rvm
-```
-
-- **ember**: Si al ejecutar `ember -v` nos devuelve el error `bash: ember: command not found` será necesario volver a ejecutar:
-
-```bash
-export PATH=node_modules/.bin:$PATH
-```
-
-Añadirlo al PATH para tener una solución permanente. Por ejemplo, si se está utilizando bash como consola, se podrá incluir los comandos como últimas líneas en el archivo `.bashrc` y posteriormente aplicar los cambios con `source .bashrc`.
-
-### Ruby version 
-
-Al intentar instalar el bundle con el comando a continuación, seguramente nos encontremos con un error `Your Ruby version is Y.Y.Y, but your Gemfile specified X.X.X`.
-```bash
-bundle install
-```
-
-Para resolverlo, se necesita instalar y usar la versión X.X.X. adecuada. 
-```bash
-rvm install X.X.X
-rvm use X.X.X
-```
