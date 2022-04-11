@@ -78,6 +78,27 @@ Buttons can be activated and desactivated without the need of deleting them. And
 
 All Buttons by default can be published at the same time in any Network that share the buttonTemplate.
 
+```
+export interface IButton {
+  id?: any | null,
+  owner: any,
+  name: string,
+  templateButtonId: any | null,
+  type: enum,
+  tags: [Itag],
+  description: string,
+  //required data
+  date: [],
+  //GIS DATA
+  geoPlace: [],
+  // optional values
+  networks: [],
+  feedType: enum, //enum {single,group} feed structure
+  templateExtraData: {}, //JSON template contains info about the image and the description (standard) and also about booleans, radius, checklist and every other field related to the network module
+}
+
+```
+
 
 ###NETWORK
 
@@ -89,15 +110,75 @@ A network can be public (all can see what the Buttons inside) or private (you ne
 
 The creator of the network is the owner and moderator. This person can assign moderation roles to other users of the network.  
 
+```
+export interface INetwork {
+  //required data
+  id: string;
+  name: string,
+  url: string,
+  avatar: string,
+  privacy: string, //enum {publico, privado} default publico
+  roles: string, //enum {admin, user, blocked} default admin, user
+  //not required data
+  tags: [],
+  description: string,
+  buttonsTemplate: {}, //array of objects, each type has an int, a name and a color associated. Default are offer (green), need (red).
+  //data for GIS
+  showButtons : string, //enum {area, point} show buttons by area not showing exact position on map
+  place: string,
+  geoPlace: {},
+  radius: string,
+  friendNetworks: [],
+  //only for admins:
+  networkRoles: [], //array of roles specific for the net, default are net admins. Each of these net roles have their user list
+  blockedUsers: [], //user ids, the blocked users cannot rejoin a network. only admin users
+  // extra option friendNets:[12,234],}
+}
+
+```
+
 ###USER
 
 The users are the person profile that is over the networks. User can jump in and out of networks, and move their Buttons to other networks and to other Users. This way an user can keep their reputation and profile independent.
 
 User cannot be rated but their reputation is stablished by supports. Other users can support an user for increasing his reputation. Blocks and low support rates can be used to measure the negative impact of the actions of users that can be moderation objectives by the community.
 
+```
+//User interface
+export interface IUser {
+
+  username: string,
+  email: string,
+  realm: string,
+  roles: [],
+  token: string,
+
+}
+
+export interface ICurrentUser {
+
+  token: string,
+
+}
+
+```
+
 ###BUTTON TEMPLATE
 
 ButtonTemplate is the model that adds the modularity. It's a mix of some boolean elements and a JSON objetc that can include custom information inside. It's used by the app to configure posts and forms and adapt them to the networks' purpose. i.e. A network for selling food would have a ButtonTemplate that includes references to prices, quantities, origins, etc.
+
+```
+export interface ITemplateButton {
+//JSON template contains info about the image and the description (standard) and also about booleans, radius, checklist and every other field related to the network module
+  id: any || null,
+  name: string,
+  type: enum,
+  fields: {},
+  owner: int,
+
+}
+
+```
 
 ###FEED
 
@@ -151,11 +232,15 @@ Every directory has a .md file that explains the purpose of the folder.
 
 * pages : Urls of the application. In Nextjs the subfolders included in this foldder define the routes. (ButtonFile, ButtonNew, Explore, Faqs, Login, ...). You can check all of them in the Pages section:
 
+[http://localhost:8000/English/pages/](http://localhost:8000/English/pages/)
+
 * modules : this a folder for complex functionalities that shoulddn't be separated by the general foler structure. i.e. You want to have the services and the reacts components together in a directory for authentication functionaliity. The folder has a fake example inside.
 
 * services: Each model has a folder in this directory to communicate with the API (Buttons, ButtonTemplates, Feed, Networks, Tags, Users). Also basic API functionalities (Alerts, Errors, HttpUtils -localStorage- and Store) have a service in this folder.
 
 * store : It's a custom script written by @hirunatan in Telegram. It's intended for storing temporal data in the session (without refreshing the page, after refresh data is lost) and avoid the need of using more complex store mngmnt software.
+
+[http://localhost:8000/English/store/](http://localhost:8000/English/store/)
 
 It's an rxjs event stream service that you can subscribe to. If you're not familiar with observables follow the link to [RxJS](https://rxjs.dev/) page.
 
