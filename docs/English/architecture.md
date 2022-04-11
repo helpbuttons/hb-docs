@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The project is divided in two repositories, front and back, that need to be run at the same time. The doc repository, this one, can be editedd here :
+The project is divided in two repositories, front and back, that need to run at the same time. The doc repository, this one, can be edited here :
 
 [Docs Repository](https://github.com/helpbuttons/hb_docs)
 
@@ -12,7 +12,7 @@ The project is divided in two repositories, front and back, that need to be run 
 
 ## Technologies
 
-We tried to choose technologies following three focuses: open software, mobile devices and GIS positioning. Trying to keep an eye on the popularity and documentation available for each one.
+We tried to choose technologies following three concepts: open software, mobile devices and GIS positioning. Trying to keep an eye on the popularity and documentation available for each one.
 
 #### HTML
 [LINK](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
@@ -149,7 +149,7 @@ Every directory has a .md file that explains the purpose of the folder.
 
 * layouts : Group of components that are not enough to define a page. (May be erased?)
 
-* pages : Urls of the application. In Nextjs the subfolders included in this foldder define the routes. (ButtonFile, ButtonNew, Explore, Faqs, Login, ...)
+* pages : Urls of the application. In Nextjs the subfolders included in this foldder define the routes. (ButtonFile, ButtonNew, Explore, Faqs, Login, ...). You can check all of them in the Pages section:
 
 * modules : this a folder for complex functionalities that shoulddn't be separated by the general foler structure. i.e. You want to have the services and the reacts components together in a directory for authentication functionaliity. The folder has a fake example inside.
 
@@ -182,6 +182,3 @@ export function useRef(store: Store, selector: func) {
 
 
 ##Folder architecture BACK
-
-
-##

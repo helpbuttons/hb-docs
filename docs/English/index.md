@@ -4,7 +4,7 @@ This is a WIP area that can be updated while the project lives. Feel free to adv
 
 # ¿What's HelpButtons?
 
-Helpbuttons.org is an opensource platform for collaborative network making. It's a CMS for cooperative websites -like uber, glovo, blablacar and so many others- specialized in connecting unknown people by purposes in real life. Shortly, we want to democratize collaborative apps creation and we need a big community for this to sustain in time.
+Helpbuttons.org is an opensource platform for collaborative network making. It's a CMS for cooperative websites -like uber, glovo, blablacar and so many others- specialized in connecting unknown people by purposes in real life. Shortly, we want to democratize collaborative-apps-creation and we need a big community for this to be sustainable in time.
 
 # ¿How can HelpButtons exist?
 
