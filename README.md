@@ -1,4 +1,6 @@
 
+![HB cover](/hb_docs/images/wip_sept_2021/hb_landscape_02_small.jpg?raw=true "hb cover")
+
 Checkout the latest docs generated:
 
 https://helpbuttons.github.io/hb_docs
