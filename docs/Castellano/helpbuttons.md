@@ -1,2 +1,0 @@
-# ¿Qué es HelpButtons?
-

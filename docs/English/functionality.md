@@ -1,4 +1,4 @@
-# HelpButtons functionality
+#Functionalities
 
 ## Backend
 
