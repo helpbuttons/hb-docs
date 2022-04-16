@@ -1,6 +1,6 @@
 #Pages
 
-Pages of the app, with a brief ddescription, are attached above. 
+Pages of the app, with a brief ddescription, are attached above.
 
 
 ##ButtonFile
@@ -12,7 +12,7 @@ Page for customizing user account. Administrate profile options, security, notif
 ##Explore
 Explore is the main view. It's the page where you can see the Buttons -the posts- in different views and with different filters. The different views and filters are configurable in the Network's options section in creator user's Config view. These types of view are:
 
-#### Types of views:
+#### Types of views in Explore page:
 
 ##### Only Map
 Shows Buttons only on map, selectable by pins placed on specific coordinates.

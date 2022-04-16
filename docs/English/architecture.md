@@ -62,13 +62,18 @@ A network is an enviroment where the users can create buttons. Comparing with ot
 
 One server could hold more than one network, and users could create buttons that could be published in several of those networks. So, the Button is the post, that can be posted in any enviroment (network) depending on the purpose and owned by an user.
 
-##Conventions
+##Conventions / Naming
 
 - Btn is traditional HTML button, Button is the actual post in the app HelpButtons.
 
 - Css naming is lowercase, including file names.
 
-- For any question you can publish an issue in the repository follow the issue guide (link to issue guide TBD):
+- Folder and archive naming follows the logic ElementClass or ElementModel (i.e. CardNotification) except for main Classes/Models that start having many elements related to the same class (i.e ButtonNew, NetworkNew, ButtonCard, NetworkCard). As a general rule, we want elements to be grouped by type so it's easier to find all together (Cards, Forms, ...). Main Classes, on the contrary, have a lot of elements associated so it's better to have them together by naming the class first.
+
+- For any question you can publish an issue in the repository follow the issue guide (link to issue guide ):
+[Issue Guide](/docs/English/issues&PR)
+
+##MODELS
 
 ###BUTTON
 
