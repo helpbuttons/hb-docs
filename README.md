@@ -1,9 +1,13 @@
 
 ![HB cover](/images/wip_sept_2021/hb_landscape_02_small.jpg?raw=true "hb cover")
 
-Checkout the latest docs generated:
+# Helpbuttons Documentation
 
-https://helpbuttons.github.io/hb_docs
+You need to have [Docker](https://www.docker.com/) installed in order to run this repository.
+
+# Checkout the latest docs generated:
+
+https://helpbuttons.github.io/hb-docs
 
 # serve documentation
 `$ docker-compose up serve`
