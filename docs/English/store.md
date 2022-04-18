@@ -103,7 +103,7 @@ store.state$.subscribe((state: GlobalState) => {
 }
 ```
 
-If the state is read from a React component, we provide a React hook that is useful to subscribe to a subset of the state. You give it a function that selects the portion of the state you need, and the hook ensures that whenever this fragment changes, a componet repaint is triggered, with the value attached to a local variable.
+If the state is read from a React component, we provide the `useRef` [React hook](https://reactjs.org/docs/hooks-intro.html), that is useful to subscribe to a subset of the state. You give it a function that selects the portion of the state you need, and the hook ensures that whenever this fragment changes, a componet repaint is triggered, with the value attached to a local variable.
 
 ```typescript
 // SomeComponent/index.tsx
