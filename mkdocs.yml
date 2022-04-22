@@ -3,7 +3,7 @@ site_description: Description...
 
 repo_url: https://github.com/helpbuttons
 edit_uri: https://github.com/helpbuttons/hb_docs
-  
+
 
 theme:
   name: material
@@ -19,8 +19,8 @@ markdown_extensions:
       permalink: "#"
       toc_depth: 3
   - attr_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  # - pymdownx.tasklist:
+  #     custom_checkbox: true
 
 extra:
   social:
