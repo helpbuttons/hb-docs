@@ -2,8 +2,8 @@ site_name: Helpbuttons.org
 site_description: Description...
 
 repo_url: https://github.com/helpbuttons
-edit_uri: https://github.com/helpbuttons/hb_docs
-  
+edit_uri: https://github.com/helpbuttons/hb-docs
+
 
 theme:
   name: material
@@ -32,3 +32,18 @@ extra:
       link: https://hub.docker.com/r/hb-dev
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/helpbuttons
+
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
