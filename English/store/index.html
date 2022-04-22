@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Store - Helpbuttons.org</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Helpbuttons.org</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Documentation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../api/" class="nav-link">Api documentation</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Castellano <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Legacy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Castellano/legacy/installation/" class="dropdown-item">Instalaciones de Help Buttons</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">English <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Welcome to Helpbuttons Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../architecture/" class="dropdown-item">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../commit/" class="dropdown-item">Commit</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Contact</a>
+</li>
+                                    
+<li>
+    <a href="../functionality/" class="dropdown-item">Functionality</a>
+</li>
+                                    
+<li>
+    <a href="../installation/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../issues%26PR/" class="dropdown-item">issues&PR</a>
+</li>
+                                    
+<li>
+    <a href="../pages/" class="dropdown-item">Pages</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Store</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../pages/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/helpbuttons/hb_docs/English/store.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#store" class="nav-link">Store</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#declaring-the-global-state" class="nav-link">Declaring the global state</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#using-immer-to-efficiently-modify-data" class="nav-link">Using immer to efficiently modify data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#using-events-to-change-the-state" class="nav-link">Using events to change the state</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#subscribing-to-state-changes" class="nav-link">Subscribing to state changes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#using-asynchronous-events" class="nav-link">Using asynchronous events</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#modularizing-the-global-state" class="nav-link">Modularizing the global state</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="store">Store<a class="headerlink" href="#store" title="Permanent link">#</a></h1>
+<p>A typical problem in web applications is how to share data between unrelated web components in one page. When a component is a child of another one, the parent may pass info with the properties. But if components that want to share data are scattered around the page, the question is more difficult.</p>
+<p>In addition, when the interacions become more complex, a change of one piece of data, often triggers further changes elsewhere. Without care, this may lead to infinite loops or race conditions.</p>
+<p>There are a number of solutions for these problems. Here we use the Store module, inspired in <a href="https://redux.js.org/">Redux</a> but much simpler to use, although quite powerful. It's based in two main contents:</p>
+<ul>
+<li>The <code>Store</code> holds a global state of the application. A tree of objects that may be changed by any component, and subscribed by any one to be notified of the changes.</li>
+<li>The <code>Event</code> stream. When any component wants to modify the state, it does not directly write to the Store. Instead, emits an <code>Event</code>, that is queued and executed only when all other processes are finished. The event is an object with a function that receives the global state, and returns a new state with the desired changes.</li>
+</ul>
+<p>This way, loops and race conditions are avoided, the state being stable while any javascript event or component redraw is being executed.</p>
+<h2 id="declaring-the-global-state">Declaring the global state<a class="headerlink" href="#declaring-the-global-state" title="Permanent link">#</a></h2>
+<p>Define an interface with all the variables you need inside the global state. Then, declare ain instance of <code>Store</code>, generated from the given interface and with the initial data, and exported to be accessible from anywhere in the app:</p>
+<pre><code class="language-typescript">// index.tsx
+
+import { Store } from &quot;store/Store&quot;;
+
+export interface GlobalState {
+  loading: boolean,
+  currentUser?: {
+    username: string,
+    name: string;
+    email: string;
+  }
+}
+
+export const store = new Store&lt;GlobalState&gt;({
+  loading: false,
+  currentUser: null,
+});
+</code></pre>
+<h2 id="using-immer-to-efficiently-modify-data">Using immer to efficiently modify data<a class="headerlink" href="#using-immer-to-efficiently-modify-data" title="Permanent link">#</a></h2>
+<p>The architecture explained here implies a lot of object cloning (to compliy with the immutable objects paradigm). To achieve this in an efficient way, we use the <a href="https://immerjs.github.io/immer/">immerjs</a> library. The main resource is the <code>produce</code> function, that takes an object and perform a shallow copy, but preserving all parts that have not changed. Example of usage:</p>
+<pre><code class="language-typescript">import produce from &quot;immer&quot;;
+
+const someObject = {
+  one: 1,
+  two: 2,
+  letters: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+}
+
+const newObject = produce(someObject, draft =&gt; {
+  draft.one = 11;
+  draft.letters.push(&quot;d&quot;);
+});
+
+// newObject is {one: 11, two: 2, letters: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]}
+// The structure of newObject shares any attribute that has not changed (in this case, `two`),
+// to save memory and processing time.
+</code></pre>
+<h2 id="using-events-to-change-the-state">Using events to change the state<a class="headerlink" href="#using-events-to-change-the-state" title="Permanent link">#</a></h2>
+<p>Define a class that implements <code>UpdateEvent</code>, with an <code>update</code> method that does the work. Then (inside a dom event handler, for example), use the <code>emit</code> method of the store to queue it to be executed later, when all other processing have stopped.</p>
+<pre><code class="language-typescript">// SomeComponent/data.tsx
+
+import { UpdateEvent } from &quot;store/Event&quot;;
+import { GlobalState } from &quot;index&quot;;
+
+export class SetLoadingEvent implements UpdateEvent {
+  public constructor(private loading: boolean) {}
+
+  public update(state: GlobalState) {
+    return produce(state, newState =&gt; {
+      newState.loading = this.loading;
+    });
+  }
+}
+
+// SomeComponent/index.tsx
+
+import { store } from &quot;index&quot;;
+import { SetLoadingEvent } from &quot;SomeComponent/data&quot;;
+
+window.onload(() =&gt; store.emit(new SetLoadingEvent(true)));
+</code></pre>
+<p>In this example, after the <code>onload</code> event completely finishes, the global state is modified to set the <code>loading</code> variable to true. Then, the subscribers of this variable will be notified of the change (see below).</p>
+<h2 id="subscribing-to-state-changes">Subscribing to state changes<a class="headerlink" href="#subscribing-to-state-changes" title="Permanent link">#</a></h2>
+<p>The global state may be read synchronously, and it will give the current value at the moment it's read. But the usual way of reading it is not so, but subscribing to the state or to one part of it, and being notified whenever it changes.</p>
+<p>The <code>Store</code> class has a public member named <code>state$</code>, that is a RX observable that you can subscribe to, and that emits the new state each time it's modified.</p>
+<pre><code class="language-typescript">import { store, GlobalState } from &quot;index&quot;;
+
+store.state$.subscribe((state: GlobalState) =&gt; {
+  console.log(state.currentUser?.name);
+}
+</code></pre>
+<p>But inside a React application, you usually will not need to subscribe directly to the state. Instead you'll use the <code>useRef</code> <a href="https://reactjs.org/docs/hooks-intro.html">React hook</a>. It's useful to subscribe to a subset of the state from a React component. You give it a function that selects the portion of the state you need, and the hook ensures that whenever this fragment changes, a componet repaint is triggered, with the value attached to a local variable.</p>
+<pre><code class="language-typescript">// SomeComponent/index.tsx
+
+import { useRef } from &quot;store/Store&quot;;
+import { store } from &quot;index&quot;;
+
+export default function SomeComponent() {
+  const user = useRef(store, (state) =&gt; state.currentUser);
+
+  return (
+    (user &amp;&amp;
+      &lt;div class=&quot;user-block&quot;&gt;
+        &lt;p&gt;{ user.name }&lt;/p&gt;
+        &lt;p&gt;{ user.email }&lt;/p&gt;
+      &lt;/div&gt;)
+  );
+}
+</code></pre>
+<h2 id="using-asynchronous-events">Using asynchronous events<a class="headerlink" href="#using-asynchronous-events" title="Permanent link">#</a></h2>
+<p>Often, you will need to trigger some action that is not immediate, but have to wait for something (for example, ask the backend for some data, or set a timer).</p>
+<p>For this, you can use the <code>WatchEvent</code>. These kind of events also may be emitted, and have a function <code>watch</code> that receives the current global state value. But these ones return a RX observable, that emits one or more events before completting. The new events are then queued, to be executed when it's their turn. If the new events are UpdateEvents, the state will finally be modified. If they are also WatchEvents, more events will be queued in turn, extending the chain.</p>
+<pre><code class="language-typescript">import { UpdateEvent } from &quot;store/Event&quot;;
+import { GlobalState } from &quot;index&quot;;
+import { ajax } from &quot;rxjs/ajax&quot;;
+
+export class LoadUserEvent implements WatchEvent {
+  public watch(state: GlobalState) {
+    return ajax.getJSON(&quot;https://my.backend/api/current-user&quot;).pipe(
+      map((user) =&gt; new UserLoadedEvent(user))
+    );
+  }
+}
+
+class UserLoadedEvent implements UpdateEvent {
+  public constructor(private user: object) {}
+
+  public update(state: GlobalState) {
+    return produce(state, newState =&gt; {
+      newState.currentUser = this.user;
+    });
+  }
+}
+</code></pre>
+<p>An event may implement both <code>UpdateEvent</code> and <code>WatchEvent</code>. In this case, when the event is executed, the <code>update</code> function will be called first, and then <code>watch</code> will be called with the updated state.</p>
+<pre><code class="language-typescript">import { UpdateEvent } from &quot;store/Event&quot;;
+import { GlobalState } from &quot;index&quot;;
+import { ajax } from &quot;rxjs/ajax&quot;;
+
+export class LoadUserEvent implements UpdateEvent, WatchEvent {
+  public update(state: GlobalState) {
+    return produce(state, newState =&gt; {
+      newState.loading = true;
+    });
+  }
+
+  public watch(state: GlobalState) {
+    return ajax.getJSON(&quot;https://my.backend/api/current-user&quot;).pipe(
+      map((user) =&gt; new UserLoadedEvent(user))
+    );
+  }
+}
+
+class UserLoadedEvent implements UpdateEvent {
+  public constructor(private user: object) {}
+
+  public update(state: GlobalState) {
+    return produce(state, newState =&gt; {
+      newState.loading = false;
+      newState.currentUser = this.user;
+    });
+  }
+}
+
+// LoadingComponent/index.tsx
+
+import { useRef } from &quot;store/Store&quot;;
+import { store } from &quot;index&quot;;
+
+export default function LoadingComponent() {
+  const loading = useRef(store, (state) =&gt; state.loading);
+
+  return (
+    (loading &amp;&amp;
+      &lt;div class=&quot;loading&quot;&gt;
+        &lt;img src=&quot;spinner.gif&quot; /&gt;
+      &lt;/div&gt;)
+  );
+}
+</code></pre>
+<p>A third type of event is the <code>EffectEvent</code>. It's intended for when you need to trigger an external action (a 'side effect') but you don't need a return value.</p>
+<pre><code class="language-typescript">import { EffectEvent } from &quot;store/Event&quot;;
+import { GlobalState } from &quot;index&quot;;
+import { ajax } from &quot;rxjs/ajax&quot;;
+
+export class LogEntryEvent implements EffectEvent {
+  public effect(state: GlobalState) {
+    ajax.post(&quot;https://my.backend/api/log-entry&quot;, JSON.stringify({
+      date: date.now(),
+      user: state.user.username,
+    }));
+  }
+}
+</code></pre>
+<h2 id="modularizing-the-global-state">Modularizing the global state<a class="headerlink" href="#modularizing-the-global-state" title="Permanent link">#</a></h2>
+<p>When the applicatoin grows, it's not a good idea to have all state in a big global object with all variables in the same level. Te suggestion is to have each submodule its own definition of the local state, the initial values and the selecte function, and to aggregate all modules in the global state.</p>
+<pre><code class="language-typescript">
+// index.ts
+
+import { Store } from &quot;store/Store&quot;;
+import { UserState, userInitial } from &quot;user/data&quot;;
+import { OtherState, otherInitial } from &quot;other/data&quot;;
+...
+
+export interface GlobalState {
+  user: UserState,
+  other: OtherState,
+  ...
+}
+
+export const store = newStore&lt;GlobalState&gt;({
+  user: userInitial,
+  other: otherInitial,
+  ...
+});
+
+
+// User/data.tsx
+
+export interface UserState {
+  loading: boolean,
+  currentUser?: {
+    username: string,
+    name: string;
+    email: string;
+  }
+}
+
+export const userInitial = {
+  loading: false,
+  currentUser: null,
+};
+
+export getUser = (state) =&gt; state.user;
+
+
+// User/index.tsx
+
+import { useRef } from &quot;store/Store&quot;;
+import { store } from &quot;index&quot;;
+import { getUser } from &quot;./data&quot;;
+
+export default function SomeComponent() {
+  const user = useRef(store, (state) =&gt; state.getUser().currentUser);
+
+  return (
+    (user &amp;&amp;
+      &lt;div class=&quot;user-block&quot;&gt;
+        &lt;p&gt;{ user.name }&lt;/p&gt;
+        &lt;p&gt;{ user.email }&lt;/p&gt;
+      &lt;/div&gt;)
+  );
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

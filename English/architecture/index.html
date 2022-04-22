@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Architecture - Helpbuttons.org</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Helpbuttons.org</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Documentation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../api/" class="nav-link">Api documentation</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Castellano <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Legacy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Castellano/legacy/installation/" class="dropdown-item">Instalaciones de Help Buttons</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">English <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Welcome to Helpbuttons Documentation</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../commit/" class="dropdown-item">Commit</a>
+</li>
+                                    
+<li>
+    <a href="../contact/" class="dropdown-item">Contact</a>
+</li>
+                                    
+<li>
+    <a href="../functionality/" class="dropdown-item">Functionality</a>
+</li>
+                                    
+<li>
+    <a href="../installation/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../issues%26PR/" class="dropdown-item">issues&PR</a>
+</li>
+                                    
+<li>
+    <a href="../pages/" class="dropdown-item">Pages</a>
+</li>
+                                    
+<li>
+    <a href="../store/" class="dropdown-item">Store</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../commit/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/helpbuttons/hb_docs/English/architecture.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#architecture" class="nav-link">Architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#technologies" class="nav-link">Technologies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#basic-concepts" class="nav-link">Basic concepts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conventions-naming" class="nav-link">Conventions / Naming</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#models" class="nav-link">MODELS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-buttontemplate-model" class="nav-link">The ButtonTemplate Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#models_1" class="nav-link">Models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#folder-architecture-front" class="nav-link">Folder architecture FRONT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#folder-architecture-back" class="nav-link">Folder architecture BACK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">#</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>The project is divided in two repositories, front and back, that need to run at the same time. The doc repository, this one, can be edited here :</p>
+<p><a href="https://github.com/helpbuttons/hb_docs">Docs Repository</a></p>
+<p><a href="https://github.com/helpbuttons/hb_docs">Frontend Repository</a></p>
+<p><a href="https://github.com/helpbuttons/hb_docs">Backend Repository</a></p>
+<h2 id="technologies">Technologies<a class="headerlink" href="#technologies" title="Permanent link">#</a></h2>
+<p>We tried to choose technologies following three concepts: open software, mobile devices and GIS positioning. Trying to keep an eye on the popularity and documentation available for each one.</p>
+<h4 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">#</a></h4>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">LINK</a></p>
+<h4 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">#</a></h4>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS">LINK</a></p>
+<h4 id="typescript">Typescript<a class="headerlink" href="#typescript" title="Permanent link">#</a></h4>
+<p>TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.</p>
+<h3 id="front">Front:<a class="headerlink" href="#front" title="Permanent link">#</a></h3>
+<h4 id="nextjs">Nextjs<a class="headerlink" href="#nextjs" title="Permanent link">#</a></h4>
+<p><a href="https://nextjs.org/">LINK</a></p>
+<h4 id="react">React<a class="headerlink" href="#react" title="Permanent link">#</a></h4>
+<p><a href="https://reactjs.org/">LINK</a></p>
+<h4 id="rxjs">RxJS<a class="headerlink" href="#rxjs" title="Permanent link">#</a></h4>
+<p><a href="https://rxjs.dev/">LINK</a></p>
+<p>RxJS is a library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code. This project is a rewrite of Reactive-Extensions/RxJS with better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface</p>
+<h3 id="backend">Backend :<a class="headerlink" href="#backend" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<h4 id="nodejs">Nodejs<a class="headerlink" href="#nodejs" title="Permanent link">#</a></h4>
+<a href="https://nodejs.org/en/">LINK</a></li>
+</ul>
+<h4 id="nestjs">Nestjs<a class="headerlink" href="#nestjs" title="Permanent link">#</a></h4>
+<p><a href="https://nestjs.com/">LINK</a>
+NestJS is a framework for building efficient, scalable Node.js web applications. It uses modern JavaScript, is built with TypeScript and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).</p>
+<h4 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">#</a></h4>
+<p><a href="https://www.postgresql.org/">LINK</a>
+PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California,</p>
+<h4 id="postgis">PostGIS<a class="headerlink" href="#postgis" title="Permanent link">#</a></h4>
+<p><a href="https://postgis.net/">LINK</a>
+PostGIS is a spatial database extender for PostgreSQL object-relational database. It adds support for geographic objects allowing location queries to be run in SQL.</p>
+<h2 id="basic-concepts">Basic concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">#</a></h2>
+<p>In order to understand the project you need to know how three concepts interact: Buttons, Users and Networks.   </p>
+<p>A network is an enviroment where the users can create buttons. Comparing with other collaborative apps: Airbnb would be a network, a house would be a button, and a landlord would be an user.</p>
+<p>One server could hold more than one network, and users could create buttons that could be published in several of those networks. So, the Button is the post, that can be posted in any enviroment (network) depending on the purpose and owned by an user.</p>
+<h2 id="conventions-naming">Conventions / Naming<a class="headerlink" href="#conventions-naming" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>Btn is traditional HTML button, Button is the actual post in the app HelpButtons.</p>
+</li>
+<li>
+<p>Css naming is lowercase, including file names.</p>
+</li>
+<li>
+<p>Folder and archive naming follows the logic ElementClass or ElementModel (i.e. CardNotification) except for main Classes/Models that start having many elements related to the same class (i.e ButtonNew, NetworkNew, ButtonCard, NetworkCard). As a general rule, we want elements to be grouped by type so it's easier to find all together (Cards, Forms, ...). Main Classes, on the contrary, have a lot of elements associated so it's better to have them together by naming the class first.</p>
+</li>
+<li>
+<p>For any question you can publish an issue in the repository follow the issue guide (link to issue guide ):
+<a href="/docs/English/issues&amp;PR">Issue Guide</a></p>
+</li>
+</ul>
+<h2 id="models">MODELS<a class="headerlink" href="#models" title="Permanent link">#</a></h2>
+<h3 id="button">BUTTON<a class="headerlink" href="#button" title="Permanent link">#</a></h3>
+<p>A Button is the app post. Basically when you create a button you make a publication that has some basic fields: A title, a type, a place, a date, a description, images and tags. On top of these records you have fields that change depending on the network type. Depending on those fields your app can be better for transport sharing (duration fields, destination list,...), food sharing (food types selectable, amounts fields,...) or any other purpose that your app can have. All these extra fields come specified in one JSON element that is dependant on a template called ButtonTemplate.</p>
+<p>Buttons can be activated and desactivated without the need of deleting them. And everybutton has an interactions record list called the Feed, where users and app changes related to the Button are displayed.</p>
+<p>All Buttons by default can be published at the same time in any Network that share the buttonTemplate.</p>
+<pre><code>export interface IButton {
+  id?: any | null,
+  owner: any,
+  name: string,
+  templateButtonId: any | null,
+  type: enum,
+  tags: [Itag],
+  description: string,
+  //required data
+  date: [],
+  //GIS DATA
+  geoPlace: [],
+  // optional values
+  networks: [],
+  feedType: enum, //enum {single,group} feed structure
+  templateExtraData: {}, //JSON template contains info about the image and the description (standard) and also about booleans, radius, checklist and every other field related to the network module
+}
+
+</code></pre>
+<h3 id="network">NETWORK<a class="headerlink" href="#network" title="Permanent link">#</a></h3>
+<p>If the button is the post, the network is the group of posts. These posts share structure of ButtonTemplate defined in the network. One Network has a location, a radius,a description, an icon, a name and a list of options that change the visulization of the buttons (on map, on map by zones, on list only, on list + map) among others. The ButtonTemplate selected in the Network properties define the properties of the buttons and also the filters displayed in the Explore page and the fields in the creation menu of the Button New page. Networks can be also friends of other networks and show their data in common, so users couldd navigate in between them.</p>
+<p>All Buttons created in a network can be shared in another network too if they share the same ButtonTemplate.</p>
+<p>A network can be public (all can see what the Buttons inside) or private (you need to enter to see and interact with the Buttons).</p>
+<p>The creator of the network is the owner and moderator. This person can assign moderation roles to other users of the network.  </p>
+<pre><code>export interface INetwork {
+  //required data
+  id: string;
+  name: string,
+  url: string,
+  avatar: string,
+  privacy: string, //enum {publico, privado} default publico
+  roles: string, //enum {admin, user, blocked} default admin, user
+  //not required data
+  tags: [],
+  description: string,
+  buttonsTemplate: {}, //array of objects, each type has an int, a name and a color associated. Default are offer (green), need (red).
+  //data for GIS
+  showButtons : string, //enum {area, point} show buttons by area not showing exact position on map
+  place: string,
+  geoPlace: {},
+  radius: string,
+  friendNetworks: [],
+  //only for admins:
+  networkRoles: [], //array of roles specific for the net, default are net admins. Each of these net roles have their user list
+  blockedUsers: [], //user ids, the blocked users cannot rejoin a network. only admin users
+  // extra option friendNets:[12,234],}
+}
+
+</code></pre>
+<h3 id="user">USER<a class="headerlink" href="#user" title="Permanent link">#</a></h3>
+<p>The users are the person profile that is over the networks. User can jump in and out of networks, and move their Buttons to other networks and to other Users. This way an user can keep their reputation and profile independent.</p>
+<p>User cannot be rated but their reputation is stablished by supports. Other users can support an user for increasing his reputation. Blocks and low support rates can be used to measure the negative impact of the actions of users that can be moderation objectives by the community.</p>
+<pre><code>//User interface
+export interface IUser {
+
+  username: string,
+  email: string,
+  realm: string,
+  roles: [],
+  token: string,
+
+}
+
+export interface ICurrentUser {
+
+  token: string,
+
+}
+
+</code></pre>
+<h3 id="button-template">BUTTON TEMPLATE<a class="headerlink" href="#button-template" title="Permanent link">#</a></h3>
+<p>ButtonTemplate is the model that adds the modularity. It's a mix of some boolean elements and a JSON objetc that can include custom information inside. It's used by the app to configure posts and forms and adapt them to the networks' purpose. i.e. A network for selling food would have a ButtonTemplate that includes references to prices, quantities, origins, etc.</p>
+<pre><code>export interface ITemplateButton {
+//JSON template contains info about the image and the description (standard) and also about booleans, radius, checklist and every other field related to the network module
+  id: any || null,
+  name: string,
+  type: enum,
+  fields: {},
+  owner: int,
+
+}
+
+</code></pre>
+<h3 id="feed">FEED<a class="headerlink" href="#feed" title="Permanent link">#</a></h3>
+<p>A Feed, as we introduced before, is a component that shows a list of interactions related to the component that is attached to. The Feed in the Button page shows all interactions (messages, updates, changes... ) related to that Button. The Feed in the Profile page shows all interactions related to the user (What we can call ).</p>
+<p>It has several filtered options. Filters change depending on the content but also depending on the user role. The owner of the Button can see different information in a Feed than other users, etc.</p>
+<h3 id="tag">TAG<a class="headerlink" href="#tag" title="Permanent link">#</a></h3>
+<p>Tags in buttons are used for search purposes but also to configure notifications. Users could select Tags in the Config page to receive notifications when a Button is creted with those tags, or with an specific button-type.</p>
+<pre><code>{
+  &quot;id&quot;: &quot;string&quot;,
+  &quot;modelName&quot;: &quot;string&quot;,
+  &quot;modelId&quot;: &quot;string&quot;,
+  &quot;created&quot;: &quot;2022-04-10T14:33:32.823Z&quot;,
+  &quot;modified&quot;: &quot;2022-04-10T14:33:32.823Z&quot;
+}
+
+</code></pre>
+<h2 id="the-buttontemplate-model">The ButtonTemplate Model<a class="headerlink" href="#the-buttontemplate-model" title="Permanent link">#</a></h2>
+<p>The ButtonTemplate is the model that defines the modular elements that will differenciate the Network. Fields is the JSON object that will enumerate the Button fileds and options for that Network. (Add examples)</p>
+<pre><code class="language-bash">{
+  &quot;id&quot;: 0,
+  &quot;name&quot;: &quot;string&quot;,
+  &quot;type&quot;: &quot;need&quot;,
+  &quot;fields&quot;: {},
+  &quot;created&quot;: &quot;2022-04-10T14:28:32.085Z&quot;,
+  &quot;modified&quot;: &quot;2022-04-10T14:28:32.085Z&quot;,
+  &quot;owner&quot;: &quot;string&quot;
+}
+</code></pre>
+<h2 id="models_1">Models<a class="headerlink" href="#models_1" title="Permanent link">#</a></h2>
+<h2 id="folder-architecture-front">Folder architecture FRONT<a class="headerlink" href="#folder-architecture-front" title="Permanent link">#</a></h2>
+<p>The structure follows the typical arrangement of an React / Nextjs project. The naming follows the logic of FIRST FUNCTION - SECOND TYPE. i.e. BtnCirle (Btn is the function -button- and circle the type).</p>
+<p>Every directory has a .md file that explains the purpose of the folder.</p>
+<ul>
+<li>
+<p>elements : Basic atoms repeated all over the app (Accordion, Avatar, Btn, BtnCircle, Checkbox, Dropdown, Form...)  </p>
+</li>
+<li>
+<p>components : Group of elments that complete and develop a function (button, feed, map, popup, nav, network, picker, popup, search, user...)</p>
+</li>
+<li>
+<p>layouts : Group of components that are not enough to define a page. (May be erased?)</p>
+</li>
+<li>
+<p>pages : Urls of the application. In Nextjs the subfolders included in this foldder define the routes. (ButtonFile, ButtonNew, Explore, Faqs, Login, ...). You can check all of them in the Pages section:</p>
+</li>
+</ul>
+<p><a href="http://localhost:8000/English/pages/">http://localhost:8000/English/pages/</a></p>
+<ul>
+<li>
+<p>modules : this a folder for complex functionalities that shoulddn't be separated by the general foler structure. i.e. You want to have the services and the reacts components together in a directory for authentication functionaliity. The folder has a fake example inside.</p>
+</li>
+<li>
+<p>services: Each model has a folder in this directory to communicate with the API (Buttons, ButtonTemplates, Feed, Networks, Tags, Users). Also basic API functionalities (Alerts, Errors, HttpUtils -localStorage- and Store) have a service in this folder.</p>
+</li>
+<li>
+<p>store : It's a custom script written by @hirunatan in Telegram. It's intended for storing temporal data in the session (without refreshing the page, after refresh data is lost) and avoid the need of using more complex store mngmnt software.</p>
+</li>
+</ul>
+<p><a href="http://localhost:8000/English/store/">http://localhost:8000/English/store/</a></p>
+<p>It's an rxjs event stream service that you can subscribe to. If you're not familiar with observables follow the link to <a href="https://rxjs.dev/">RxJS</a> page.</p>
+<pre><code>// === Hook para suscribirse al store ===
+
+export function useRef(store: Store, selector: func) {
+  const [value, setValue] = useState(null);
+
+  useEffect(() =&gt; {
+    store.state$.subscribe((state) =&gt; {
+      const newValue = selector(state);
+      if (newValue !== value) {
+        setValue(selector(state));
+      }
+    });
+  });
+
+  return value;
+}
+
+</code></pre>
+<h2 id="folder-architecture-back">Folder architecture BACK<a class="headerlink" href="#folder-architecture-back" title="Permanent link">#</a></h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
