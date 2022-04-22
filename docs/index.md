@@ -6,6 +6,7 @@ Checkout the latest docs generated:
 
 First remember to install and execute docker.
 
+
 # serve documentation
 `$ docker-compose up serve`
 
