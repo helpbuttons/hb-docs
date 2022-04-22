@@ -19,8 +19,8 @@ markdown_extensions:
       permalink: "#"
       toc_depth: 3
   - attr_list
-  # - pymdownx.tasklist:
-  #     custom_checkbox: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra:
   social:
