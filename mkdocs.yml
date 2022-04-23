@@ -1,9 +1,9 @@
 site_name: Helpbuttons.org
 site_description: Description...
 
-repo_url: https://github.com/helpbuttons
-edit_uri: https://github.com/helpbuttons/hb_docs
-  
+repo_url: https://github.com/helpbuttons/hb-docs
+edit_uri: https://github.com/helpbuttons/hb-docs
+
 
 theme:
   name: material

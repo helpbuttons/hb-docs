@@ -8,8 +8,11 @@ services:
      - ./:/docs/:ro
   build:
     build: .
-    ports:
-      - "8000:8000"
     entrypoint: mkdocs build
     volumes:
      - ./:/docs/:rw
+  help:
+    build: .
+    entrypoint: mkdocs gh-deploy --help
+    volumes:
+     - ./:/docs/:ro

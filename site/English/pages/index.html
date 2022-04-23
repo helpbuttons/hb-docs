@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Installation - Helpbuttons.org</title>
+        <title>Pages - Helpbuttons.org</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -79,7 +79,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Installation</a>
+    <a href="../installation/" class="dropdown-item">Installation</a>
 </li>
                                     
 <li>
@@ -87,7 +87,7 @@
 </li>
                                     
 <li>
-    <a href="../pages/" class="dropdown-item">Pages</a>
+    <a href="./" class="dropdown-item active">Pages</a>
 </li>
                                     
 <li>
@@ -104,17 +104,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../functionality/" class="nav-link">
+                                <a rel="prev" href="../issues%26PR/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../issues%26PR/" class="nav-link">
+                                <a rel="next" href="../store/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/helpbuttons/hb_docs/English/installation.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/helpbuttons/hb_docs/English/pages.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -134,21 +134,62 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#installation-guide" class="nav-link">Installation Guide</a>
+            <li class="nav-item" data-level="1"><a href="#pages" class="nav-link">Pages</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#requisites" class="nav-link">Requisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#running-the-frontend" class="nav-link">running the frontend</a>
+            <li class="nav-item" data-level="2"><a href="#buttonfile" class="nav-link">ButtonFile</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#running-the-backend" class="nav-link">running the backend</a>
+            <li class="nav-item" data-level="2"><a href="#buttonnew" class="nav-link">ButtonNew</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#developers-hints" class="nav-link">developers hints:</a>
+            <li class="nav-item" data-level="2"><a href="#config" class="nav-link">Config</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#explore" class="nav-link">Explore</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#faqs" class="nav-link">Faqs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#homeinfo" class="nav-link">HomeInfo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#login" class="nav-link">Login</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#networkaccess" class="nav-link">NetworkAccess</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#networknew" class="nav-link">NetworkNew</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#notifiications" class="nav-link">Notifiications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#profile" class="nav-link">Profile</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#recovery" class="nav-link">Recovery</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#repositorypage" class="nav-link">RepositoryPage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#signup" class="nav-link">Signup</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -159,55 +200,45 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">#</a></h1>
-<p>The project is divided in two repositories, hb-front and hb-back, that need to run at the same time. The docs repository, this one, can be edited here :</p>
-<p><a href="https://github.com/helpbuttons/hb_docs">https://github.com/helpbuttons/hb_docs</a></p>
-<h2 id="requisites">Requisites<a class="headerlink" href="#requisites" title="Permanent link">#</a></h2>
-<p>Install all this to start:</p>
-<ul>
-<li>PostgreSQL para PostGIS
-<a href="https://www.postgresql.org/">https://www.postgresql.org/</a></li>
-<li>Docker
-<a href="https://www.docker.com/">https://www.docker.com/</a></li>
-<li>Nodejs
-<a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
-<li>Yarn o NPM
-<a href="https://yarnpkg.com/">https://yarnpkg.com/</a>
-<a href="https://www.npmjs.com/">https://www.npmjs.com/</a></li>
-</ul>
-<h2 id="running-the-frontend">running the frontend<a class="headerlink" href="#running-the-frontend" title="Permanent link">#</a></h2>
-<p><a href="https://github.com/helpbuttons/hb-front">https://github.com/helpbuttons/hb-front</a></p>
-<p>Open console / terminal:</p>
-<ul>
-<li>npm install</li>
-<li>npm run dev</li>
-</ul>
-<p>You can see the running app here:
-<a href="http://localhost:3000/">http://localhost:3000/</a></p>
-<h2 id="running-the-backend">running the backend<a class="headerlink" href="#running-the-backend" title="Permanent link">#</a></h2>
-<p><a href="https://github.com/helpbuttons/hb-back">https://github.com/helpbuttons/hb-back</a></p>
-<h4 id="we-need-to-run-an-instance-of-postgis-we-recomend-to-use-docker">We need to run an instance of postgis.. we recomend to use docker<a class="headerlink" href="#we-need-to-run-an-instance-of-postgis-we-recomend-to-use-docker" title="Permanent link">#</a></h4>
-<p>Open console / terminal:</p>
-<p>To start postgis:</p>
-<pre><code class="language-sh">$ cp env.docker .env
-$ docker-compose up db -d
-</code></pre>
-<h3 id="install-dependencies">install dependencies<a class="headerlink" href="#install-dependencies" title="Permanent link">#</a></h3>
-<pre><code class="language-sh">yarn
-</code></pre>
-<h4 id="run-the-application">Run the application<a class="headerlink" href="#run-the-application" title="Permanent link">#</a></h4>
-<pre><code class="language-sh">$ yarn start
-</code></pre>
-<p>Open <a href="http://127.0.0.1:3001">http://127.0.0.1:3001</a> in your browser.</p>
-<h4 id="run-the-application-in-watchmode">run the application in watchmode<a class="headerlink" href="#run-the-application-in-watchmode" title="Permanent link">#</a></h4>
-<pre><code class="language-sh">$ yarn start:watch
-</code></pre>
-<h2 id="developers-hints">developers hints:<a class="headerlink" href="#developers-hints" title="Permanent link">#</a></h2>
-<p>Cheatsheet on chai and mochajs
- <a href="https://devhints.io/chai.html">https://devhints.io/chai.html</a></p>
-<p>docker compose up</p>
-<p><a href="http://localhost:3001/">http://localhost:3001/</a></p>
-<h3 id="instalacion-de-la-version-de-node-del-proyecto-problemas-comunes">Instalación de la versión de Node del proyecto. Problemas comunes.<a class="headerlink" href="#instalacion-de-la-version-de-node-del-proyecto-problemas-comunes" title="Permanent link">#</a></h3></div>
+<h1 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">#</a></h1>
+<p>Pages of the app, with a brief ddescription, are attached above.</p>
+<h2 id="buttonfile">ButtonFile<a class="headerlink" href="#buttonfile" title="Permanent link">#</a></h2>
+<p>It's the Button post page. Here you can see complete Button's data, Network's ButtonTemplate specific fields included. Also you can find the Button's Feed, with all the conversation and activity related to the Button. You can access this page from any shared link to the button or through the Explore page.</p>
+<h2 id="buttonnew">ButtonNew<a class="headerlink" href="#buttonnew" title="Permanent link">#</a></h2>
+<p>Button creation form. Fields inside change depending on the ButtonTemplate associated with the Network.</p>
+<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">#</a></h2>
+<p>Page for customizing user account. Administrate profile options, security, notifications, user's Networks, etc.</p>
+<h2 id="explore">Explore<a class="headerlink" href="#explore" title="Permanent link">#</a></h2>
+<p>Explore is the main view. It's the page where you can see the Buttons -the posts- in different views and with different filters. The different views and filters are configurable in the Network's options section in creator user's Config view. These types of view are:</p>
+<h4 id="types-of-views-in-explore-page">Types of views in Explore page:<a class="headerlink" href="#types-of-views-in-explore-page" title="Permanent link">#</a></h4>
+<h5 id="only-map">Only Map<a class="headerlink" href="#only-map" title="Permanent link">#</a></h5>
+<p>Shows Buttons only on map, selectable by pins placed on specific coordinates.</p>
+<h5 id="map-with-list-by-zones">Map with list by zones<a class="headerlink" href="#map-with-list-by-zones" title="Permanent link">#</a></h5>
+<p>Shows Buttons on map and on a list displayed on top of the map. User can click on polygonal zones drawn over the map to display in the list Buttons included in that area.</p>
+<h5 id="map-with-list-by-pins">Map with list by pins<a class="headerlink" href="#map-with-list-by-pins" title="Permanent link">#</a></h5>
+<p>Shows Buttons on map view and a list component displaying a summary of the Buttons on top. Buttons are selectable by pins displayed over the map and on the list, summaries.</p>
+<h5 id="only-list">Only list<a class="headerlink" href="#only-list" title="Permanent link">#</a></h5>
+<p>Buttons are shown on a list filtered by place, type, tags or any other filter depending on the Network's ButtonTemplate.</p>
+<h2 id="faqs">Faqs<a class="headerlink" href="#faqs" title="Permanent link">#</a></h2>
+<p>All questions and info useful for the user can be foundd and placed here.</p>
+<h2 id="homeinfo">HomeInfo<a class="headerlink" href="#homeinfo" title="Permanent link">#</a></h2>
+<p>Welcome page with access to Button's search by place and Netowrk's selection and creation menu. For first time-new Helpbuttons installation, the user would be asked to create a Network in this view.</p>
+<h2 id="login">Login<a class="headerlink" href="#login" title="Permanent link">#</a></h2>
+<p>Already registered user access.</p>
+<h2 id="networkaccess">NetworkAccess<a class="headerlink" href="#networkaccess" title="Permanent link">#</a></h2>
+<p>Welcome screen for new private Network's users. User sees a question about acceptting entering the app or not.</p>
+<h1 id="networknew">NetworkNew<a class="headerlink" href="#networknew" title="Permanent link">#</a></h1>
+<p>Create new network. The registered user becomes the creator and administrator. The user choose basic info just to create a Network that can be later modified in the User's Config page.</p>
+<h2 id="notifiications">Notifiications<a class="headerlink" href="#notifiications" title="Permanent link">#</a></h2>
+<p>Displays a feed of all user's activity. Included all Buttons' interactions and user changes to the account.</p>
+<h2 id="profile">Profile<a class="headerlink" href="#profile" title="Permanent link">#</a></h2>
+<p>User's account related info. it's a card with all the custom User's info and photos. Access to Config page.</p>
+<h2 id="recovery">Recovery<a class="headerlink" href="#recovery" title="Permanent link">#</a></h2>
+<p>Password recovery page accessible only from the recovery email. Inset new password twiice.</p>
+<h2 id="repositorypage">RepositoryPage<a class="headerlink" href="#repositorypage" title="Permanent link">#</a></h2>
+<p>Ddisplays a list of all the elements andd components of the app. Used for ddesign purposes only.</p>
+<h2 id="signup">Signup<a class="headerlink" href="#signup" title="Permanent link">#</a></h2>
+<p>User's registration page.</p></div>
             </div>
         </div>
 
