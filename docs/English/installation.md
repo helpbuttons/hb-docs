@@ -72,4 +72,4 @@ docker compose up
 [http://localhost:3001/](http://localhost:3001/)
 
 
-### Instalación de la versión de Node del proyecto. Problemas comunes.
+### CONGRATULATIONS, YOU JOINED THE CONTRIBUTORS LIST

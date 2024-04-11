@@ -2,13 +2,14 @@
 
 ## Introduction
 
-The project is divided in two repositories, front and back, that need to run at the same time. The doc repository, this one, can be edited here :
+The project has one main repository: 
+
+[Repository](https://github.com/helpbuttons/helpbuttons)
+
+The doc repository, this one, can be edited here :
 
 [Docs Repository](https://github.com/helpbuttons/hb_docs)
 
-[Frontend Repository](https://github.com/helpbuttons/hb_docs)
-
-[Backend Repository](https://github.com/helpbuttons/hb_docs)
 
 ## Technologies
 
@@ -56,11 +57,11 @@ PostGIS is a spatial database extender for PostgreSQL object-relational database
 
 ##Basic concepts
 
-In order to understand the project you need to know how three concepts interact: Buttons, Users and Networks.   
+In order to understand the project you need to know how three concepts interact: Helpbuttons, Users and Networks.   
 
-A network is an enviroment where the users can create buttons. Comparing with other collaborative apps: Airbnb would be a network, a house would be a button, and a landlord would be an user.
+A Network is an enviroment where the users can create Helpbuttons. Comparing with other collaborative apps: Airbnb would be a network, a house would be a Helpbutton, and a landlord would be an user.
 
-One server could hold more than one network, and users could create buttons that could be published in several of those networks. So, the Button is the post, that can be posted in any enviroment (network) depending on the purpose and owned by an user.
+One server could hold more than one separated Network, and then federate them. Users could create Helpbuttons that could be published in several of those Networks. So, the Helpbuttons is the post, that can be posted in any enviroment (Network) depending on the purpose and owned by an user.
 
 ##Conventions / Naming
 
@@ -75,13 +76,13 @@ One server could hold more than one network, and users could create buttons that
 
 ##MODELS
 
-###BUTTON
+###BUTTON / HELPBUTTON
 
-A Button is the app post. Basically when you create a button you make a publication that has some basic fields: A title, a type, a place, a date, a description, images and tags. On top of these records you have fields that change depending on the network type. Depending on those fields your app can be better for transport sharing (duration fields, destination list,...), food sharing (food types selectable, amounts fields,...) or any other purpose that your app can have. All these extra fields come specified in one JSON element that is dependant on a template called ButtonTemplate.
+A Button or Helpbutton is the app post. Basically when you create a button you make a publication that has some basic fields: A title, a type, a place, a date, a description, images and tags. On top of these records you have fields that change depending on the network type. Depending on those fields your app can be better for transport sharing (duration fields, destination list,...), food sharing (food types selectable, amounts fields,...) or any other purpose that your app can have. All these extra fields come specified in one JSON element that is dependant on a template called ButtonTemplate.
 
-Buttons can be activated and desactivated without the need of deleting them. And everybutton has an interactions record list called the Feed, where users and app changes related to the Button are displayed.
+Helpbuttons can be activated and desactivated without the need of deleting them. And everybutton has an interactions record list called the Feed, where users and app changes related to the Button are displayed.
 
-All Buttons by default can be published at the same time in any Network that share the buttonTemplate.
+All Helpbuttons by default can be published at the same time in any Network that share the buttonTemplate.
 
 ```
 export interface IButton {
@@ -107,11 +108,11 @@ export interface IButton {
 
 ###NETWORK
 
-If the button is the post, the network is the group of posts. These posts share structure of ButtonTemplate defined in the network. One Network has a location, a radius,a description, an icon, a name and a list of options that change the visulization of the buttons (on map, on map by zones, on list only, on list + map) among others. The ButtonTemplate selected in the Network properties define the properties of the buttons and also the filters displayed in the Explore page and the fields in the creation menu of the Button New page. Networks can be also friends of other networks and show their data in common, so users couldd navigate in between them.
+If the Helpbutton is the post, the network is the group of posts. These posts share structure of ButtonTemplate defined in the network. One Network has a location, a radius,a description, an icon, a name and a list of options that change the visulization of the Helpbuttons (on map, on map by zones, on list only, on list + map) among others. The ButtonTemplate selected in the Network properties define the properties of the Helpbuttons and also the filters displayed in the Explore page and the fields in the creation menu of the Helpbuttons New page. Networks can be also friends of other networks and show their data in common, so users couldd navigate in between them.
 
-All Buttons created in a network can be shared in another network too if they share the same ButtonTemplate.
+All Helpbuttons created in a network can be shared in another network too if they share the same ButtonTemplate.
 
-A network can be public (all can see what the Buttons inside) or private (you need to enter to see and interact with the Buttons).
+A network can be public (all can see what the Helpbuttons inside) or private (you need to enter to see and interact with the Helpbuttons).
 
 The creator of the network is the owner and moderator. This person can assign moderation roles to other users of the network.  
 
@@ -129,7 +130,7 @@ export interface INetwork {
   description: string,
   buttonsTemplate: {}, //array of objects, each type has an int, a name and a color associated. Default are offer (green), need (red).
   //data for GIS
-  showButtons : string, //enum {area, point} show buttons by area not showing exact position on map
+  showButtons : string, //enum {area, point} show Helpbuttons by area not showing exact position on map
   place: string,
   geoPlace: {},
   radius: string,
@@ -144,7 +145,7 @@ export interface INetwork {
 
 ###USER
 
-The users are the person profile that is over the networks. User can jump in and out of networks, and move their Buttons to other networks and to other Users. This way an user can keep their reputation and profile independent.
+The users are the person profile that is over the networks. User can jump in and out of networks, and move their Helpbuttons to other networks and to other Users. This way an user can keep their reputation and profile independent.
 
 User cannot be rated but their reputation is stablished by supports. Other users can support an user for increasing his reputation. Blocks and low support rates can be used to measure the negative impact of the actions of users that can be moderation objectives by the community.
 
@@ -168,7 +169,7 @@ export interface ICurrentUser {
 
 ```
 
-###BUTTON TEMPLATE
+###BUTTON / HELPBUTTON TEMPLATE
 
 ButtonTemplate is the model that adds the modularity. It's a mix of some boolean elements and a JSON objetc that can include custom information inside. It's used by the app to configure posts and forms and adapt them to the networks' purpose. i.e. A network for selling food would have a ButtonTemplate that includes references to prices, quantities, origins, etc.
 
@@ -187,12 +188,12 @@ export interface ITemplateButton {
 
 ###FEED
 
-A Feed, as we introduced before, is a component that shows a list of interactions related to the component that is attached to. The Feed in the Button page shows all interactions (messages, updates, changes... ) related to that Button. The Feed in the Profile page shows all interactions related to the user (What we can call ).
+A Feed, as we introduced before, is a component that shows a list of interactions related to the component that is attached to. The Feed in the Helpbuttons page shows all interactions (messages, updates, changes... ) related to that Helpbuttons. The Feed in the Profile page shows all interactions related to the user (What we can call ).
 
-It has several filtered options. Filters change depending on the content but also depending on the user role. The owner of the Button can see different information in a Feed than other users, etc.
+It has several filtered options. Filters change depending on the content but also depending on the user role. The owner of the Helpbuttons can see different information in a Feed than other users, etc.
 
 ###TAG
-Tags in buttons are used for search purposes but also to configure notifications. Users could select Tags in the Config page to receive notifications when a Button is creted with those tags, or with an specific button-type.
+Tags in Helpbuttons are used for search purposes but also to configure notifications. Users could select Tags in the Config page to receive notifications when a Helpbuttons is creted with those tags, or with an specific button-type.
 ```
 {
   "id": "string",
@@ -241,7 +242,7 @@ Every directory has a .md file that explains the purpose of the folder.
 
 * modules : this a folder for complex functionalities that shoulddn't be separated by the general foler structure. i.e. You want to have the services and the reacts components together in a directory for authentication functionaliity. The folder has a fake example inside.
 
-* services: Each model has a folder in this directory to communicate with the API (Buttons, ButtonTemplates, Feed, Networks, Tags, Users). Also basic API functionalities (Alerts, Errors, HttpUtils -localStorage- and Store) have a service in this folder.
+* services: Each model has a folder in this directory to communicate with the API (Helpbuttons, ButtonTemplates, Feed, Networks, Tags, Users). Also basic API functionalities (Alerts, Errors, HttpUtils -localStorage- and Store) have a service in this folder.
 
 * store : It's a custom script written by @hirunatan in Telegram. It's intended for storing temporal data in the session (without refreshing the page, after refresh data is lost) and avoid the need of using more complex store mngmnt software.
 
