@@ -1,5 +1,3 @@
-#ISSUES AND PULL REQUEST POLICY 
-
 Issue tracker is **ONLY** used for reporting bugs. New features should be discussed on our [Telegram](https://t.me/+-_0KxKJ427VkYjU0)  channel. Please use [Github](https://github.com/helpbuttons/) for supporting issues.
 
 Copy any of this to start an issue in Github:

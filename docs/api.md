@@ -1,2 +1,2 @@
-# Api scheme
+# Api documentation
 !!swagger swagger.yaml!!
