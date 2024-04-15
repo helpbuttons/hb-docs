@@ -1,4 +1,4 @@
-# 1. Philosophy of the project 
+# B. Philosophy of the project 
 
 # History
 

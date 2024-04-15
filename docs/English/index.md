@@ -1,4 +1,4 @@
-# A. Overview
+# Overview
 
 # ¿What's HelpButtons?
 
