@@ -1,4 +1,4 @@
-#ISSUES AND PULL REQUEST POLICY 
+#Issues a& PR Policy
 
 Issue tracker is **ONLY** used for reporting bugs. New features should be discussed on our [Telegram](https://t.me/+-_0KxKJ427VkYjU0)  channel. Please use [Github](https://github.com/helpbuttons/) for supporting issues.
 
