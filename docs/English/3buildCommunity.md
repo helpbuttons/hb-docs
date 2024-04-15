@@ -1,6 +1,6 @@
 # Build Community
 
-Helpbuttons is an app designed for community leaders. If you're a person worried for your community wellness and cooperation, this is an app for you. Although we continue testing the app features with final users, so we get the best IU/UX design, the success of a ne Networks project depends on the compromise and action of the Network's Admins that need to spread the information and ussage in their intended community. We can offer you all the support of our experiences and some suggestions about methods for getting the communities to use the app in the first days of the project.
+Helpbuttons is an app designed for people compromised with their community. If you're a person worried for your community wellness and cooperation, this is an app for you. Although we continue testing the app features with final users, so we get the best IU/UX design, the success of a ne Networks project depends on the compromise and action of the Network's Admins that need to spread the information and ussage in their intended community. We can offer you all the support of our experiences and some suggestions about methods for getting the communities to use the app in the first days of the project.
 
 # Some possible actions:
 
