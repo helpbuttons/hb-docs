@@ -1,5 +1,7 @@
 # Guía de instalación
 
+> **¿No eres desarrollador/a?** Si no tienes un entorno técnico, puedes solicitar una Red directamente en [helpbuttons.org](https://helpbuttons.org) — el equipo puede configurártela en su servidor. También puedes pedir ayuda en el [grupo de Telegram](https://t.me/+-_0KxKJ427VkYjU0) de la comunidad.
+
 Helpbuttons vive en un único monorepo: [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons). Contiene el frontend (`web/`), la API backend (`api/`) y la configuración de la base de datos — todo se ejecuta junto mediante Docker Compose.
 
 ---

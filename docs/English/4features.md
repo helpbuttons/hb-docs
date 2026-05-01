@@ -47,8 +47,17 @@ The Explore page offers multiple views:
 ### Deep URL routing
 The map state (zoom, lat/lng, selected button) is encoded in the URL, making it fully shareable and linkable.
 
+### Map styles and key locations
+Admins can change the map's visual style (tile layer) to match the network's identity or improve readability. They can also define **key locations** — named places pinned on the map with a special marker, useful for community landmarks, meeting points, or points of interest.
+
 ### Embeddable map
-Networks can embed a read-only map widget on external websites.
+Networks can embed a read-only map widget on external websites using an **iframe**. The embed respects the network's configuration and can be filtered by tag or button type.
+
+### Social media feed
+Networks expose a public **RRSS feed** (RSS/Atom) of recently published buttons. Communities can pipe this into social media channels, newsletters, or aggregator tools to keep followers updated without requiring them to visit the platform.
+
+### PDF bulletin
+Admins can export a **PDF bulletin** of buttons currently published in the Network. This is useful for printing and distributing in physical spaces — noticeboards, community centers, assemblies — reaching people who may not use digital tools.
 
 ---
 

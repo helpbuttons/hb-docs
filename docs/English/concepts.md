@@ -16,7 +16,7 @@ Each Network has:
 - A set of **ButtonTemplates** that define what types of buttons exist in this Network
 - **Administrators** who can moderate content and manage users
 
-One Helpbuttons server can host **multiple Networks**. Networks can also **federate** with each other to share users and content across instances.
+Each Helpbuttons installation hosts **one Network**. Separate installations can **federate** with each other to share users and content across instances.
 
 **Example**: A neighborhood mutual aid group runs its Network at `ayuda.mibarrio.org`. It's configured as public, has two button types ("Offering" and "Requesting"), and three administrators.
 
@@ -34,7 +34,7 @@ Every button has these base fields:
 - **Images**
 - **Date** (optional, turns it into an event)
 
-Buttons belong to one Network but can be published in multiple Networks if they share the same ButtonTemplate.
+Buttons belong to the Network they were created in. Through federation, a button can be shared with other Networks that use the same ButtonTemplate.
 
 Every button has a **Feed** — see below.
 
@@ -112,7 +112,7 @@ Server
         └── Tags subscriptions, roles, profiles
 ```
 
-One server can have multiple Networks. Networks can federate with other servers. Buttons can be shared across Networks that use the same ButtonTemplate.
+Each installation runs one Network. Installations can federate with other servers, sharing users and content. Buttons can be shared across federated Networks that use the same ButtonTemplate.
 
 ---
 

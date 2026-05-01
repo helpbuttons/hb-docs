@@ -17,7 +17,7 @@ Think of apps like Airbnb, BlaBlaCar, or food-sharing platforms. Helpbuttons giv
 
 ## How does it work?
 
-Each Helpbuttons installation hosts one or more **Networks**. A Network is a community space with its own name, location, configuration, and moderation. Inside a Network, people publish **Buttons** — geo-located posts that represent offers, needs, events, or any other type of interaction the community defines.
+Each Helpbuttons installation hosts one **Network**. A Network is a community space with its own name, location, configuration, and moderation. Inside a Network, people publish **Buttons** — geo-located posts that represent offers, needs, events, or any other type of interaction the community defines.
 
 Users register, browse the map, filter by tags or type, contact each other via messages, and organize their cooperation in one shared space.
 

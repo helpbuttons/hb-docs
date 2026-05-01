@@ -17,7 +17,7 @@ Piensa en plataformas como Airbnb, BlaBlaCar o aplicaciones de reparto de comida
 
 ## ¿Cómo funciona?
 
-Cada instalación de Helpbuttons aloja una o más **Redes**. Una Red es un espacio comunitario con su propio nombre, ubicación, configuración y moderación. Dentro de una Red, las personas publican **Botones** — publicaciones geolocalizadas que representan ofertas, necesidades, eventos o cualquier otro tipo de interacción que la comunidad defina.
+Cada instalación de Helpbuttons aloja una **Red**. Una Red es un espacio comunitario con su propio nombre, ubicación, configuración y moderación. Dentro de una Red, las personas publican **Botones** — publicaciones geolocalizadas que representan ofertas, necesidades, eventos o cualquier otro tipo de interacción que la comunidad defina.
 
 Los usuarios se registran, navegan el mapa, filtran por etiquetas o tipo, se contactan entre sí mediante mensajes y organizan su cooperación en un espacio compartido.
 

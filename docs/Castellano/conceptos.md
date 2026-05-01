@@ -16,7 +16,7 @@ Cada Red tiene:
 - Un conjunto de **Plantillas de Botón** que definen qué tipos de botones existen en esta Red
 - **Administradores** que pueden moderar contenido y gestionar usuarios
 
-Un servidor de Helpbuttons puede alojar **múltiples Redes**. Las Redes también pueden **federar** entre sí para compartir usuarios y contenido entre instancias.
+Cada instalación de Helpbuttons aloja **una Red**. Instalaciones separadas pueden **federar** entre sí para compartir usuarios y contenido entre instancias.
 
 **Ejemplo**: Un grupo de ayuda mutua de barrio gestiona su Red en `ayuda.mibarrio.org`. Está configurada como pública, tiene dos tipos de botón ("Ofrezco" y "Necesito"), y tres administradores.
 
@@ -34,7 +34,7 @@ Cada botón tiene estos campos base:
 - **Imágenes**
 - **Fecha** (opcional, lo convierte en evento)
 
-Los botones pertenecen a una Red pero pueden publicarse en múltiples Redes si comparten la misma Plantilla de Botón.
+Los botones pertenecen a la Red en la que fueron creados. Mediante la federación, un botón puede compartirse con otras Redes que usen la misma Plantilla de Botón.
 
 Cada botón tiene un **Feed** — ver más abajo.
 
@@ -112,7 +112,7 @@ Servidor
         └── Suscripciones a etiquetas, roles, perfiles
 ```
 
-Un servidor puede tener múltiples Redes. Las Redes pueden federar con otros servidores. Los botones pueden compartirse entre Redes que usen la misma Plantilla de Botón.
+Cada instalación ejecuta una Red. Las instalaciones pueden federar con otros servidores, compartiendo usuarios y contenido. Los botones pueden compartirse entre Redes federadas que usen la misma Plantilla de Botón.
 
 ---
 

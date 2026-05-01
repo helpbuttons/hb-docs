@@ -1,5 +1,7 @@
 # Installation Guide
 
+> **Not a developer?** If you don't have a technical setup, you can request a Network directly at [helpbuttons.org](https://helpbuttons.org) — the team can set it up for you on their server. You can also ask for help in the community [Telegram group](https://t.me/+-_0KxKJ427VkYjU0).
+
 Helpbuttons lives in a single monorepo: [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons). It contains the frontend (`web/`), the backend API (`api/`), and the database configuration — all run together via Docker Compose.
 
 ---
