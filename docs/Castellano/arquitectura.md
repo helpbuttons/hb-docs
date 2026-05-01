@@ -19,7 +19,7 @@ Las tecnologías se eligieron siguiendo tres principios: **software abierto**, *
 
 | Tecnología | Rol |
 |---|---|
-| [TypeScript](https://www.typescriptlang.org/) | JavaScript tipado en toda la pila |
+| [TypeScript](https://www.typescriptlang.org/) | JavaScript tipado |
 | [Next.js](https://nextjs.org/) | Framework React, enrutamiento por archivos, SSR |
 | [React](https://reactjs.org/) | UI basada en componentes |
 | [Pigeon Maps](https://pigeon-maps.js.org/) | Mapas interactivos (ligero, sin dependencias externas) |

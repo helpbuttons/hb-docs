@@ -32,3 +32,11 @@ No dudes en contactarnos a través de cualquiera de nuestros canales, proponer i
 - **Auto-hospedaje**: sigue la [Guía de instalación](instalacion.md) — lleva menos de una hora
 - **Opción hospedada**: si no tienes tu propio servidor, puedes solicitar una red en el servidor del equipo en [helpbuttons.org](https://helpbuttons.org)
 - **Ayuda para empezar**: únete al Telegram y pregunta — la comunidad está feliz de apoyar a los nuevos administradores de Redes
+
+---
+
+## Apoya el proyecto
+
+Helpbuttons ha sido construido por programadores voluntarios. Si te resulta útil a ti o a tu comunidad, considera hacer una donación para ayudar a sostener el proyecto.
+
+[**Donar →**](https://buy.stripe.com/8x23cv73DfFhb7r3Yb7g40K)

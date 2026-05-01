@@ -19,7 +19,7 @@ Technologies were chosen following three principles: **open software**, **mobile
 
 | Technology | Role |
 |---|---|
-| [TypeScript](https://www.typescriptlang.org/) | Typed JavaScript across the whole stack |
+| [TypeScript](https://www.typescriptlang.org/) | Typed JavaScript |
 | [Next.js](https://nextjs.org/) | React framework, file-based routing, SSR |
 | [React](https://reactjs.org/) | Component-based UI |
 | [Pigeon Maps](https://pigeon-maps.js.org/) | Interactive maps (lightweight, no external dependencies) |

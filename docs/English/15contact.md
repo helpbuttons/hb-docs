@@ -32,3 +32,11 @@ Feel free to reach out through any of our channels, propose ideas, or become par
 - **Self-host**: follow the [Installation Guide](5installation.md) — it takes less than an hour
 - **Hosted option**: if you don't have your own server, you can request a network on the team's server at [helpbuttons.org](https://helpbuttons.org)
 - **Help getting started**: join Telegram and ask — the community is happy to support new Network admins
+
+---
+
+## Support the project
+
+Helpbuttons has been built by voluntary programmers. If it is useful to you or your community, consider making a donation to help sustain the project.
+
+[**Donate →**](https://buy.stripe.com/8x23cv73DfFhb7r3Yb7g40K)
