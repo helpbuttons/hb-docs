@@ -56,10 +56,10 @@ Las Redes pueden insertar un widget de mapa de solo lectura en sitios web extern
 Cada botón tiene un feed — un hilo de conversación donde los usuarios pueden dejar mensajes, actualizaciones y notas de coordinación. Visible para todos los participantes.
 
 ### Mensajes privados
-Los usuarios pueden responder en privado en el feed de un botón. Solo el propietario del botón y el autor del mensaje pueden ver las respuestas privadas.
+Los usuarios pueden iniciar una conversación totalmente privada con cualquier otro usuario. Los mensajes privados están completamente separados de los feeds de botones — aparecen en la sección de Mensajes y nunca son visibles para otros miembros ni para los administradores.
 
 ### Mensajería grupal
-Los usuarios pueden intercambiar mensajes en conversaciones grupales, independientemente de botones específicos.
+Existen dos hilos de grupo fijos, independientes de botones concretos: un **foro de comunidad** abierto a todos los miembros, y un **foro de administradores** restringido a los administradores de la red. Estas son las únicas conversaciones grupales — los usuarios no pueden crear chats de grupo adicionales.
 
 ---
 

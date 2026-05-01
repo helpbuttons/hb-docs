@@ -54,7 +54,7 @@ La página completa de un botón individual. Muestra la galería de imágenes, t
 
 ![Mensajes — conversación de botón](../images/screencaps/2_messages.jpg)
 
-Vista de mensajería en tres paneles. La columna izquierda lista todas las conversaciones — feeds de botones, mensajes directos, avisos del sistema, foro de administradores y foro comunitario. El centro muestra el hilo activo. El panel derecho muestra la tarjeta del botón asociado a la conversación, manteniendo el contexto visible.
+Vista de mensajería en tres paneles. La columna izquierda lista todas las conversaciones — mensajes privados directos, avisos del sistema, el foro comunitario y el foro de administradores. El centro muestra el hilo activo. El panel derecho muestra la tarjeta del botón cuando la conversación está vinculada a uno. Las conversaciones privadas entre usuarios están completamente separadas de los feeds de botones y solo son visibles para los dos participantes.
 
 ![Mensajes — foro comunitario](../images/screencaps/3_group_chat_comunidad.jpg)
 

@@ -54,7 +54,7 @@ The full page for a single button. Shows the button's image gallery, title, type
 
 ![Messages — button conversation](../images/screencaps/2_messages.jpg)
 
-Three-panel messaging view. The left column lists all conversations — button feeds, direct messages, system notices, admin forum, and community forum. The centre shows the active thread. The right panel displays the button card associated with the conversation, keeping context visible.
+Three-panel messaging view. The left column lists all conversations — private direct messages, system notices, the community forum, and the admin forum. The centre shows the active thread. The right panel displays the button card when the conversation is linked to one. Private conversations between users are fully separate from button feeds and visible only to the two participants.
 
 ![Messages — community forum](../images/screencaps/3_group_chat_comunidad.jpg)
 

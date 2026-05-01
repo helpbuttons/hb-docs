@@ -67,7 +67,7 @@ Admins can export a **PDF bulletin** of buttons currently published in the Netwo
 Every button has a feed — a conversation thread where users can leave messages, updates, and coordination notes. Visible to all participants.
 
 ### Private messages
-Users can reply privately in a button's feed. Only the button owner and the message author can see private replies.
+Users can start a fully private conversation with any other user. Private messages are completely separate from button feeds — they appear in the Messages section and are never visible to other members or admins.
 
 ### Group messaging
 There are two fixed group threads, independent of specific buttons: a **community forum** open to all members, and an **admin forum** restricted to the network's administrators. These are the only group conversations — users cannot create additional group chats.
