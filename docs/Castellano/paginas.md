@@ -8,9 +8,13 @@ Un recorrido visual por las principales pantallas de una Red Helpbuttons. Las ca
 
 ### Inicio
 
-![Página de inicio](../images/screencaps/1_home.jpg)
+![Cabecera de inicio](../images/screencaps/1_home_a.jpg)
 
-La página de llegada de la Red. Muestra las etiquetas más populares creadas hasta la fecha, un conjunto de etiquetas recomendadas por el admin, y la lista de administradores y contactos de asistencia. Los visitantes nuevos usan esta página para entender de qué trata la comunidad antes de registrarse.
+La parte superior de la página de inicio muestra el nombre de la red, el eslogan y la imagen de fondo — todo definido por el admin. Tres acciones principales siempre visibles: **Explorar**, **Crear publicación** y **Compartir**. Debajo del encabezado, una tarjeta resumen muestra cuántos botones y usuarios están activos, seguida de todos los tipos de botón disponibles como accesos rápidos.
+
+![Inicio — etiquetas e información](../images/screencaps/1_home.jpg)
+
+Bajando aparecen las etiquetas más usadas en la red (útil para descubrir qué temas están activos), la lista curada de etiquetas recomendadas por el admin, y una sección con los administradores y contactos de asistencia. Los visitantes nuevos usan esta página para entender de qué trata la comunidad antes de registrarse.
 
 ---
 
@@ -48,9 +52,17 @@ La página completa de un botón individual. Muestra la galería de imágenes, t
 
 ### Mensajes
 
-![Página de mensajes](../images/screencaps/2_messages.jpg)
+![Mensajes — conversación de botón](../images/screencaps/2_messages.jpg)
 
-Vista de mensajería en tres paneles. La columna izquierda lista todas las conversaciones — feeds de botones, mensajes directos, foro de administradores y foro comunitario. El centro muestra el hilo activo. El panel derecho muestra la tarjeta del botón asociado a la conversación, manteniendo el contexto visible. Los administradores ven un hilo de "Foro de administradores" en la parte superior.
+Vista de mensajería en tres paneles. La columna izquierda lista todas las conversaciones — feeds de botones, mensajes directos, avisos del sistema, foro de administradores y foro comunitario. El centro muestra el hilo activo. El panel derecho muestra la tarjeta del botón asociado a la conversación, manteniendo el contexto visible.
+
+![Mensajes — foro comunitario](../images/screencaps/3_group_chat_comunidad.jpg)
+
+El hilo del **foro de comunidad** es un chat grupal compartido abierto a todos los miembros de la red, independiente de cualquier botón concreto. Útil para anuncios generales, preguntas y conversación comunitaria. El foro de administradores funciona igual pero está restringido a los administradores.
+
+![Mensajes — avisos y feed de eventos](../images/screencaps/2b_messages.jpg)
+
+La bandeja de mensajes también muestra **avisos** del sistema — notificaciones automáticas como renovaciones de botones, suscripciones a etiquetas activadas o nuevos seguidores. Cuando un aviso está relacionado con un botón de evento, el panel derecho muestra la tarjeta completa del evento con fecha, hora, lugar y precio.
 
 ---
 
@@ -70,7 +82,15 @@ El panel de compartir, accesible desde la pantalla de inicio. Ofrece dos grupos 
 
 **Invitar personas** — copiar el enlace de registro, o generar **invitaciones imprimibles con código QR** que la gente puede escanear para unirse a la red directamente, sin necesidad de conocer la URL.
 
+![Tarjetas de invitación QR imprimibles](../images/screencaps/01_compartir_b.jpg)
+
+El generador de invitaciones produce una hoja PDF lista para imprimir con múltiples códigos QR por página — listos para recortar y repartir en eventos, tablones de anuncios o espacios comunitarios. Cada QR enlaza directamente a la página de registro de la red.
+
 **Compartir contenido de la red** — imprimir la lista actual de botones como **boletín en PDF**, insertar la red en un sitio web externo mediante un **iframe**, o suscribirse al **feed RSS** de la red para seguir las nuevas publicaciones desde cualquier lector de feeds o herramienta de redes sociales.
+
+![Vista previa del boletín PDF](../images/screencaps/01_compartir_c.jpg)
+
+La exportación del boletín PDF genera un documento paginado con los botones actuales: título, tipo, descripción, ubicación y un código QR que enlaza a cada uno. Útil para imprimir y distribuir en espacios físicos — centros comunitarios, tablones de anuncios, asambleas — llegando a personas que no usan herramientas digitales.
 
 ---
 

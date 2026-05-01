@@ -8,9 +8,13 @@ A visual walkthrough of the main screens in a Helpbuttons Network. Screenshots a
 
 ### Home
 
-![Home page](../images/screencaps/1_home.jpg)
+![Home hero](../images/screencaps/1_home_a.jpg)
 
-The landing page of the Network. It shows the most popular tags created so far, a set of recommended tags chosen by the admin, and the list of administrators and assistance contacts. First-time visitors use this page to understand what the community is about before registering.
+The top of the home page shows the network's name, tagline, and background image — all set by the admin. Three main actions are always visible: **Explore**, **Publish**, and **Share**. Below the hero, a summary card shows how many buttons and users are active, followed by all available button types as quick-access chips.
+
+![Home tags and info](../images/screencaps/1_home.jpg)
+
+Scrolling down reveals the most-used tags across the network (useful for discovering what topics are active), the admin's curated list of recommended tags, and a section showing the administrators and assistance contacts. First-time visitors use this page to understand what the community is about before registering.
 
 ---
 
@@ -48,9 +52,17 @@ The full page for a single button. Shows the button's image gallery, title, type
 
 ### Messages
 
-![Messages page](../images/screencaps/2_messages.jpg)
+![Messages — button conversation](../images/screencaps/2_messages.jpg)
 
-Three-panel messaging view. The left column lists all conversations — button feeds, direct messages, admin forum, and community forum. The centre shows the active thread. The right panel displays the button card associated with the conversation, keeping context visible. Admins see an extra "Admin forum" thread at the top.
+Three-panel messaging view. The left column lists all conversations — button feeds, direct messages, system notices, admin forum, and community forum. The centre shows the active thread. The right panel displays the button card associated with the conversation, keeping context visible.
+
+![Messages — community forum](../images/screencaps/3_group_chat_comunidad.jpg)
+
+The **community forum** thread is a shared group chat open to all members of the network, independent of any specific button. Useful for general announcements, questions, and community conversation. The admin forum works the same way but is restricted to administrators.
+
+![Messages — notifications and event feed](../images/screencaps/2b_messages.jpg)
+
+The messages inbox also surfaces **system notices** (avisos) — automatic notifications such as button renewals, tag subscriptions firing, or new followers. When a notice is about an event button, the right panel shows the full event card including date, time, location, and price.
 
 ---
 
@@ -68,9 +80,17 @@ The user's public profile page. Shows their name, username, role badge (e.g. Adm
 
 The sharing panel, accessible from the home screen. It provides two groups of actions:
 
-**Invite people** — copy the registration link, or generate **printable invitation cards** with QR code that people can scan to join the network directly, without needing to know the URL.
+**Invite people** — copy the registration link, or generate **printable invitation cards** with QR codes that people can scan to join the network directly, without needing to know the URL.
+
+![Printable QR invitation cards](../images/screencaps/01_compartir_b.jpg)
+
+The invitation card generator produces a print-ready PDF sheet of QR codes — multiple cards per page, ready to cut and hand out at events, noticeboards, or community spaces. Each QR links directly to the network's registration page.
 
 **Share network content** — print the current button list as a **PDF bulletin**, embed the network in an external website using an **iframe**, or subscribe to the network's **RSS feed** to follow new publications through any feed reader or social media tool.
+
+![PDF bulletin preview](../images/screencaps/01_compartir_c.jpg)
+
+The PDF bulletin export generates a paginated document listing current buttons with their title, type, description, location, and a QR code linking to each one. Useful for printing and distributing in physical spaces — community centres, noticeboards, assemblies — reaching people who may not use digital tools.
 
 ---
 
