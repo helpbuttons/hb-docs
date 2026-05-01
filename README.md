@@ -1,23 +1,38 @@
-
-![HB cover](/images/wip_sept_2021/hb_landscape_02_small.jpg?raw=true "hb cover")
+![Helpbuttons](images/wip_sept_2021/base_jumbo_03.jpg)
 
 # Helpbuttons Documentation
 
-You need to have [Docker](https://www.docker.com/) installed in order to run this repository.
+This is the documentation repository for [Helpbuttons](https://github.com/helpbuttons/helpbuttons) — an open-source platform for building geo-based collaborative networks.
 
-# Checkout the latest docs generated:
+**Browse the docs:** [helpbuttons.github.io/hb-docs](https://helpbuttons.github.io/hb-docs)
 
-https://helpbuttons.github.io/hb-docs
+---
 
-# serve documentation
-`$ docker-compose up serve`
+## Contributing to the docs
 
-# build documentation
-`$ docker-compose up build`
+The docs are written in Markdown and built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
+
+### Run locally
+
+```sh
+pip install mkdocs-material mkdocs-render-swagger-plugin
+mkdocs serve
+```
+
+Open [http://localhost:8000](http://localhost:8000).
+
+### Structure
 
 ```
-$ mkdir local
-$ cp swagger.yaml local/
-$ docker run --rm -v "${PWD}/local:/local" openapitools/openapi-generator-cli generate  -i /local/swagger.yaml     -g typescript-node     -o /local/backend
-$ cp -r local/backend/* ../hb-back/
+docs/
+├── English/      # English documentation
+├── Castellano/   # Spanish documentation
+├── images/       # Images used in the docs
+└── index.md      # Landing page
 ```
+
+To contribute, edit the Markdown files in `docs/` and open a pull request.
+
+---
+
+*Part of the [Helpbuttons](https://github.com/helpbuttons/helpbuttons) project · [help@helpbuttons.org](mailto:help@helpbuttons.org)*
