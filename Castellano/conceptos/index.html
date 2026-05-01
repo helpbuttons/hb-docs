@@ -1338,7 +1338,7 @@
 - Una <strong>configuración de privacidad</strong>: pública (visible para cualquiera) o privada (solo por invitación)
 - Un conjunto de <strong>Plantillas de Botón</strong> que definen qué tipos de botones existen en esta Red
 - <strong>Administradores</strong> que pueden moderar contenido y gestionar usuarios</p>
-<p>Un servidor de Helpbuttons puede alojar <strong>múltiples Redes</strong>. Las Redes también pueden <strong>federar</strong> entre sí para compartir usuarios y contenido entre instancias.</p>
+<p>Cada instalación de Helpbuttons aloja <strong>una Red</strong>. Instalaciones separadas pueden <strong>federar</strong> entre sí para compartir usuarios y contenido entre instancias.</p>
 <p><strong>Ejemplo</strong>: Un grupo de ayuda mutua de barrio gestiona su Red en <code>ayuda.mibarrio.org</code>. Está configurada como pública, tiene dos tipos de botón ("Ofrezco" y "Necesito"), y tres administradores.</p>
 <hr />
 <h2 id="boton-helpbutton">Botón (Helpbutton)<a class="headerlink" href="#boton-helpbutton" title="Permanent link">#</a></h2>
@@ -1350,7 +1350,7 @@
 - <strong>Etiquetas</strong>
 - <strong>Imágenes</strong>
 - <strong>Fecha</strong> (opcional, lo convierte en evento)</p>
-<p>Los botones pertenecen a una Red pero pueden publicarse en múltiples Redes si comparten la misma Plantilla de Botón.</p>
+<p>Los botones pertenecen a la Red en la que fueron creados. Mediante la federación, un botón puede compartirse con otras Redes que usen la misma Plantilla de Botón.</p>
 <p>Cada botón tiene un <strong>Feed</strong> — ver más abajo.</p>
 <p><strong>Ejemplo</strong>: Un usuario publica un botón: "Tengo 5kg de tomates para compartir" → tipo "Ofrezco", ubicación en área aproximada, etiquetado "comida, verduras". Otros usuarios lo ven en el mapa y contactan a través del feed del botón.</p>
 <hr />
@@ -1404,7 +1404,7 @@ Una red de eventos podría añadir: fecha, duración, participantes máximos.</p
     └── Usuarios: [usuario_A, usuario_B, usuario_C, ...]
         └── Suscripciones a etiquetas, roles, perfiles
 </code></pre>
-<p>Un servidor puede tener múltiples Redes. Las Redes pueden federar con otros servidores. Los botones pueden compartirse entre Redes que usen la misma Plantilla de Botón.</p>
+<p>Cada instalación ejecuta una Red. Las instalaciones pueden federar con otros servidores, compartiendo usuarios y contenido. Los botones pueden compartirse entre Redes federadas que usen la misma Plantilla de Botón.</p>
 <hr />
 <p>Para el detalle técnico — columnas de base de datos, interfaces TypeScript, endpoints de la API — ver <a href="../arquitectura/">Arquitectura</a>.</p>
 

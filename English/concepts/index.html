@@ -1338,7 +1338,7 @@
 - A <strong>privacy setting</strong>: public (visible to anyone) or private (invite-only)
 - A set of <strong>ButtonTemplates</strong> that define what types of buttons exist in this Network
 - <strong>Administrators</strong> who can moderate content and manage users</p>
-<p>One Helpbuttons server can host <strong>multiple Networks</strong>. Networks can also <strong>federate</strong> with each other to share users and content across instances.</p>
+<p>Each Helpbuttons installation hosts <strong>one Network</strong>. Separate installations can <strong>federate</strong> with each other to share users and content across instances.</p>
 <p><strong>Example</strong>: A neighborhood mutual aid group runs its Network at <code>ayuda.mibarrio.org</code>. It's configured as public, has two button types ("Offering" and "Requesting"), and three administrators.</p>
 <hr />
 <h2 id="button-helpbutton">Button (Helpbutton)<a class="headerlink" href="#button-helpbutton" title="Permanent link">#</a></h2>
@@ -1350,7 +1350,7 @@
 - <strong>Tags</strong>
 - <strong>Images</strong>
 - <strong>Date</strong> (optional, turns it into an event)</p>
-<p>Buttons belong to one Network but can be published in multiple Networks if they share the same ButtonTemplate.</p>
+<p>Buttons belong to the Network they were created in. Through federation, a button can be shared with other Networks that use the same ButtonTemplate.</p>
 <p>Every button has a <strong>Feed</strong> — see below.</p>
 <p><strong>Example</strong>: A user posts a button: "I have 5kg of tomatoes to share" → type "Offering", location set to approximate area, tagged "food, vegetables". Other users see it on the map and message through the button's feed.</p>
 <hr />
@@ -1404,7 +1404,7 @@ An event network might add: date, duration, maximum participants.</p>
     └── Users: [user_A, user_B, user_C, ...]
         └── Tags subscriptions, roles, profiles
 </code></pre>
-<p>One server can have multiple Networks. Networks can federate with other servers. Buttons can be shared across Networks that use the same ButtonTemplate.</p>
+<p>Each installation runs one Network. Installations can federate with other servers, sharing users and content. Buttons can be shared across federated Networks that use the same ButtonTemplate.</p>
 <hr />
 <p>For the technical detail — database columns, TypeScript interfaces, API endpoints — see <a href="../6architecture/">Architecture</a>.</p>
 
