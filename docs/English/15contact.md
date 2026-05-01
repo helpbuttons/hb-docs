@@ -2,7 +2,7 @@
 
 ![Helpbuttons](../images/hb_logo_blue.png){ width=80 align=right }
 
-Helpbuttons is a project of [Watch Out, Freedom!](https://wofreedom.org), a nonprofit association. We are people from different backgrounds who come together to build projects that we believe have a positive social impact.
+Helpbuttons is developed by a group of voluntary programmers who believe in open tools for social cooperation.
 
 Feel free to reach out through any of our channels, propose ideas, or become part of the community.
 
@@ -30,5 +30,5 @@ Feel free to reach out through any of our channels, propose ideas, or become par
 ## For communities wanting to use Helpbuttons
 
 - **Self-host**: follow the [Installation Guide](5installation.md) — it takes less than an hour
-- **Hosted option**: contact [help@helpbuttons.org](mailto:help@helpbuttons.org) to request a managed instance at helpbuttons.org
+- **Hosted option**: if you don't have your own server, you can request a network on the team's server at [helpbuttons.org](https://helpbuttons.org)
 - **Help getting started**: join Telegram and ask — the community is happy to support new Network admins

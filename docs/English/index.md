@@ -26,21 +26,21 @@ Users register, browse the map, filter by tags or type, contact each other via m
 | | |
 |---|---|
 | **Main repository** | [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons) |
-| **Live instance** | [helpbuttons.org](https://helpbuttons.org) |
+| **Project home** | [helpbuttons.org](https://helpbuttons.org) |
 | **Dev preview** | [dev.helpbuttons.org](https://dev.helpbuttons.org) |
 | **Community chat** | [Telegram](https://t.me/+-_0KxKJ427VkYjU0) |
 | **Contact** | [help@helpbuttons.org](mailto:help@helpbuttons.org) |
 
 ## Getting started
 
-- **I want to install it** → [Installation Guide](installation.md)
-- **I want to understand the code** → [Architecture](architecture.md) · [Core Concepts](concepts.md)
+- **I want to install it** → [Installation Guide](5installation.md)
+- **I want to understand the code** → [Architecture](6architecture.md) · [Core Concepts](concepts.md)
 - **I want to contribute** → [Contributing Guide](contributing.md)
-- **I want to understand the project values** → [Philosophy](philosophy.md)
-- **I want to grow a community with it** → [Spreading Helpbuttons](spreading.md)
+- **I want to understand the project values** → [Philosophy](2philosophy.md)
+- **I want to grow a community with it** → [Spreading Helpbuttons](3buildCommunity.md)
 
 ## Project background
 
-Helpbuttons is developed by [Watch Out, Freedom!](https://wofreedom.org), a nonprofit organization dedicated to promoting social cooperation and public debate. The project has been in development since 2012 through several prototypes. The current version is a mature, production-ready platform actively used in real communities.
+Helpbuttons is developed by a group of voluntary programmers. The project has been in development since 2012 through several prototypes. The current version is a mature, production-ready platform actively used in real communities.
 
-If you want to support the project, you can donate or contribute code, translation, or documentation — see [Contact](contact.md).
+If you want to support the project, you can donate or contribute code, translation, or documentation — see [Contact](15contact.md).

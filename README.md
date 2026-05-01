@@ -15,9 +15,11 @@ The docs are written in Markdown and built with [MkDocs Material](https://squidf
 ### Run locally
 
 ```sh
-pip install mkdocs-material mkdocs-render-swagger-plugin
+pip install mkdocs-material mkdocs-render-swagger-plugin mkdocs-git-revision-date-localized-plugin
 mkdocs serve
 ```
+
+> On macOS use `pip3` instead of `pip`.
 
 Open [http://localhost:8000](http://localhost:8000).
 

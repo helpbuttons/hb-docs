@@ -121,7 +121,7 @@ Los admins pueden personalizar: colores, logo/avatar, nombre, descripción, etiq
 Cada Red tiene una ubicación principal y un radio geográfico que establece la vista predeterminada del mapa.
 
 ### Soporte de dominio personalizado
-Al alojar en helpbuttons.org, puedes usar un dominio personalizado (ej. `coopera.mibarrio.org`).
+Si tu red está hospedada en el servidor del equipo en helpbuttons.org, puedes usar un dominio personalizado (ej. `coopera.mibarrio.org`).
 
 ---
 

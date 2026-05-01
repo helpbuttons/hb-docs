@@ -90,4 +90,4 @@ Si estás arrancando una nueva Red y necesitas ayuda:
 
 - **Comunidad en Telegram**: [t.me/helpbuttons](https://t.me/+-_0KxKJ427VkYjU0)
 - **Email**: [help@helpbuttons.org](mailto:help@helpbuttons.org)
-- **Opción hospedada**: si prefieres no gestionar un servidor, puedes solicitar hospedaje en [helpbuttons.org](https://helpbuttons.org)
+- **Opción hospedada**: si no tienes tu propio servidor, puedes solicitar una red en el servidor del equipo en [helpbuttons.org](https://helpbuttons.org)

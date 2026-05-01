@@ -36,6 +36,7 @@ nav:
     - Pages: English/7pages.md
     - Store: English/9store.md
     - Installation: English/5installation.md
+    - Contributing: English/contributing.md
     - Coding Standards: English/coding-standards.md
     - Commit Conventions: English/11commit.md
     - Issues & PRs: English/12issues&PR.md

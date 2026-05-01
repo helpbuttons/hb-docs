@@ -123,7 +123,7 @@ Admins can customize: colors, logo/avatar, name, description, preferred tags, bu
 Each Network has a home location and a geographic radius that sets the default map view.
 
 ### Custom domain support
-When hosting at helpbuttons.org, you can use a custom domain (e.g. `coopera.mibarrio.org`).
+If your network is hosted on the team's server at helpbuttons.org, you can use a custom domain (e.g. `coopera.mibarrio.org`).
 
 ---
 

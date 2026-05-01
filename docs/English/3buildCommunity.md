@@ -90,6 +90,6 @@ If you're starting a new network and need help, reach out through:
 
 - **Telegram community**: [t.me/helpbuttons](https://t.me/+-_0KxKJ427VkYjU0)
 - **Email**: [help@helpbuttons.org](mailto:help@helpbuttons.org)
-- **Hosted option**: if you'd rather not manage a server, you can request hosting at [helpbuttons.org](https://helpbuttons.org)
+- **Hosted option**: if you don't have your own server, you can request a network on the team's server at [helpbuttons.org](https://helpbuttons.org)
 
 See [Contact](15contact.md) for the full list of channels.

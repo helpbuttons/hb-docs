@@ -26,7 +26,7 @@ Los usuarios se registran, navegan el mapa, filtran por etiquetas o tipo, se con
 | | |
 |---|---|
 | **Repositorio principal** | [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons) |
-| **Instancia en producción** | [helpbuttons.org](https://helpbuttons.org) |
+| **Web del proyecto** | [helpbuttons.org](https://helpbuttons.org) |
 | **Vista previa de desarrollo** | [dev.helpbuttons.org](https://dev.helpbuttons.org) |
 | **Chat comunitario** | [Telegram](https://t.me/+-_0KxKJ427VkYjU0) |
 | **Contacto** | [help@helpbuttons.org](mailto:help@helpbuttons.org) |
@@ -41,6 +41,6 @@ Los usuarios se registran, navegan el mapa, filtran por etiquetas o tipo, se con
 
 ## Contexto del proyecto
 
-Helpbuttons es desarrollado por [Watch Out, Freedom!](https://wofreedom.org), una asociación sin ánimo de lucro dedicada a promover la cooperación social y el debate público. El proyecto lleva en desarrollo desde 2012 a través de varios prototipos. La versión actual es una plataforma madura y lista para producción, utilizada activamente en comunidades reales.
+Helpbuttons es desarrollado por un grupo de programadores voluntarios. El proyecto lleva en desarrollo desde 2012 a través de varios prototipos. La versión actual es una plataforma madura y lista para producción, utilizada activamente en comunidades reales.
 
 Si quieres apoyar el proyecto, puedes contribuir con código, traducción o documentación — ver [Contacto](contacto.md).

@@ -9,4 +9,4 @@ Open-source platform for building geo-based collaborative networks. Run your own
 
 ---
 
-*Developed by [Watch Out, Freedom!](https://wofreedom.org) · [github.com/helpbuttons](https://github.com/helpbuttons) · [help@helpbuttons.org](mailto:help@helpbuttons.org)*
+*Developed by a group of voluntary programmers · [github.com/helpbuttons](https://github.com/helpbuttons) · [help@helpbuttons.org](mailto:help@helpbuttons.org)*
