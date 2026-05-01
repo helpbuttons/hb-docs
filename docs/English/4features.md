@@ -70,7 +70,7 @@ Every button has a feed — a conversation thread where users can leave messages
 Users can reply privately in a button's feed. Only the button owner and the message author can see private replies.
 
 ### Group messaging
-Users can exchange messages in group conversations, independent of specific buttons.
+There are two fixed group threads, independent of specific buttons: a **community forum** open to all members, and an **admin forum** restricted to the network's administrators. These are the only group conversations — users cannot create additional group chats.
 
 ---
 
