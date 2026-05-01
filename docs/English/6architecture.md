@@ -1,275 +1,310 @@
-#Software Architecture
+# Software Architecture
 
-## Introduction
+## Repository
 
-The project has one main repository: 
+The project lives in a single monorepo:
 
-[Repository](https://github.com/helpbuttons/helpbuttons)
+- **Code**: [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons)
+- **Docs** (this repo): [github.com/helpbuttons/hb-docs](https://github.com/helpbuttons/hb-docs)
 
-The doc repository, this one, can be edited here :
+Active development happens on the `dev` branch. Pull requests should target `dev`. The `main` branch tracks production releases.
 
-[Docs Repository](https://github.com/helpbuttons/hb_docs)
-
+---
 
 ## Technologies
 
-We tried to choose technologies following three concepts: open software, mobile devices and GIS positioning. Trying to keep an eye on the popularity and documentation available for each one.
+Technologies were chosen following three principles: **open software**, **mobile-first**, and **GIS positioning**. We also favored tools with good community adoption and documentation.
 
-#### HTML
-[LINK](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+### Frontend (`web/`)
 
-#### CSS
-[LINK](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+| Technology | Role |
+|---|---|
+| [TypeScript](https://www.typescriptlang.org/) | Typed JavaScript across the whole stack |
+| [Next.js](https://nextjs.org/) | React framework, file-based routing, SSR |
+| [React](https://reactjs.org/) | Component-based UI |
+| [Leaflet](https://leafletjs.com/) | Interactive maps |
+| [RxJS](https://rxjs.dev/) | Reactive state management (see [Store](9store.md)) |
+| [react-icons](https://react-icons.github.io/react-icons/) | Icon set (Bootstrap icons) |
 
-#### Typescript
-TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
+### Backend (`api/`)
 
-### Front:
+| Technology | Role |
+|---|---|
+| [Node.js](https://nodejs.org/) | JavaScript runtime |
+| [NestJS](https://nestjs.com/) | Modular backend framework (OOP + DI) |
+| [TypeORM](https://typeorm.io/) | Database ORM with migration support |
+| [PostgreSQL](https://www.postgresql.org/) | Relational database |
+| [PostGIS](https://postgis.net/) | Spatial extension for geographic queries |
+| [H3](https://h3geo.org/) | Uber's hexagonal spatial indexing library |
+| [Redis](https://redis.io/) | Cache and queue |
+| Handlebars | Email templates |
 
-#### Nextjs
-[LINK](https://nextjs.org/)
+### Infrastructure
 
-#### React
-[LINK](https://reactjs.org/)
+| Technology | Role |
+|---|---|
+| Docker + docker-compose | Container orchestration |
+| Custom PostgreSQL image | PostgreSQL + PostGIS + H3 bundled |
+| Yarn | Package manager |
 
-#### RxJS
-[LINK](https://rxjs.dev/)
+---
 
-RxJS is a library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code. This project is a rewrite of Reactive-Extensions/RxJS with better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface
-
-### Backend :
-
-* #### Nodejs
-[LINK](https://nodejs.org/en/)
-
-#### Nestjs
-[LINK](https://nestjs.com/)
-NestJS is a framework for building efficient, scalable Node.js web applications. It uses modern JavaScript, is built with TypeScript and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
-
-#### PostgreSQL
-[LINK](https://www.postgresql.org/)
-PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California,
-
-#### PostGIS
-[LINK](https://postgis.net/)
-PostGIS is a spatial database extender for PostgreSQL object-relational database. It adds support for geographic objects allowing location queries to be run in SQL.
-
-
-##Basic concepts
-
-In order to understand the project you need to know how three concepts interact: Helpbuttons, Users and Networks.   
-
-A Network is an enviroment where the users can create Helpbuttons. Comparing with other collaborative apps: Airbnb would be a network, a house would be a Helpbutton, and a landlord would be an user.
-
-One server could hold more than one separated Network, and then federate them. Users could create Helpbuttons that could be published in several of those Networks. So, the Helpbuttons is the post, that can be posted in any enviroment (Network) depending on the purpose and owned by an user.
-
-##Conventions / Naming
-
-- Btn is traditional HTML button, Button is the actual post in the app HelpButtons.
-
-- Css naming is lowercase, including file names.
-
-- Folder and archive naming follows the logic ElementClass or ElementModel (i.e. CardNotification) except for main Classes/Models that start having many elements related to the same class (i.e ButtonNew, NetworkNew, ButtonCard, NetworkCard). As a general rule, we want elements to be grouped by type so it's easier to find all together (Cards, Forms, ...). Main Classes, on the contrary, have a lot of elements associated so it's better to have them together by naming the class first.
-
-- For any question you can publish an issue in the repository follow the issue guide (link to issue guide ):
-[Issue Guide](/docs/English/issues&PR)
-
-##MODELS
-
-###BUTTON / HELPBUTTON
-
-A Button or Helpbutton is the app post. Basically when you create a button you make a publication that has some basic fields: A title, a type, a place, a date, a description, images and tags. On top of these records you have fields that change depending on the network type. Depending on those fields your app can be better for transport sharing (duration fields, destination list,...), food sharing (food types selectable, amounts fields,...) or any other purpose that your app can have. All these extra fields come specified in one JSON element that is dependant on a template called ButtonTemplate.
-
-Helpbuttons can be activated and desactivated without the need of deleting them. And everybutton has an interactions record list called the Feed, where users and app changes related to the Button are displayed.
-
-All Helpbuttons by default can be published at the same time in any Network that share the buttonTemplate.
+## Monorepo structure
 
 ```
+helpbuttons/
+├── api/                        # NestJS backend
+│   ├── src/
+│   │   ├── app/                # Bootstrap, global config, validators
+│   │   ├── config/             # Configuration module
+│   │   ├── data/
+│   │   │   ├── migrations/     # TypeORM migrations (run in order)
+│   │   │   └── seed/           # Database seeders and sample data
+│   │   └── modules/            # Feature modules (see below)
+│   ├── locales/                # API i18n strings (en, es, cat, eu, pt)
+│   └── Dockerfile
+│
+├── web/                        # Next.js frontend
+│   ├── public/
+│   │   ├── assets/             # Images, SVGs, routing assets
+│   │   └── locales/            # Frontend i18n strings (en, es, cat, eu, pt)
+│   └── src/
+│       ├── components/         # Composed UI components
+│       ├── elements/           # Atomic UI elements (buttons, forms, fields…)
+│       ├── layouts/            # Page layout wrappers
+│       ├── pages/              # Next.js routes (see Pages section below)
+│       ├── services/           # API client services per domain
+│       ├── shared/             # DTOs, entities, types shared by api and web
+│       ├── state/              # Global app state (RxJS-based, per domain)
+│       └── store/              # Event store (see Store docs)
+│
+├── plugins/                    # Plugin system
+├── postgres/                   # Custom PostgreSQL Docker image
+├── docker-compose.yml
+├── env.sample
+└── README.md
+```
+
+---
+
+## Backend modules (`api/src/modules/`)
+
+Each module owns its entity, DTO, service, controller, and any related guards or strategies.
+
+| Module | Responsibility |
+|---|---|
+| `auth/` | JWT authentication, guards, login strategies |
+| `button/` | Core Button entity — geo-located posts |
+| `network/` | Networks — community containers |
+| `user/` | User profiles |
+| `user-credential/` | Password and credential management |
+| `post/` | Comments and replies on buttons |
+| `group-message/` | Group messaging between users |
+| `activity/` | Activity feed |
+| `tag/` | Tag creation and subscription |
+| `geo/` | Geocoding (Komoot / Pelias / simulate mode) |
+| `invite/` | Invite link system |
+| `mail/` | Email notifications via SMTP + Handlebars templates |
+| `storage/` | File and image storage |
+| `setup/` | First-run setup wizard |
+| `deleteme/` | Account deletion |
+
+---
+
+## Frontend folder conventions (`web/src/`)
+
+The naming convention for files and folders follows **FUNCTION-TYPE** order:
+- `BtnCircle` — Btn is the function (button), Circle is the type
+- `CardNotification` — Card is the function, Notification is the type
+- Exception: when a domain class has many related elements, the class name comes first: `ButtonNew`, `ButtonCard`, `NetworkNew`, `NetworkCard`
+
+### `elements/`
+Atomic building blocks reused everywhere: `Accordion`, `Avatar`, `Btn`, `BtnCircle`, `Checkbox`, `Dropdown`, `Form`, fields, icons, etc.
+
+### `components/`
+Groups of elements that implement a feature: `button/`, `feed/`, `map/`, `popup/`, `nav/`, `network/`, `search/`, `user/`, etc.
+
+### `layouts/`
+Page-level layout wrappers that are not full pages themselves (e.g. `ActivityLayout`, `FeedLayout`).
+
+### `pages/`
+Every subfolder here is a Next.js route. See the [Pages section](7pages.md) for descriptions of each.
+
+### `services/`
+One folder per domain model, containing functions that call the API: `Buttons`, `Networks`, `Users`, `Tags`, `Feed`, `Geo`, `Posts`. Also contains cross-cutting concerns: `Alerts`, `Errors`, `HttpUtils`.
+
+### `state/`
+RxJS-based global state, split per domain: `Activity`, `Alerts`, `Button`, `Explore`, `Map`, `Networks`, `Profile`, `Users`, etc.
+
+### `store/`
+The custom event store. See [Store](9store.md) for full documentation and examples.
+
+---
+
+## Basic domain concepts
+
+In order to understand the project you need to know how three concepts interact: Buttons, Users, and Networks.
+
+A **Network** is an environment where users can create Buttons. Using a common analogy: if Airbnb were built on Helpbuttons, Airbnb itself would be a Network, each listing would be a Button, and each host would be a User.
+
+One server can hold more than one separate Network, and Networks can federate — sharing users and content between instances to facilitate inter-community cooperation.
+
+A **Button** (also called Helpbutton) is the core post. It can be published in any Network that shares the same ButtonTemplate. A **ButtonTemplate** defines the extra fields and structure that differentiate one type of Network from another — a food-sharing network has different fields than a transport-sharing network.
+
+For full model descriptions see the sections below, or the [Core Concepts](concepts.md) page for a simpler overview.
+
+---
+
+## Models
+
+### Button / Helpbutton
+
+A Button is the app's post. Its base fields are: title, type, location, date, description, images, and tags. On top of these, the ButtonTemplate adds extra fields specific to the Network's purpose.
+
+Every button has a **Feed** — a chronological list of interactions (messages, changes, updates) visible to its participants.
+
+```typescript
 export interface IButton {
   id?: any | null,
   owner: any,
   name: string,
   templateButtonId: any | null,
   type: enum,
-  tags: [Itag],
+  tags: [ITag],
   description: string,
-  //required data
   date: [],
-  //GIS DATA
+  // GIS data
   geoPlace: [],
-  // optional values
+  // optional
   networks: [],
-  feedType: enum, //enum {single,group} feed structure
-  templateExtraData: {}, //JSON template contains info about the image and the description (standard) and also about booleans, radius, checklist and every other field related to the network module
+  feedType: enum,           // 'single' | 'group'
+  templateExtraData: {},    // JSON: custom fields defined by ButtonTemplate
 }
-
 ```
 
+### Network
 
-###NETWORK
+The Network is the community container. It has a location, radius, description, avatar, name, and display options (map view, list view, honeycomb zones, etc.). Its ButtonTemplate defines which fields and filters appear in the Explore page and button creation forms.
 
-If the Helpbutton is the post, the network is the group of posts. These posts share structure of ButtonTemplate defined in the network. One Network has a location, a radius,a description, an icon, a name and a list of options that change the visulization of the Helpbuttons (on map, on map by zones, on list only, on list + map) among others. The ButtonTemplate selected in the Network properties define the properties of the Helpbuttons and also the filters displayed in the Explore page and the fields in the creation menu of the Helpbuttons New page. Networks can be also friends of other networks and show their data in common, so users couldd navigate in between them.
+A Network can be **public** (anyone can see and interact) or **private** (requires an invitation to join). The creator is the owner and first moderator. Moderators can assign additional admin roles.
 
-All Helpbuttons created in a network can be shared in another network too if they share the same ButtonTemplate.
+Networks can federate with other Networks — sharing users and content between instances. See [Features](4features.md) for details.
 
-A network can be public (all can see what the Helpbuttons inside) or private (you need to enter to see and interact with the Helpbuttons).
-
-The creator of the network is the owner and moderator. This person can assign moderation roles to other users of the network.  
-
-```
+```typescript
 export interface INetwork {
-  //required data
-  id: string;
+  id: string,
   name: string,
   url: string,
   avatar: string,
-  privacy: string, //enum {publico, privado} default publico
-  roles: string, //enum {admin, user, blocked} default admin, user
-  //not required data
+  privacy: string,          // 'public' | 'private'
   tags: [],
   description: string,
-  buttonsTemplate: {}, //array of objects, each type has an int, a name and a color associated. Default are offer (green), need (red).
-  //data for GIS
-  showButtons : string, //enum {area, point} show Helpbuttons by area not showing exact position on map
+  buttonsTemplate: {},      // button types: name, color, fields
+  showButtons: string,      // 'area' | 'point'
   place: string,
   geoPlace: {},
   radius: string,
   friendNetworks: [],
-  //only for admins:
-  networkRoles: [], //array of roles specific for the net, default are net admins. Each of these net roles have their user list
-  blockedUsers: [], //user ids, the blocked users cannot rejoin a network. only admin users
-  // extra option friendNets:[12,234],}
+  networkRoles: [],         // admin-assigned roles with user lists
+  blockedUsers: [],         // blocked user IDs
 }
-
 ```
 
-###USER
+### User
 
-The users are the person profile that is over the networks. User can jump in and out of networks, and move their Helpbuttons to other networks and to other Users. This way an user can keep their reputation and profile independent.
+Users exist across Networks. They can join and leave Networks, and their reputation and profile travel with them. Reputation is established through **supports** from other users — there is no rating system, only positive endorsements. Moderation relies on blocks and community support signals.
 
-User cannot be rated but their reputation is stablished by supports. Other users can support an user for increasing his reputation. Blocks and low support rates can be used to measure the negative impact of the actions of users that can be moderation objectives by the community.
-
-```
-//User interface
+```typescript
 export interface IUser {
-
   username: string,
   email: string,
   realm: string,
   roles: [],
   token: string,
-
 }
-
-export interface ICurrentUser {
-
-  token: string,
-
-}
-
 ```
 
-###BUTTON / HELPBUTTON TEMPLATE
+### ButtonTemplate
 
-ButtonTemplate is the model that adds the modularity. It's a mix of some boolean elements and a JSON objetc that can include custom information inside. It's used by the app to configure posts and forms and adapt them to the networks' purpose. i.e. A network for selling food would have a ButtonTemplate that includes references to prices, quantities, origins, etc.
+ButtonTemplate is the module that gives each Network its specific character. The `fields` JSON object enumerates extra button fields: dates, prices, booleans, checklists, or any field type added by the community. This is what allows the same codebase to power food-sharing, transport-sharing, skill-exchange, or emergency-support networks.
 
-```
+```typescript
 export interface ITemplateButton {
-//JSON template contains info about the image and the description (standard) and also about booleans, radius, checklist and every other field related to the network module
-  id: any || null,
+  id: any | null,
   name: string,
   type: enum,
-  fields: {},
+  fields: {},   // JSON: custom field definitions
   owner: int,
-
 }
-
 ```
 
-###FEED
-
-A Feed, as we introduced before, is a component that shows a list of interactions related to the component that is attached to. The Feed in the Helpbuttons page shows all interactions (messages, updates, changes... ) related to that Helpbuttons. The Feed in the Profile page shows all interactions related to the user (What we can call ).
-
-It has several filtered options. Filters change depending on the content but also depending on the user role. The owner of the Helpbuttons can see different information in a Feed than other users, etc.
-
-###TAG
-Tags in Helpbuttons are used for search purposes but also to configure notifications. Users could select Tags in the Config page to receive notifications when a Helpbuttons is creted with those tags, or with an specific button-type.
-```
-{
-  "id": "string",
-  "modelName": "string",
-  "modelId": "string",
-  "created": "2022-04-10T14:33:32.823Z",
-  "modified": "2022-04-10T14:33:32.823Z"
-}
-
-```
-
-##The ButtonTemplate Model
-
-The ButtonTemplate is the model that defines the modular elements that will differenciate the Network. Fields is the JSON object that will enumerate the Button fileds and options for that Network. (Add examples)
-```bash
+Example ButtonTemplate JSON:
+```json
 {
   "id": 0,
-  "name": "string",
-  "type": "need",
+  "name": "Event",
+  "type": "offer",
   "fields": {},
-  "created": "2022-04-10T14:28:32.085Z",
-  "modified": "2022-04-10T14:28:32.085Z",
-  "owner": "string"
+  "created": "2024-01-01T00:00:00.000Z",
+  "owner": "1"
 }
 ```
 
-##Models
+### Feed
 
+A Feed is a chronological list of interactions attached to an entity. The **Button Feed** shows all messages, updates, and changes related to a specific button. The **Profile Feed** shows all activity related to a user.
 
+Feed content and visibility vary by user role — the button owner sees different information than regular participants.
 
-##Folder architecture FRONT
+### Tag
 
-The structure follows the typical arrangement of an React / Nextjs project. The naming follows the logic of FIRST FUNCTION - SECOND TYPE. i.e. BtnCirle (Btn is the function -button- and circle the type).
+Tags serve two purposes: **search filtering** and **notification subscription**. Users can subscribe to tags in their settings to receive notifications whenever a button with that tag is created.
 
-Every directory has a .md file that explains the purpose of the folder.
+---
 
-* elements : Basic atoms repeated all over the app (Accordion, Avatar, Btn, BtnCircle, Checkbox, Dropdown, Form...)  
+## Adding a new attribute to a Network
 
-* components : Group of elments that complete and develop a function (button, feed, map, popup, nav, network, picker, popup, search, user...)
+This is the standard flow for extending a domain model — use this as a reference for contributing:
 
-* layouts : Group of components that are not enough to define a page. (May be erased?)
-
-* pages : Urls of the application. In Nextjs the subfolders included in this foldder define the routes. (ButtonFile, ButtonNew, Explore, Faqs, Login, ...). You can check all of them in the Pages section:
-
-[http://localhost:8000/English/pages/](http://localhost:8000/English/pages/)
-
-* modules : this a folder for complex functionalities that shoulddn't be separated by the general foler structure. i.e. You want to have the services and the reacts components together in a directory for authentication functionaliity. The folder has a fake example inside.
-
-* services: Each model has a folder in this directory to communicate with the API (Helpbuttons, ButtonTemplates, Feed, Networks, Tags, Users). Also basic API functionalities (Alerts, Errors, HttpUtils -localStorage- and Store) have a service in this folder.
-
-* store : It's a custom script written by @hirunatan in Telegram. It's intended for storing temporal data in the session (without refreshing the page, after refresh data is lost) and avoid the need of using more complex store mngmnt software.
-
-[http://localhost:8000/English/store/](http://localhost:8000/English/store/)
-
-It's an rxjs event stream service that you can subscribe to. If you're not familiar with observables follow the link to [RxJS](https://rxjs.dev/) page.
+**1. Backend — define in entity and DTO:**
 
 ```
-// === Hook para suscribirse al store ===
-
-export function useRef(store: Store, selector: func) {
-  const [value, setValue] = useState(null);
-
-  useEffect(() => {
-    store.state$.subscribe((state) => {
-      const newValue = selector(state);
-      if (newValue !== value) {
-        setValue(selector(state));
-      }
-    });
-  });
-
-  return value;
-}
-
+api/src/modules/network/network.entity.ts   # database column definition
+api/src/modules/network/network.dto.ts      # POST request validation
 ```
 
+**2. Generate and run migration:**
 
+```sh
+yarn migration:generate src/data/migrations/add-my-attribute
+yarn migration:run
+```
 
-##Folder architecture BACK
+**3. Frontend — add to configuration form:**
+
+```
+web/src/pages/Configuration/index.tsx       # add field to the submit handler
+```
+
+The same pattern applies to `button/`, `user/`, and any other module.
+
+---
+
+## Geocoding
+
+The geocoding system is pluggable. Providers are configured via environment:
+
+- **Komoot** (Photon) — default, open and free
+- **Pelias** — self-hostable geocoding stack
+- **Simulate** — for local development without external calls
+
+---
+
+## Internationalisation (i18n)
+
+The app ships with translations for: **English**, **Spanish**, **Catalan**, **Basque**, **Portuguese**.
+
+- API strings: `api/locales/<lang>/`
+- Frontend strings: `web/public/locales/<lang>/`
+
+To add a new language, copy one of the existing locale folders and translate the strings.

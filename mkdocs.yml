@@ -1,8 +1,8 @@
-site_name: Helpbuttons.org
-site_description: Description...
+site_name: Helpbuttons Documentation
+site_description: Open-source platform for building geo-based collaborative networks
 
-repo_url: https://github.com/helpbuttons/hb-docs
-edit_uri: https://github.com/helpbuttons/hb-docs
+repo_url: https://github.com/helpbuttons/helpbuttons
+edit_uri: https://github.com/helpbuttons/hb-docs/edit/main/docs/
 
 
 theme:
@@ -10,10 +10,13 @@ theme:
   language: en
   include_search_page: true
   search_index_only: true
+  logo: images/hb_logo_blue.png
+  favicon: images/hb_logo_blue.png
 
 plugins:
   - search
   - render_swagger
+
 markdown_extensions:
   - toc:
       permalink: "#"
@@ -22,13 +25,43 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
+nav:
+  - Home: index.md
+  - English:
+    - Overview: English/index.md
+    - Philosophy: English/2philosophy.md
+    - Features: English/4features.md
+    - Core Concepts: English/concepts.md
+    - Architecture: English/6architecture.md
+    - Pages: English/7pages.md
+    - Store: English/9store.md
+    - Installation: English/5installation.md
+    - Coding Standards: English/coding-standards.md
+    - Commit Conventions: English/11commit.md
+    - Issues & PRs: English/12issues&PR.md
+    - Build Community: English/3buildCommunity.md
+    - Contact: English/15contact.md
+  - Castellano:
+    - Inicio: Castellano/index.md
+    - Filosofía: Castellano/filosofia.md
+    - Características: Castellano/caracteristicas.md
+    - Conceptos: Castellano/conceptos.md
+    - Arquitectura: Castellano/arquitectura.md
+    - Instalación: Castellano/instalacion.md
+    - Normas de código: Castellano/normas-codigo.md
+    - Convenciones de commits: Castellano/commits.md
+    - Issues y PRs: Castellano/issues-pr.md
+    - Construir comunidad: Castellano/construir-comunidad.md
+    - Contacto: Castellano/contacto.md
+  - API: api.md
+
 extra:
   social:
-    - icon: fontawesome/brands/gitlab
-      link: https://gitlab.com/hb-dev/
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/repo
+    - icon: fontawesome/brands/github
+      link: https://github.com/helpbuttons
     - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/hb-dev
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/helpbuttons
+      link: https://hub.docker.com/u/helpbuttons
+    - icon: fontawesome/brands/mastodon
+      link: https://social.coop/@helpbuttons
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/+-_0KxKJ427VkYjU0

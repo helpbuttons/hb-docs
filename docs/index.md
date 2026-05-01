@@ -1,22 +1,12 @@
-# Run Documentation
+![Helpbuttons](images/base_jumbo_03.jpg)
 
-# Run Documentation in local
+# Helpbuttons Documentation
 
-Checkout the latest docs generated:
+Open-source platform for building geo-based collaborative networks. Run your own cooperation app — under total community control.
 
-[https://helpbuttons.github.io/hb_docs](https://helpbuttons.github.io/hb_docs)
+- [English documentation](English/index.md)
+- [Documentación en castellano](Castellano/index.md)
 
-First remember to install and execute docker.
+---
 
-# serve documentation
-`$ docker-compose up serve`
-
-# build documentation
-`$ docker-compose up build`
-
-```
-$ mkdir local
-$ cp swagger.yaml local/
-$ docker run --rm -v "${PWD}/local:/local" openapitools/openapi-generator-cli generate  -i /local/swagger.yaml     -g typescript-node     -o /local/backend
-$ cp -r local/backend/* ../hb-back/
-```
+*Developed by [Watch Out, Freedom!](https://wofreedom.org) · [github.com/helpbuttons](https://github.com/helpbuttons) · [help@helpbuttons.org](mailto:help@helpbuttons.org)*

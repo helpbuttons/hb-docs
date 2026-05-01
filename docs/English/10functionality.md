@@ -31,7 +31,6 @@
   `Images`
 
 - Button destruction
-- Button activation/deactivation
 - Button edition
   `Net`
   `Type`
@@ -148,7 +147,6 @@
 - Password Recovery
 - Button creation
 - Button destruction
-- Button activation/deactivation
 - Button edition
 - User edition
 - User position tracking

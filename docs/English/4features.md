@@ -1,73 +1,141 @@
 # Features
 
-Helpbuttons offer many features, outlined bellow. For a walkthrough of the app and examples check the following video. 
+Helpbuttons is a feature-rich platform for geo-based community cooperation. Below is a full overview of what it offers out of the box.
 
-# Helpbuttons Features
+For a deeper explanation of how these features work together, see [Core Concepts](concepts.md).
 
-## Basic Helpbuttons (posts) parts
-A Helpbutton has a basic structure of a location, description, name, tags and image(s).
+---
 
-## Geolocation
-Add location to every post. Search by place and dispay in map or list. Display results by distance.
+## Buttons (posts)
 
-## Hide exact location
-Users can hide the posts exact location and keep privacy while sharing their posts.
+### Basic structure
+Every Button has: title, location, description, type, tags, and images. The type and any extra fields are defined by the Network's ButtonTemplate.
 
-## User message exchange
-Comments/messages in every 
+### Geolocation
+Buttons are tied to a geographic location. Users can search by place, browse on a map, or filter by distance. Results display on map and list simultaneously.
 
-## Private messages
-Inside every Helpbutton, users can reply in private so just the hepbuttons creator and the message author can see them. 
+### Hide exact location
+Users can publish a button with an approximate area instead of an exact point, preserving privacy while still enabling location-based discovery.
 
-## Tag creation and suscription 
-Users can create tags and associate them to the helpbuttons. Then search and suscribe to them in the ButtonFilters view or in the Config page so you receive the notifications.
+### Multiple images
+Upload multiple images per button. They display as a gallery on the button page.
 
-## Full description search
-Search terms also indescriptions and titles and display results in map an list.
+### Events
+Adding a date to a button turns it into an event. Events can be listed chronologically, and they expire automatically after their date passes. Recurring dates are also supported.
 
-## Email notification system
-Users can enable receive notifications of messages, helpbutton created, deleted and other updates.
+### Price and currency
+Users can add a price to a button. A price of `0` displays a "Free" badge. "Price on request" is also an option. Currency is typed freely (e.g. EUR, USD). No currency conversion is provided.
 
-## Helpbuttons (posts) follow
-An user can follow another user's Helpbuttons in order to receive the news about changes in the state and owner messages.
+---
 
-## Add phone
-Users can add phone to receive direct calls, whatsapp and telegram links
+## Modular button templates
 
-#MultiImage upload
-Upload as many images as you want to the Helputtons and display in gallery.
+The defining characteristic of Helpbuttons is the **ButtonTemplate** system. Network admins define button types with custom fields: date, price, boolean, list, or any field type the community develops. This makes the same codebase work for food sharing, transport, skill exchange, emergency coordination, or any other use case.
 
-## Decentralized administration managment
-Network's Admin can assign as many admins as needed. Those admin can moderate, delete and block any other user content. If they add a phone, they can be reached by other users for support from the HomeInfo page of their Network.
+Examples of custom fields: departure/destination (transport), quantities and food type (food sharing), duration and skill level (skill exchange), event capacity (events).
 
-## User moderation and administration
-Admins can block users. 
+---
 
-## Federation of Network Instances
-If two Networks federate, users can jump from one network to another with the same credentials, and Networks can share content between them without any problem. This is useful to integrate communities in a fast and easy way, helping integration and social cooperation.
+## Maps and exploration
 
-## Customizable appearience, naming and
-Network's admins can customize Network's colors, images, name, description, location, preferred tags, language, Hellpbuttons types, and other features. 
+### Map views
+The Explore page offers multiple views:
+- **Map + list**: pins on the map, summary list alongside
+- **Honeycomb zones**: buttons grouped by geographic area, click to expand
+- **List only**: for text-heavy browsing or low-bandwidth use
 
-## Modular Helpbutton (post) data and features. Button Templates
-A distinc characteristic of the Helpbutton tool is the modular structure of the posts. Every Helpbutton created by the Admins can be customized with different parts or modules. I.e. A Helpbutton type created by the admin called 'Event' Has a name, description, a set of tags, location and a date (this date was added by the admin to this type) Admins can add as many fields as the templates enabled in their Network.  Date, price, boolean list... or any other field developed in the future by the community could be added, enabling infinite combinations and options. 
+### Deep URL routing
+The map state (zoom, lat/lng, selected button) is encoded in the URL, making it fully shareable and linkable.
 
-## Event creation and notification
-Users can add date to Helbuttons, becoming and event. Events can be listed by date, and they expire after their date is passed. That can have a periodic date and some other feature.
+### Embeddable map
+Networks can embed a read-only map widget on external websites.
 
-## Currency managment and order by price
-Users can a price to Helpbuttons, activating order by price. By adding a '0' the Helbutton would display a 'Free' Mark. Users can also choose to display a 'Price to consult' mark. 
-Currency can be freely selected by typing the acronym in the text field.
-The app doesn't offer currency exchange at the moment. We're open to integrate with any currency if any developer is interested.
+---
 
-## Private Network option. Invitations
-Administrators can change the privacy setting to allow just Signup with invitations. Invitations links can be limited by number of user and time available. Visitors could see the apps Helpbuttons but they won't be able to interact with them unless they get an invitation from an logged user.
+## Communication
 
-## Public/private profile option
-Users can display their Helpbuttons in their profile or hide them. If they display them, it can become a page useful to share with others.
+### Button feed (public messages)
+Every button has a feed — a conversation thread where users can leave messages, updates, and coordination notes. Visible to all participants.
 
-## Custom domain support  
-If you choose to use our server to deploy your network, we support using your custom domain 'example.com' if you want.
+### Private messages
+Users can reply privately in a button's feed. Only the button owner and the message author can see private replies.
+
+### Group messaging
+Users can exchange messages in group conversations, independent of specific buttons.
+
+---
+
+## Tags
+
+### Tag creation and search
+Users create tags when posting buttons. Tags are searchable and filterable across the Network.
+
+### Tag subscriptions and notifications
+Users can subscribe to tags in their settings. When a new button is created with a subscribed tag, they receive an email notification.
+
+---
+
+## Email notifications
+
+Users can enable or disable email notifications for:
+- New messages in their buttons' feeds
+- New direct private messages
+- New buttons created with subscribed tags
+- Button status changes
+
+---
+
+## User profiles
+
+### Public or private profile
+Users can choose to show or hide their buttons on their public profile page. A public profile with a list of buttons can serve as a personal sharing page.
+
+### Phone contact
+Users can add a phone number to their profile, enabling direct calls, WhatsApp, and Telegram links from other users.
+
+### Follow buttons
+Users can follow other users' buttons to receive updates on changes and owner messages.
+
+### Reputation via endorsements
+There is no star rating. Users can endorse (support) each other — a social trust signal rather than a numerical score.
+
+---
+
+## Moderation and administration
+
+### Decentralized administration
+Network owners can assign any number of additional admins. Admins can moderate, delete, and block content or users. Multiple admins distribute the workload and increase community trust.
+
+### User blocking
+Admins can block users within a Network or globally. Blocked users cannot rejoin.
+
+### Invitation-only networks
+Admins can set a Network to private. Visitors can see buttons but cannot interact without an invitation. Invitation links can be limited by number of uses and expiration time.
+
+---
+
+## Network customization
+
+### Appearance
+Admins can customize: colors, logo/avatar, name, description, preferred tags, button types, map view defaults, and language.
+
+### Location and radius
+Each Network has a home location and a geographic radius that sets the default map view.
+
+### Custom domain support
+When hosting at helpbuttons.org, you can use a custom domain (e.g. `coopera.mibarrio.org`).
+
+---
+
+## Federation
+
+If two Networks federate, users can move between them with the same credentials and content can be shared across instances. This is the building block for a decentralized, inter-connected ecosystem of communities. See [Philosophy](2philosophy.md) for more context on why this matters.
+
+---
+
+## Internationalisation
+
+The platform ships with support for: **English, Spanish, Catalan, Basque, Portuguese**. Additional languages can be added by translating the locale files in `api/locales/` and `web/public/locales/`.
 
 
 

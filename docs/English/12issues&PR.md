@@ -1,8 +1,12 @@
-#Issues & PR Policy
+# Issues & PR Policy
 
-Issue tracker is **ONLY** used for reporting bugs. New features should be discussed on our [Telegram](https://t.me/+-_0KxKJ427VkYjU0)  channel. Please use [Github](https://github.com/helpbuttons/) for supporting issues.
+The issue tracker is **ONLY** used for reporting bugs. New features and ideas should be discussed first in our [Telegram](https://t.me/+-_0KxKJ427VkYjU0) community channel.
 
-Copy any of this to start an issue in Github:
+The repository is at [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons). Open issues and pull requests there.
+
+Before opening an issue, search for existing ones to avoid duplicates.
+
+Copy any of these templates to start an issue:
 
 #Bug Issue Template
 <!--- Provide a general summary of the issue in the Title above -->

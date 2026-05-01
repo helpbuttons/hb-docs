@@ -1,19 +1,46 @@
-# Overview
+![Helpbuttons](../images/base_jumbo_03.jpg)
 
-# ¿What's HelpButtons?
+# What is Helpbuttons?
 
-Helpbuttons.org is an opensource tool for collaborative network making. It's a CMS for cooperative websites -like airbnb, uber, glovo, blablacar and so many others- specialized in connecting unknown people by purposes in real life. Shortly, we want to democratize collaborative-apps-creation, and we're designing a tool for building those types of websites without programming knowledge.
+Helpbuttons is an open-source, self-hostable platform for building geo-based collaborative networks. It lets communities create their own cooperation tool — like mutual aid maps, resource sharing boards, or local exchange networks — hosted under their own control, adapted to their own needs.
 
-# Install Helpbuttons in my server
+Think of apps like Airbnb, BlaBlaCar, or food-sharing platforms. Helpbuttons gives any community the skeleton to build that kind of tool, without the corporate layer, the data harvesting, or the algorithmic agenda. You run it. You own it.
 
-For a brief introduction of how to install Helpbuttons in your server, visit this guide. If you want to install it to contribute with code, you can see the Contributing Installation guide. Or visit this video.
+## Who is it for?
 
-Helpbuttons has two parts, front app folder calld 'web', and a backend app folder called 'api'. You just need to run them both, together with the database, to have your instance working. 
+- **Mutual aid groups** coordinating support within a neighborhood or town
+- **Community organizations** sharing resources, events, or skills
+- **Schools and cooperatives** that need a private, focused network
+- **Emergency teams** mapping needs and offers in a crisis
+- **Town halls and local governments** building participatory tools for their territory
+- **Anyone** who wants to build a collaboration app without starting from scratch
 
-# Create your own instance of Helpbuttons in our servers
+## How does it work?
 
-If you just need a fast way yo create your Network and start cooperating, follow the following link and select the plan you want. 
+Each Helpbuttons installation hosts one or more **Networks**. A Network is a community space with its own name, location, configuration, and moderation. Inside a Network, people publish **Buttons** — geo-located posts that represent offers, needs, events, or any other type of interaction the community defines.
 
-# Configure your Network
+Users register, browse the map, filter by tags or type, contact each other via messages, and organize their cooperation in one shared space.
 
-Once installed, you need to configure your network according to your needs, in order to see an example, visit the following video. 
+## Quick links
+
+| | |
+|---|---|
+| **Main repository** | [github.com/helpbuttons/helpbuttons](https://github.com/helpbuttons/helpbuttons) |
+| **Live instance** | [helpbuttons.org](https://helpbuttons.org) |
+| **Dev preview** | [dev.helpbuttons.org](https://dev.helpbuttons.org) |
+| **Community chat** | [Telegram](https://t.me/+-_0KxKJ427VkYjU0) |
+| **Contact** | [help@helpbuttons.org](mailto:help@helpbuttons.org) |
+
+## Getting started
+
+- **I want to install it** → [Installation Guide](installation.md)
+- **I want to understand the code** → [Architecture](architecture.md) · [Core Concepts](concepts.md)
+- **I want to contribute** → [Contributing Guide](contributing.md)
+- **I want to understand the project values** → [Philosophy](philosophy.md)
+- **I want to grow a community with it** → [Spreading Helpbuttons](spreading.md)
+
+## Project background
+
+Helpbuttons is developed by [Watch Out, Freedom!](https://wofreedom.org), a nonprofit organization dedicated to promoting social cooperation and public debate. The project has been in development since 2012 through several prototypes. The current version is a mature, production-ready platform actively used in real communities.
+
+If you want to support the project, you can donate or contribute code, translation, or documentation — see [Contact](contact.md).
