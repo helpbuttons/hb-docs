@@ -84,7 +84,7 @@ El panel de compartir, accesible desde la pantalla de inicio. Ofrece dos grupos 
 
 ![Tarjetas de invitación QR imprimibles](../images/screencaps/01_compartir_b.jpg)
 
-El generador de invitaciones produce una hoja PDF lista para imprimir con múltiples códigos QR por página — listos para recortar y repartir en eventos, tablones de anuncios o espacios comunitarios. Cada QR enlaza directamente a la página de registro de la red.
+El generador de invitaciones produce una hoja PDF lista para imprimir con múltiples tarjetas QR por página — listas para recortar y repartir en eventos, tablones de anuncios o espacios comunitarios. Cada tarjeta es una credencial personal: escanear el QR permite al usuario acceder a la red directamente, sin necesidad de correo electrónico ni contraseña.
 
 **Compartir contenido de la red** — imprimir la lista actual de botones como **boletín en PDF**, insertar la red en un sitio web externo mediante un **iframe**, o suscribirse al **feed RSS** de la red para seguir las nuevas publicaciones desde cualquier lector de feeds o herramienta de redes sociales.
 
@@ -198,4 +198,4 @@ Una tabla con búsqueda de todos los botones publicados. Cada fila muestra el t�
 
 ![Invitaciones QR](../images/screencaps/14_diginvites_menu.jpg)
 
-Genera enlaces de invitación compartibles con fechas de expiración opcionales (día, semana, mes o nunca). Cada invitación se muestra como código QR y como URL de texto. Escanear el QR o seguir el enlace lleva al usuario directamente a una página de registro preautorizada para la red — sin necesidad de invitación por email.
+Genera tarjetas de invitación con fechas de expiración opcionales (día, semana, mes o nunca). Cada tarjeta se muestra como código QR y como URL de texto. El QR funciona como credencial personal — escanearlo permite al usuario acceder a la red directamente, sin necesidad de correo electrónico ni contraseña. Las tarjetas pueden imprimirse y distribuirse físicamente o compartirse de forma digital.

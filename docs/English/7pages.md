@@ -84,7 +84,7 @@ The sharing panel, accessible from the home screen. It provides two groups of ac
 
 ![Printable QR invitation cards](../images/screencaps/01_compartir_b.jpg)
 
-The invitation card generator produces a print-ready PDF sheet of QR codes — multiple cards per page, ready to cut and hand out at events, noticeboards, or community spaces. Each QR links directly to the network's registration page.
+The invitation card generator produces a print-ready PDF sheet of QR cards — multiple cards per page, ready to cut and hand out at events, noticeboards, or community spaces. Each card is a personal credential: scanning the QR lets the user log in to the network directly, with no email address or password required.
 
 **Share network content** — print the current button list as a **PDF bulletin**, embed the network in an external website using an **iframe**, or subscribe to the network's **RSS feed** to follow new publications through any feed reader or social media tool.
 
@@ -198,4 +198,4 @@ A searchable table of all published buttons. Each row shows the title, type badg
 
 ![QR invitations](../images/screencaps/14_diginvites_menu.jpg)
 
-Generates shareable invitation links with optional expiry dates (day, week, month, or never). Each invitation renders as a QR code and a plain URL. Scanning the QR or following the link takes the user directly to a registration page pre-authorised for the network — no email invite needed.
+Generates invitation cards with optional expiry dates (day, week, month, or never). Each card is rendered as a QR code and a plain URL. The QR acts as a personal credential — scanning it logs the user into the network directly, with no email address or password required. Cards can be printed and distributed physically or shared digitally.
