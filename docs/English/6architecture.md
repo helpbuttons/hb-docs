@@ -22,7 +22,7 @@ Technologies were chosen following three principles: **open software**, **mobile
 | [TypeScript](https://www.typescriptlang.org/) | Typed JavaScript across the whole stack |
 | [Next.js](https://nextjs.org/) | React framework, file-based routing, SSR |
 | [React](https://reactjs.org/) | Component-based UI |
-| [Leaflet](https://leafletjs.com/) | Interactive maps |
+| [Pigeon Maps](https://pigeon-maps.js.org/) | Interactive maps (lightweight, no external dependencies) |
 | [RxJS](https://rxjs.dev/) | Reactive state management (see [Store](9store.md)) |
 | [react-icons](https://react-icons.github.io/react-icons/) | Icon set (Bootstrap icons) |
 

@@ -2,7 +2,7 @@
 
 ![Helpbuttons](../images/hb_logo_blue.png){ width=80 align=right }
 
-Helpbuttons es desarrollado por un grupo de programadores voluntarios que creen en herramientas abiertas para la cooperación social.
+Helpbuttons ha sido desarrollado por un grupo de programadores voluntarios que creen en herramientas abiertas para la cooperación social. El objetivo actual es hacer crecer el proyecto hasta convertirlo en una plataforma sostenible.
 
 No dudes en contactarnos a través de cualquiera de nuestros canales, proponer ideas o formar parte de la comunidad.
 

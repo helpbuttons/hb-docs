@@ -41,6 +41,6 @@ Los usuarios se registran, navegan el mapa, filtran por etiquetas o tipo, se con
 
 ## Contexto del proyecto
 
-Helpbuttons es desarrollado por un grupo de programadores voluntarios. El proyecto lleva en desarrollo desde 2012 a través de varios prototipos. La versión actual es una plataforma madura y lista para producción, utilizada activamente en comunidades reales.
+Helpbuttons ha sido desarrollado por un grupo de programadores voluntarios. El proyecto lleva en desarrollo desde 2012 a través de varios prototipos. La versión actual es una plataforma madura y lista para producción, utilizada activamente en comunidades reales. El objetivo actual es hacer crecer el proyecto hasta convertirlo en una plataforma sostenible.
 
 Si quieres apoyar el proyecto, puedes contribuir con código, traducción o documentación — ver [Contacto](contacto.md).

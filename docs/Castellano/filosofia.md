@@ -58,7 +58,7 @@ El modelo está inspirado en el fediverso: comunidades independientes que pueden
 
 Las plataformas propietarias pueden cerrarse, adquirirse o pivotar. Los proyectos de código abierto con amplias comunidades de contribuidores son más resilientes. Al hacer Helpbuttons abierto, invitamos a desarrolladores, traductores, organizadores comunitarios y diseñadores de todo el mundo a mejorarlo y mantenerlo juntos.
 
-La sostenibilidad a largo plazo del proyecto depende de su comunidad de contribuidores — programadores voluntarios, traductores, diseñadores y organizadores comunitarios que creen en herramientas abiertas para la cooperación social.
+El proyecto ha sido construido por programadores voluntarios, traductores, diseñadores y organizadores comunitarios que creen en herramientas abiertas para la cooperación social. El objetivo actual es convertirlo en una plataforma sostenible — que pueda mantenerse y seguir mejorando a largo plazo.
 
 ---
 

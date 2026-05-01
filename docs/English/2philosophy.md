@@ -58,7 +58,7 @@ The model is inspired by the fediverse: independent communities that can interop
 
 Proprietary platforms can be shut down, acquired, or pivoted. Open-source projects with broad contributor communities are more resilient. By making Helpbuttons open, we invite developers, translators, community organizers, and designers from around the world to improve and maintain it together.
 
-The project's long-term sustainability depends on the community of contributors — voluntary programmers, translators, designers, and community organizers who believe in open tools for social cooperation.
+The project has been built by voluntary programmers, translators, designers, and community organizers who believe in open tools for social cooperation. The current goal is to grow it into a sustainable platform — one that can sustain itself and keep improving over the long term.
 
 ---
 

@@ -41,6 +41,6 @@ Users register, browse the map, filter by tags or type, contact each other via m
 
 ## Project background
 
-Helpbuttons is developed by a group of voluntary programmers. The project has been in development since 2012 through several prototypes. The current version is a mature, production-ready platform actively used in real communities.
+Helpbuttons has been developed by a group of voluntary programmers. The project has been in development since 2012 through several prototypes. The current version is a mature, production-ready platform actively used in real communities. The current goal is to grow the project into a sustainable platform.
 
 If you want to support the project, you can donate or contribute code, translation, or documentation — see [Contact](15contact.md).

@@ -22,7 +22,7 @@ Las tecnologías se eligieron siguiendo tres principios: **software abierto**, *
 | [TypeScript](https://www.typescriptlang.org/) | JavaScript tipado en toda la pila |
 | [Next.js](https://nextjs.org/) | Framework React, enrutamiento por archivos, SSR |
 | [React](https://reactjs.org/) | UI basada en componentes |
-| [Leaflet](https://leafletjs.com/) | Mapas interactivos |
+| [Pigeon Maps](https://pigeon-maps.js.org/) | Mapas interactivos (ligero, sin dependencias externas) |
 | [RxJS](https://rxjs.dev/) | Gestión reactiva del estado |
 | [react-icons](https://react-icons.github.io/react-icons/) | Iconos (set Bootstrap) |
 
