@@ -1,5 +1,6 @@
 site_name: Helpbuttons Documentation
 site_description: Open-source platform for building geo-based collaborative networks
+site_url: https://helpbuttons.github.io/hb-docs/
 
 repo_url: https://github.com/helpbuttons/helpbuttons
 edit_uri: https://github.com/helpbuttons/hb-docs/edit/main/docs/
