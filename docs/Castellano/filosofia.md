@@ -20,6 +20,8 @@ Helpbuttons aspira a convertirse en una herramienta para coordinar la cooperaci�
 
 El estado ideal de Helpbuttons es **una red de redes** — instancias que federan para compartir usuarios y contenido entre sí, facilitando la cooperación y el apoyo mutuo entre comunidades sin control centralizado.
 
+Más allá del software en sí, Helpbuttons es un proyecto de promoción de la colaboración. Establecemos alianzas con organizaciones, asociaciones e instituciones públicas que comparten nuestros valores, aportando la infraestructura técnica como nuestra parte de un esfuerzo más amplio. También estamos poniendo en marcha proyectos de acompañamiento — que combinan formación en competencia digital y en software libre — para dar a las personas las herramientas y la confianza necesarias para participar en este nuevo mundo en sus propios términos. La tecnología solo es útil cuando la gente la entiende, puede cuestionarla y puede hacerla suya.
+
 ---
 
 ## Valores fundamentales
@@ -59,6 +61,8 @@ El modelo está inspirado en el fediverso: comunidades independientes que pueden
 Las plataformas propietarias pueden cerrarse, adquirirse o pivotar. Los proyectos de código abierto con amplias comunidades de contribuidores son más resilientes. Al hacer Helpbuttons abierto, invitamos a desarrolladores, traductores, organizadores comunitarios y diseñadores de todo el mundo a mejorarlo y mantenerlo juntos.
 
 El proyecto ha sido construido por programadores voluntarios, traductores, diseñadores y organizadores comunitarios que creen en herramientas abiertas para la cooperación social. El objetivo actual es convertirlo en una plataforma sostenible — que pueda mantenerse y seguir mejorando a largo plazo.
+
+**Helpbuttons nunca cobra al usuario final.** Lo que cada comunidad haga con su red — si la mantiene gratuita, establece un sistema de donaciones o cobra por algún servicio — es decisión suya y forma parte de su soberanía. Sin embargo, para las comunidades que eligen hospedar su red en el servidor del equipo de Helpbuttons en lugar de auto-hospedarse, cobramos una tarifa fija que cubre el acompañamiento, el mantenimiento y la asistencia técnica. Este modelo mantiene el software libre y abierto para todo el mundo mientras permite que el proyecto se sostenga.
 
 ### La interacción humana primero
 

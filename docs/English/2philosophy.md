@@ -20,6 +20,8 @@ Helpbuttons aims to become a tool for coordinating social cooperation, especiall
 
 The ideal state of Helpbuttons is **a network of networks** — instances that federate to share users and content between them, facilitating cooperation and mutual support across communities without centralized control.
 
+Beyond the software itself, Helpbuttons is a project for promoting collaboration. We build alliances with organizations, associations, and public institutions that share our values, contributing the technical infrastructure as our part of a broader effort. We are also developing accompaniment programmes — combining digital literacy training and education in free and open-source software — to give people the tools and confidence to participate in this new landscape on their own terms. Technology is only useful when people understand it, can question it, and can make it their own.
+
 ---
 
 ## Core values
@@ -59,6 +61,8 @@ The model is inspired by the fediverse: independent communities that can interop
 Proprietary platforms can be shut down, acquired, or pivoted. Open-source projects with broad contributor communities are more resilient. By making Helpbuttons open, we invite developers, translators, community organizers, and designers from around the world to improve and maintain it together.
 
 The project has been built by voluntary programmers, translators, designers, and community organizers who believe in open tools for social cooperation. The current goal is to grow it into a sustainable platform — one that can sustain itself and keep improving over the long term.
+
+**Helpbuttons never charges end users.** What communities do with their own network — whether they keep it free, set up a donation system, or charge for specific services — is entirely their decision and their sovereignty. However, for communities that choose to host their network on the Helpbuttons team's server rather than self-hosting, we charge a fixed fee that covers accompaniment, maintenance, and technical assistance. This model keeps the software free and open for everyone while allowing the project to sustain itself.
 
 ### Human interaction first
 

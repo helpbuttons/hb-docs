@@ -29,8 +29,10 @@ No dudes en contactarnos a través de cualquiera de nuestros canales, proponer i
 
 ## Para comunidades que quieren usar Helpbuttons
 
-- **Auto-hospedaje**: sigue la [Guía de instalación](instalacion.md) — lleva menos de una hora
-- **Opción hospedada**: si no tienes tu propio servidor, puedes solicitar una red en el servidor del equipo en [helpbuttons.org](https://helpbuttons.org)
+El software es gratuito y de código abierto. También ofrecemos opciones gratuitas para comunidades que necesitan apoyo para comenzar — contáctanos y encontramos la manera de ayudar.
+
+- **Auto-hospedaje**: sigue la [Guía de instalación](instalacion.md) — lleva menos de una hora y es completamente gratuito
+- **Opción hospedada**: si no tienes tu propio servidor, puedes solicitar una red en el servidor del equipo en [helpbuttons.org](https://helpbuttons.org). Se aplica una tarifa fija que cubre el acompañamiento, el mantenimiento y la asistencia técnica — los usuarios finales de tu red nunca son cobrados por nosotros
 - **Ayuda para empezar**: únete al Telegram y pregunta — la comunidad está feliz de apoyar a los nuevos administradores de Redes
 
 ---

@@ -29,8 +29,10 @@ Feel free to reach out through any of our channels, propose ideas, or become par
 
 ## For communities wanting to use Helpbuttons
 
-- **Self-host**: follow the [Installation Guide](5installation.md) — it takes less than an hour
-- **Hosted option**: if you don't have your own server, you can request a network on the team's server at [helpbuttons.org](https://helpbuttons.org)
+The software is free and open-source. We also offer free options for communities that need support getting started — get in touch and we'll find a way to help.
+
+- **Self-host**: follow the [Installation Guide](5installation.md) — it takes less than an hour, and it's completely free
+- **Hosted option**: if you don't have your own server, you can request a network on the team's server at [helpbuttons.org](https://helpbuttons.org). A fixed fee applies to cover accompaniment, maintenance, and technical assistance — end users of your network are never charged by us
 - **Help getting started**: join Telegram and ask — the community is happy to support new Network admins
 
 ---
