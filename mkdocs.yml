@@ -50,6 +50,7 @@ nav:
     - Conceptos: Castellano/conceptos.md
     - Arquitectura: Castellano/arquitectura.md
     - Instalación: Castellano/instalacion.md
+    - Páginas: Castellano/paginas.md
     - Normas de código: Castellano/normas-codigo.md
     - Convenciones de commits: Castellano/commits.md
     - Issues y PRs: Castellano/issues-pr.md

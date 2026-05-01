@@ -1,64 +1,181 @@
-#Pages
+# Pages
 
-Pages of the app, with a brief ddescription, are attached above.
+A visual walkthrough of the main screens in a Helpbuttons Network. Screenshots are taken from a live community network — "Vecinos del Campillín" — used as an example.
 
+---
 
-##ButtonFile
-It's the Button post page. Here you can see complete Button's data, Network's ButtonTemplate specific fields included. Also you can find the Button's Feed, with all the conversation and activity related to the Button. You can access this page from any shared link to the button or through the Explore page.
+## User pages
 
-##ButtonNew
-Button creation form. Fields inside change depending on the ButtonTemplate associated with the Network.
+### Home
 
-##Config
-Page for customizing user account. Administrate profile options, security, notifications, user's Networks, etc.
+![Home page](../images/screencaps/1_home.jpg)
 
-##Explore
-Explore is the main view. It's the page where you can see the HelpButtons -the posts- in different views and with different filters. The different views and filters are configurable in the Network's options section in creator user's Config view. These types of view are:
+The landing page of the Network. It shows the most popular tags created so far, a set of recommended tags chosen by the admin, and the list of administrators and assistance contacts. First-time visitors use this page to understand what the community is about before registering.
 
-#### Types of views in Explore page:
+---
 
-##### Only Map
+### Explore
 
-Shows Buttons on map and on a list displayed on top of the map. User can click on polygonal zones drawn over the map to display in the list Buttons included in that area. When the map has a maximum zoom, depending on the pin creator setting, user can see also the pins in the area and select them.
+![Explore page](../images/screencaps/2_explore.jpg)
 
-##### Map with list by pins
-Shows Buttons on map view and a list component displaying a summary of the Buttons on top. Buttons are selectable by pins displayed over the map and on the list, summaries.
+The main view of the Network. Buttons appear as pins on the map and as summary cards in a list alongside it. Button type filters are pinned at the top, allowing quick narrowing by category. Clicking a zone on the map expands the buttons in that area. The URL encodes the current map state, making any view shareable as a direct link.
 
-##### Only list
-Buttons are shown on a list filtered by place, type, tags or any other filter depending on the Network's ButtonTemplate.
+---
 
-##Faqs
-All questions and info useful for the user can be foundd and placed here.
+### Filters
 
-##HomeInfo
-Welcome page with access to Button's search by place and Netowrk's selection and creation menu. In order, this view displays:
+![Filters panel](../images/screencaps/5_filters.jpg)
 
-- Name and description of the network
-- A list of the Administrator user of the Network
-- A list of the Network's most used tags of the 
+An overlay panel accessible from Explore. Users can filter buttons by date range (with a calendar picker), by location (search or drop a pin), or combine both. Filters apply to both the map and the list simultaneously.
 
-For first time-new Helpbuttons installation, the user would be asked to create a Network in this view.
+---
 
-##Login
-Already registered user access.
+### Publish a button
 
-##NetworkAccess
-Welcome screen for new private Network's users. User sees a question about acceptting entering the app or not.
+![Publish button form](../images/screencaps/2_crear_boton.jpg)
 
-#NetworkNew
-Create new network. The registered user becomes the creator and administrator. The user choose basic info just to create a Network that can be later modified in the User's Config page.
+The button creation form. On the left, the user selects the button type — each type has a custom icon and colour defined by the admin. On the right, the standard fields: title, description, keywords (tags), images, and location. If the selected type has extra fields (date, price, etc.) they appear in this same form. The location field opens a map picker for precise or approximate placement.
 
-##Notifiications
-Displays a feed of all user's activity. Included all Buttons' interactions and user changes to the account.
+---
 
-##Profile
-User's account related info. it's a card with all the custom User's info and photos. Access to Config page.
+### Button detail
 
-##Recovery
-Password recovery page accessible only from the recovery email. Inset new password twiice.
+![Button detail view](../images/screencaps/4_button_view.jpg)
 
-##RepositoryPage
-Ddisplays a list of all the elements andd components of the app. Used for ddesign purposes only.
+The full page for a single button. Shows the button's image gallery, title, type, location, follower count, and the author's first message. The map remains visible on the right side, keeping geographic context. Users can follow the button to receive updates, message the owner, or leave public comments in the feed.
 
-##Signup
-User's registration page.
+---
+
+### Messages
+
+![Messages page](../images/screencaps/2_messages.jpg)
+
+Three-panel messaging view. The left column lists all conversations — button feeds, direct messages, admin forum, and community forum. The centre shows the active thread. The right panel displays the button card associated with the conversation, keeping context visible. Admins see an extra "Admin forum" thread at the top.
+
+---
+
+### Profile
+
+![User profile](../images/screencaps/3_profile.jpg)
+
+The user's public profile page. Shows their name, username, role badge (e.g. Administrator), and tabs for published, followed, and commented buttons. Admin users see quick-access buttons to edit their profile, configure the Network, access moderation, and log out.
+
+---
+
+### Share and community integration
+
+![Share panel](../images/screencaps/01_compartir.jpg)
+
+The sharing panel, accessible from the home screen. It provides two groups of actions:
+
+**Invite people** — copy the registration link, or generate **printable invitation cards** with QR code that people can scan to join the network directly, without needing to know the URL.
+
+**Share network content** — print the current button list as a **PDF bulletin**, embed the network in an external website using an **iframe**, or subscribe to the network's **RSS feed** to follow new publications through any feed reader or social media tool.
+
+---
+
+### FAQ / Legal
+
+![FAQ page](../images/screencaps/15_faqs.jpg)
+
+The public FAQ and legal information page. Displays the network's description ("What is this network?"), privacy policy, ethics policy, and cookie policy — all written by the admin in the network configuration. The page footer shows the Helpbuttons version and the Mozilla Public License.
+
+---
+
+## Network configuration (admin)
+
+All configuration pages are reached from Profile → Configure your Network. Changes take effect immediately.
+
+---
+
+### Configuration overview
+
+![Network config overview](../images/screencaps/6_network_config.jpg)
+
+The top-level configuration panel. All settings are grouped into five sections: **Define the network** (name, description, location), **Privacy preferences**, **Appearance**, **Configure your network** (location, key places, tags), and **Supplementary information** (legal texts, contact). A single Save button at the bottom applies all changes.
+
+---
+
+### Privacy settings
+
+![Privacy settings](../images/screencaps/6_network_privacy_settings.jpg)
+
+Controls three key access policies:
+
+- **QR-only registration** — when enabled, users can only register by scanning a QR invitation card, no open sign-up.
+- **Moderation** — when enabled, all buttons submitted by non-admins are held for review before appearing on the map.
+- **Anonymous registration** — allows users to join without an email address, useful for low-barrier community tools (comes with a spam risk warning).
+
+---
+
+### Appearance
+
+![Appearance settings](../images/screencaps/7_customize_network.jpg)
+
+Visual identity of the Network. Admins can rename what a "button" is called (singular and plural) so the interface speaks the community's language. Primary and secondary brand colours are set here (hex values). The network logo (400×400 px) and a background header image are uploaded in this section.
+
+---
+
+### Network location and key places
+
+![Location and key places settings](../images/screencaps/10_location_network_settings.jpg)
+
+Sets the geographic centre and default zoom level of the map — this is where the map snaps to every time someone opens the network. Admins can define **key locations** (named landmarks visible as special markers on the map), toggle whether exact button locations are hidden by default, and set the network's recommended tags shown on the home page.
+
+---
+
+### Location picker
+
+![Location picker modal](../images/screencaps/10_key_locations.jpg)
+
+The location picker modal used when setting the network centre or adding a key location. Admins type an address or click on the map to place a pin, and adjust the default zoom level with a slider. Used both for the network's home location and for each individual key place.
+
+---
+
+### Button template list
+
+![Button template list](../images/screencaps/8config_button_template_list.jpg)
+
+The list of all button types defined for this Network. Each type shows its label, emoji icon, and colour band. Icons on the right indicate whether the type has extra fields (price, date, scheduler). Admins can edit any type or add new ones.
+
+---
+
+### Button template editor
+
+![Button template editor](../images/screencaps/9_button_template_form.jpg)
+
+The editor for a single button type. Admins set the type's name, icon (emoji), and colour. Below that, optional extra fields can be toggled on: **Add price** (enables buy/sell display), **Add date** (turns the type into an event type), **Add scheduler** (sets an automatic reactivation reminder). These extra fields appear in the publish form and as filters on the Explore page.
+
+---
+
+### Supplementary information
+
+![Supplementary info](../images/screencaps/11_custom_faqs_fields.jpg)
+
+The legal and contact section. Admins write the network's privacy policy and ethics policy in free-text fields. These texts are shown publicly on the FAQ page. A contact field allows publishing an email or phone number visible to all members.
+
+---
+
+## Moderation (admin)
+
+### Moderation panel
+
+![Moderation panel](../images/screencaps/12_moderation.jpg)
+
+The moderation hub, accessible from the profile page. Sections: **Users** (manage accounts, block users), **Pending buttons** (buttons awaiting approval if moderation mode is on), **Published buttons** (full searchable list of all live buttons), **QR Invitations** (generate and manage invite codes), **Admin communications** (broadcast messages to the community).
+
+---
+
+### Button moderation list
+
+![Moderation button list](../images/screencaps/13_moderation_buttons.jpg)
+
+A searchable table of all published buttons. Each row shows the title, type badge, tags, time since posting, and author. Admins can open any button from here to review, edit, or remove it.
+
+---
+
+### QR invitations
+
+![QR invitations](../images/screencaps/14_diginvites_menu.jpg)
+
+Generates shareable invitation links with optional expiry dates (day, week, month, or never). Each invitation renders as a QR code and a plain URL. Scanning the QR or following the link takes the user directly to a registration page pre-authorised for the network — no email invite needed.
