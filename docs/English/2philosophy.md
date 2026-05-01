@@ -6,7 +6,7 @@
 
 We've been working on this concept since 2012, testing and changing prototypes and teams, and now — after many tests, mock-ups, and 2 beta versions — we have a better design and understanding of what Helpbuttons should be.
 
-During the 2021 COVID crisis, the team could make some tests and improved the first prototype. They also realized the urgent need for better social cooperation tools. If we want communities to be resilient and prepared, we need to cultivate connections and social integration every day, not just in crisis moments.
+During the 2021 COVID crisis, the team could make some tests and improved the first prototype. We also realized the urgent need for better social cooperation tools. If we want communities to be resilient and prepared, we need to cultivate connections and social integration every day, not just in crisis moments.
 
 Collaborative apps require a large amount of technical support and design effort that can't be sustained by a single-purpose project. We see that many useful collaborative apps fail because they serve just one commitment or one small community — the work required makes them unsustainable. Building an app to help elders in your town is useful, but it probably won't get enough economic and professional support to survive long-term. The same problem is being solved in parallel by many others — for food sharing, transport sharing, house sharing, skill exchange, and countless other purposes. Why not unify the effort?
 
