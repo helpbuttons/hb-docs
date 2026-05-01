@@ -60,6 +60,20 @@ Las plataformas propietarias pueden cerrarse, adquirirse o pivotar. Los proyecto
 
 El proyecto ha sido construido por programadores voluntarios, traductores, diseñadores y organizadores comunitarios que creen en herramientas abiertas para la cooperación social. El objetivo actual es convertirlo en una plataforma sostenible — que pueda mantenerse y seguir mejorando a largo plazo.
 
+### La interacción humana primero
+
+Helpbuttons es una herramienta para la cooperación humana, y ese compromiso da forma a cada decisión sobre cómo se construye y se gestiona.
+
+**La moderación es humana.** No hay filtros de contenido automatizados ni sistemas de clasificación algorítmica. Los moderadores son los propios administradores de la red — personas reales que conocen su comunidad, aplican sus valores y son responsables ante ella. Los avales y la reputación son señales entre iguales, no puntuaciones asignadas por una plataforma.
+
+**El código está hecho a mano.** El proyecto ha sido desarrollado a mano desde 2012 — años de programación real, decisiones de diseño y retroalimentación comunitaria. Esto importa porque significa que el software refleja elecciones deliberadas, no los resultados de un proceso generativo.
+
+**La IA es una herramienta, no una desarrolladora.** En la fase reciente del proyecto, la asistencia de IA se ha usado de forma selectiva — para tareas repetitivas y tediosas, formateo de documentación y código de plantilla — nunca para diseñar o implementar funcionalidades completas. Cada cambio sugerido por IA ha sido revisado, comprendido y aceptado conscientemente por un desarrollador humano antes de incorporarse al código. El objetivo es mantener el software legible, intencional y mantenible por las personas que trabajan en él.
+
+Creemos que las plataformas de cooperación social tienen la responsabilidad de reflejar los valores que promueven. Una plataforma que reemplaza el juicio humano con automatización — ya sea en la moderación, la curación o el desarrollo — no es una herramienta de cooperación. Es un producto.
+
+Sostenemos un principio ético simple: **la tecnología debe estar al servicio de las personas, no al revés**. El ser humano debe mantener el control sobre la máquina — no como una limitación técnica, sino como un valor deliberado. Las herramientas deben ampliar lo que las personas pueden hacer juntas; nunca deben tomar en silencio las decisiones que pertenecen a las comunidades.
+
 ---
 
 ## El problema que estamos resolviendo

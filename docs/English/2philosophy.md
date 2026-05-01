@@ -60,6 +60,20 @@ Proprietary platforms can be shut down, acquired, or pivoted. Open-source projec
 
 The project has been built by voluntary programmers, translators, designers, and community organizers who believe in open tools for social cooperation. The current goal is to grow it into a sustainable platform — one that can sustain itself and keep improving over the long term.
 
+### Human interaction first
+
+Helpbuttons is a tool for human cooperation, and that commitment shapes every decision about how it is built and run.
+
+**Moderation is human.** There are no automated content filters or algorithmic ranking systems. Moderators are the network's own administrators — real people who know their community, apply its values, and are accountable to it. Endorsements and reputation are peer-to-peer signals between members, not scores assigned by a platform.
+
+**The code is handmade.** The project has been developed by hand since 2012 — years of real programming, design decisions, and community feedback. This matters because it means the software reflects deliberate choices, not the outputs of a generative process.
+
+**AI is a tool, not a developer.** In the recent phase of the project, AI assistance has been used selectively — for repetitive and tedious tasks, documentation formatting, and boilerplate — never to design or implement complete features. Every AI-suggested change has been reviewed, understood, and consciously accepted by a human developer before being incorporated into the codebase. The goal is to keep the software legible, intentional, and maintainable by the people who work on it.
+
+We believe that social cooperation platforms have a responsibility to model the values they promote. A platform that replaces human judgment with automation — whether in moderation, curation, or development — is not a cooperation tool. It is a product.
+
+We hold to a simple ethical principle: **technology must serve people, not the other way around**. Humans must remain in control of the machine — not as a technical constraint, but as a deliberate value. Tools should expand what people can do together; they should never quietly take over the decisions that belong to communities.
+
 ---
 
 ## The problem we are solving
