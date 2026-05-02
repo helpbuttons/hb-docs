@@ -4,13 +4,13 @@
 
 ## Historia
 
-Llevamos trabajando en este concepto desde 2012, probando y cambiando prototipos y equipos, y ahora — después de muchas pruebas, maquetas y 2 versiones beta — tenemos un mejor diseño y comprensión de lo que Helpbuttons debe ser.
+Helpbuttons lleva en desarrollo desde 2012, a través de varios prototipos, iteraciones de diseño y equipos cambiantes. Dos versiones beta precedieron a la versión actual.
 
-Durante la crisis del COVID-19 en 2021, el equipo pudo hacer algunas pruebas y mejorar el primer prototipo. También nos dimos cuenta de la necesidad urgente de mejores herramientas de cooperación social. Si queremos que las comunidades sean resilientes y estén preparadas, necesitamos cultivar conexiones e integración social cada día, no solo en momentos de crisis.
+La crisis del COVID-19 de 2021 funcionó como una prueba de estrés para las herramientas de cooperación comunitaria y puso de manifiesto una carencia: la mayoría de las comunidades no disponían de la infraestructura necesaria para coordinar la ayuda mutua en tiempo real. Este período aceleró el desarrollo y precisó el enfoque del proyecto.
 
-Las aplicaciones colaborativas requieren una gran cantidad de soporte técnico y trabajo de diseño que no puede sostenerse con un proyecto de un solo propósito. Vemos que muchas aplicaciones colaborativas útiles fracasan porque sirven a un único compromiso o a una comunidad pequeña — el trabajo requerido las hace insostenibles. Crear una app para ayudar a personas mayores en tu pueblo es útil, pero probablemente no obtendrá suficiente apoyo económico y profesional para sobrevivir a largo plazo. El mismo problema lo están resolviendo en paralelo muchas otras personas — para compartir comida, transporte, vivienda, habilidades, y otros innumerables propósitos. ¿Por qué no unificar el esfuerzo?
+Tras la crisis, parte del equipo responsable de [Frenalacurva](https://frenalacurva.net) — una plataforma de coordinación construida durante la pandemia por el estudio de software libre [Kaleidos](https://kaleidos.net) — inició su colaboración con Helpbuttons. El objetivo compartido era construir una herramienta que funcionase no solo en situaciones de emergencia, sino como infraestructura de propósito general para la coordinación comunitaria en la vida cotidiana.
 
-Creemos que es posible. Analizamos la estructura común de las apps colaborativas y diseñamos un esqueleto base con los campos principales que todas comparten, más una capa modular que puede adaptarse a cualquier propósito. Necesitamos personas que ayuden a refinar estos diseños, sostener el apoyo comunitario y desarrollar módulos que extiendan la base a más casos de uso.
+El problema central que el proyecto identificó es estructural: las aplicaciones colaborativas requieren un esfuerzo técnico y de diseño sostenido que los proyectos de un solo propósito raramente logran. Muchas herramientas útiles para compartir comida, intercambiar habilidades, transporte o servicios locales se han construido de forma aislada — resolviendo por separado el mismo problema de coordinación de fondo, y fallando a menudo por las mismas razones. Helpbuttons fue diseñado como infraestructura compartida: una base común que cualquier comunidad puede adaptar a su propósito específico, sin partir de cero.
 
 ---
 

@@ -4,13 +4,13 @@
 
 ## History
 
-We've been working on this concept since 2012, testing and changing prototypes and teams, and now — after many tests, mock-ups, and 2 beta versions — we have a better design and understanding of what Helpbuttons should be.
+Helpbuttons has been in development since 2012, through several prototypes, design iterations, and changing teams. Two beta versions preceded the current release.
 
-During the 2021 COVID crisis, the team could make some tests and improved the first prototype. We also realized the urgent need for better social cooperation tools. If we want communities to be resilient and prepared, we need to cultivate connections and social integration every day, not just in crisis moments.
+The 2021 COVID crisis served as a stress test for community cooperation tools and underlined a gap: most communities lacked the infrastructure to coordinate mutual aid in real time. This period accelerated development and sharpened the project's focus.
 
-Collaborative apps require a large amount of technical support and design effort that can't be sustained by a single-purpose project. We see that many useful collaborative apps fail because they serve just one commitment or one small community — the work required makes them unsustainable. Building an app to help elders in your town is useful, but it probably won't get enough economic and professional support to survive long-term. The same problem is being solved in parallel by many others — for food sharing, transport sharing, house sharing, skill exchange, and countless other purposes. Why not unify the effort?
+Following the crisis, part of the team behind [Frenalacurva](https://frenalacurva.net) — a coordination platform built during the pandemic by the open-source studio [Kaleidos](https://kaleidos.net) — began collaborating with Helpbuttons. The shared goal was to build a tool that would work not only in emergency situations, but as general-purpose infrastructure for community coordination in everyday life.
 
-We think it's possible. We analyzed the common structure of collaborative apps and designed a base skeleton with the core fields they all share, plus a modular layer that can be adapted to any purpose. We need people to help refine these designs, sustain community support, and develop modules that extend the base for more use cases.
+The core problem the project identified is structural: collaborative apps require sustained technical and design effort that single-purpose projects rarely achieve. Many useful tools for food sharing, skill exchange, transport, or local services have been built in isolation — solving the same underlying coordination problem separately, and often failing for the same reasons. Helpbuttons was designed as shared infrastructure: a common base that any community can adapt to their specific purpose, without starting from scratch.
 
 ---
 
