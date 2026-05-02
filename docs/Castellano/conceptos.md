@@ -73,12 +73,17 @@ No existe una puntuación de reputación global — la reputación es social, es
 
 ## Feed
 
-Un **Feed** es el registro de actividad y conversación adjunto a una entidad específica.
+Un **Feed** es el hilo de conversación pública adjunto a un botón — donde ocurre la coordinación: preguntas, confirmaciones, actualizaciones de estado. Todos los miembros pueden leer y publicar en el feed de un botón.
 
-- El **Feed de Botón** muestra todos los mensajes, actualizaciones y cambios relacionados con ese botón. Es donde ocurre la coordinación — preguntas, confirmaciones, actualizaciones de estado.
-- El **Feed de Actividad** (en el panel del usuario) muestra todas las interacciones en las Redes a las que pertenece.
+---
 
-Los feeds tienen **reglas de visibilidad**: el propietario del botón ve todo; otros usuarios ven lo que el propietario permite; los admins ven el contenido relevante para la moderación.
+## Mensajería
+
+Toda la comunicación privada y grupal vive en la sección de **Mensajes**, separada de los feeds de botones. Cada hilo se denomina **Activity Conversation**. Hay tres tipos:
+
+- **Conversación de botón**: se abre desde un botón concreto y crea un chat privado uno a uno entre el usuario y el creador del botón. Invisible para el resto.
+- **Foro de comunidad**: una Activity Conversation grupal única abierta a todos los miembros de la Red.
+- **Foro de administradores**: una Activity Conversation grupal restringida a los administradores de la Red.
 
 ---
 

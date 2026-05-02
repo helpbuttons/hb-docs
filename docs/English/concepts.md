@@ -73,12 +73,17 @@ There is no global reputation score — reputation is social, established throug
 
 ## Feed
 
-A **Feed** is the activity and conversation log attached to a specific entity.
+A **Feed** is the public conversation thread attached to a button — where coordination happens: questions, confirmations, status updates. All members can read and post in a button's feed.
 
-- The **Button Feed** shows all messages, updates, and changes related to that button. It's where coordination happens — questions, confirmations, status updates.
-- The **Activity Feed** (in the user's dashboard) shows all interactions across the Networks they belong to.
+---
 
-Feeds have **visibility rules**: the button owner sees everything; other users see what the owner allows; admins see moderation-relevant content.
+## Messaging
+
+All private and group communication lives in the **Messages** section, separate from button feeds. Each thread is called an **Activity Conversation**. There are three types:
+
+- **Button conversation**: opened from a specific button, it creates a one-to-one private chat between the user and the button's creator. Invisible to everyone else.
+- **Community forum**: a single group Activity Conversation open to all members of the Network.
+- **Admin forum**: a group Activity Conversation restricted to the Network's administrators.
 
 ---
 
