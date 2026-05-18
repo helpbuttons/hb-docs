@@ -1387,9 +1387,9 @@
 - An <strong>avatar</strong> and customizable colors/theme
 - A <strong>privacy setting</strong>: public (visible to anyone) or private (invite-only)
 - A set of <strong>ButtonTemplates</strong> that define what types of buttons exist in this Network
-- <strong>Administrators</strong> who can moderate content and manage users</p>
+- <strong>Coordinators</strong> who can moderate content and manage users</p>
 <p>Each Helpbuttons installation hosts <strong>one Network</strong>. Separate installations can <strong>federate</strong> with each other to share users and content across instances.</p>
-<p><strong>Example</strong>: A neighborhood mutual aid group runs its Network at <code>ayuda.mibarrio.org</code>. It's configured as public, has two button types ("Offering" and "Requesting"), and three administrators.</p>
+<p><strong>Example</strong>: A neighborhood mutual aid group runs its Network at <code>ayuda.mibarrio.org</code>. It's configured as public, has two button types ("Offering" and "Requesting"), and three coordinators.</p>
 <hr />
 <h2 id="button-helpbutton">Button (Helpbutton)<a class="headerlink" href="#button-helpbutton" title="Permanent link">#</a></h2>
 <p>A <strong>Button</strong> is the core post — the unit of information that users publish and other users respond to. The name "Helpbutton" reflects the original mutual aid focus, but a button can represent any kind of offer, need, event, or resource.</p>
@@ -1405,12 +1405,12 @@
 <p><strong>Example</strong>: A user posts a button: "I have 5kg of tomatoes to share" → type "Offering", location set to approximate area, tagged "food, vegetables". Other users see it on the map and message through the button's feed.</p>
 <hr />
 <h2 id="buttontemplate">ButtonTemplate<a class="headerlink" href="#buttontemplate" title="Permanent link">#</a></h2>
-<p>A <strong>ButtonTemplate</strong> is what makes each Network unique. It defines extra fields beyond the base button structure — the Network admin creates templates that match their community's use case.</p>
+<p>A <strong>ButtonTemplate</strong> is what makes each Network unique. It defines extra fields beyond the base button structure — the Network coordinator creates templates that match their community's use case.</p>
 <p>A food-sharing network might add: food type, quantity, dietary info.
 A transport network might add: departure, destination, departure time, seats available.
 An event network might add: date, duration, maximum participants.</p>
 <p>ButtonTemplates are defined in JSON and the frontend renders the appropriate form fields and filters automatically.</p>
-<p><strong>Example</strong>: Admin creates a "Ride offer" template with fields: <code>from</code>, <code>to</code>, <code>departure_time</code>, <code>seats</code>. When users create a "Ride offer" button, they fill in those extra fields. The Explore page shows a "departure time" filter.</p>
+<p><strong>Example</strong>: The coordinator creates a "Ride offer" template with fields: <code>from</code>, <code>to</code>, <code>departure_time</code>, <code>seats</code>. When users create a "Ride offer" button, they fill in those extra fields. The Explore page shows a "departure time" filter.</p>
 <hr />
 <h2 id="user">User<a class="headerlink" href="#user" title="Permanent link">#</a></h2>
 <p>A <strong>User</strong> is a registered person who can join Networks, publish Buttons, and interact with others.</p>
@@ -1418,8 +1418,8 @@ An event network might add: date, duration, maximum participants.</p>
 - Users exist <strong>across Networks</strong> — their profile and reputation travel with them
 - Users can <strong>join and leave</strong> Networks freely (subject to privacy settings)
 - Users can <strong>support</strong> each other (positive endorsement, no ratings)
-- Users can be <strong>blocked</strong> by admins within a Network or globally
-- Admins can assign other users <strong>admin roles</strong> within their Network</p>
+- Users can be <strong>blocked</strong> by coordinators within a Network or globally
+- Coordinators can assign other users <strong>coordinator roles</strong> within their Network</p>
 <p>There is no global reputation score — reputation is social, established through peer endorsements and community trust.</p>
 <hr />
 <h2 id="feed">Feed<a class="headerlink" href="#feed" title="Permanent link">#</a></h2>
@@ -1430,7 +1430,7 @@ An event network might add: date, duration, maximum participants.</p>
 <ul>
 <li><strong>Button conversation</strong>: opened from a specific button, it creates a one-to-one private chat between the user and the button's creator. Invisible to everyone else.</li>
 <li><strong>Community forum</strong>: a single group Activity Conversation open to all members of the Network.</li>
-<li><strong>Admin forum</strong>: a group Activity Conversation restricted to the Network's administrators.</li>
+<li><strong>Coordinator forum</strong>: a group Activity Conversation restricted to the Network's coordinators.</li>
 </ul>
 <hr />
 <h2 id="tag">Tag<a class="headerlink" href="#tag" title="Permanent link">#</a></h2>
@@ -1439,7 +1439,7 @@ An event network might add: date, duration, maximum participants.</p>
 <li><strong>Search and filter</strong>: users can search buttons by tag across a Network</li>
 <li><strong>Notifications</strong>: users can subscribe to tags in their settings and receive email notifications when new buttons with those tags are created</li>
 </ol>
-<p>Tags are free-form — anyone can create a tag when posting a button. Network admins can suggest or feature preferred tags in the Network's configuration.</p>
+<p>Tags are free-form — anyone can create a tag when posting a button. Network coordinators can suggest or feature preferred tags in the Network's configuration.</p>
 <hr />
 <h2 id="how-they-fit-together">How they fit together<a class="headerlink" href="#how-they-fit-together" title="Permanent link">#</a></h2>
 <pre><code>Server
