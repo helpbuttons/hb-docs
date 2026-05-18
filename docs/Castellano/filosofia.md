@@ -34,7 +34,7 @@ Plataformas como Airbnb o Wallapop coordinan la cooperación con eficacia pero e
 
 ### Inclusión y accesibilidad
 
-Helpbuttons aspira a ser usable por personas sin conocimientos técnicos, traducible a cualquier idioma y desplegable en infraestructura modesta. La moderación se distribuye entre varios administradores, las invitaciones permiten crecer a través de la confianza, y la ubicación puede ocultarse para proteger la privacidad.
+Helpbuttons aspira a ser usable por personas sin conocimientos técnicos, traducible a cualquier idioma y desplegable en infraestructura modesta. La moderación se distribuye entre varios coordinadores, las invitaciones permiten crecer a través de la confianza, y la ubicación puede ocultarse para proteger la privacidad.
 
 ### Federación
 
@@ -46,7 +46,7 @@ El proyecto ha sido construido por programadores voluntarios, traductores y orga
 
 ### La interacción humana primero
 
-La moderación es humana — los propios administradores de la red, no algoritmos. Los avales son señales entre iguales, no puntuaciones de plataforma. El código ha sido desarrollado a mano desde 2012; la IA solo se ha usado para tareas tediosas, con cada cambio revisado y aceptado por un desarrollador humano antes de incorporarse.
+La moderación es humana — los propios coordinadores de la red, no algoritmos. Los avales son señales entre iguales, no puntuaciones de plataforma. El código ha sido desarrollado a mano desde 2012; la IA solo se ha usado para tareas tediosas, con cada cambio revisado y aceptado por un desarrollador humano antes de incorporarse.
 
 **La tecnología debe estar al servicio de las personas, no al revés.** Las herramientas deben ampliar lo que las comunidades pueden hacer juntas — nunca tomar en silencio las decisiones que les pertenecen.
 

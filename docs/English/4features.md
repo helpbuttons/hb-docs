@@ -30,7 +30,7 @@ Users can add a price to a button. A price of `0` displays a "Free" badge. "Pric
 
 ## Modular button templates
 
-The defining characteristic of Helpbuttons is the **ButtonTemplate** system. Network admins define button types with custom fields: date, price, boolean, list, or any field type the community develops. This makes the same codebase work for food sharing, transport, skill exchange, emergency coordination, or any other use case.
+The defining characteristic of Helpbuttons is the **ButtonTemplate** system. Network coordinators define button types with custom fields: date, price, boolean, list, or any field type the community develops. This makes the same codebase work for food sharing, transport, skill exchange, emergency coordination, or any other use case.
 
 Examples of custom fields: departure/destination (transport), quantities and food type (food sharing), duration and skill level (skill exchange), event capacity (events).
 
@@ -48,7 +48,7 @@ The Explore page offers multiple views:
 The map state (zoom, lat/lng, selected button) is encoded in the URL, making it fully shareable and linkable.
 
 ### Map styles and key locations
-Admins can change the map's visual style (tile layer) to match the network's identity or improve readability. They can also define **key locations** — named places pinned on the map with a special marker, useful for community landmarks, meeting points, or points of interest.
+Coordinators can change the map's visual style (tile layer) to match the network's identity or improve readability. They can also define **key locations** — named places pinned on the map with a special marker, useful for community landmarks, meeting points, or points of interest.
 
 ### Embeddable map
 Networks can embed a read-only map widget on external websites using an **iframe**. The embed respects the network's configuration and can be filtered by tag or button type.
@@ -57,7 +57,7 @@ Networks can embed a read-only map widget on external websites using an **iframe
 Networks expose a public **RRSS feed** (RSS/Atom) of recently published buttons. Communities can pipe this into social media channels, newsletters, or aggregator tools to keep followers updated without requiring them to visit the platform.
 
 ### PDF bulletin
-Admins can export a **PDF bulletin** of buttons currently published in the Network. This is useful for printing and distributing in physical spaces — noticeboards, community centers, assemblies — reaching people who may not use digital tools.
+Coordinators can export a **PDF bulletin** of buttons currently published in the Network. This is useful for printing and distributing in physical spaces — noticeboards, community centers, assemblies — reaching people who may not use digital tools.
 
 ---
 
@@ -67,10 +67,10 @@ Admins can export a **PDF bulletin** of buttons currently published in the Netwo
 Every button has a feed — a conversation thread where users can leave messages, updates, and coordination notes. Visible to all participants.
 
 ### Private messages
-Users can start a fully private conversation with any other user. Private messages are completely separate from button feeds — they appear in the Messages section and are never visible to other members or admins.
+Users can start a fully private conversation with any other user. Private messages are completely separate from button feeds — they appear in the Messages section and are never visible to other members or coordinators.
 
 ### Group messaging
-There are two fixed group threads, independent of specific buttons: a **community forum** open to all members, and an **admin forum** restricted to the network's administrators. These are the only group conversations — users cannot create additional group chats.
+There are two fixed group threads, independent of specific buttons: a **community forum** open to all members, and a **coordinator forum** restricted to the network's coordinators. These are the only group conversations — users cannot create additional group chats.
 
 ---
 
@@ -110,23 +110,23 @@ There is no star rating. Users can endorse (support) each other — a social tru
 
 ---
 
-## Moderation and administration
+## Moderation and coordination
 
-### Decentralized administration
-Network owners can assign any number of additional admins. Admins can moderate, delete, and block content or users. Multiple admins distribute the workload and increase community trust.
+### Decentralized coordination
+Network owners can assign any number of additional coordinators. Coordinators can moderate, delete, and block content or users. Multiple coordinators distribute the workload and increase community trust.
 
 ### User blocking
-Admins can block users within a Network or globally. Blocked users cannot rejoin.
+Coordinators can block users within a Network or globally. Blocked users cannot rejoin.
 
 ### Invitation-only networks
-Admins can set a Network to private. Visitors can see buttons but cannot interact without an invitation. Invitation links can be limited by number of uses and expiration time.
+Coordinators can set a Network to private. Visitors can see buttons but cannot interact without an invitation. Invitation links can be limited by number of uses and expiration time.
 
 ---
 
 ## Network customization
 
 ### Appearance
-Admins can customize: colors, logo/avatar, name, description, preferred tags, button types, map view defaults, and language.
+Coordinators can customize: colors, logo/avatar, name, description, preferred tags, button types, map view defaults, and language.
 
 ### Location and radius
 Each Network has a home location and a geographic radius that sets the default map view.

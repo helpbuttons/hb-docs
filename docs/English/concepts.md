@@ -14,11 +14,11 @@ Each Network has:
 - An **avatar** and customizable colors/theme
 - A **privacy setting**: public (visible to anyone) or private (invite-only)
 - A set of **ButtonTemplates** that define what types of buttons exist in this Network
-- **Administrators** who can moderate content and manage users
+- **Coordinators** who can moderate content and manage users
 
 Each Helpbuttons installation hosts **one Network**. Separate installations can **federate** with each other to share users and content across instances.
 
-**Example**: A neighborhood mutual aid group runs its Network at `ayuda.mibarrio.org`. It's configured as public, has two button types ("Offering" and "Requesting"), and three administrators.
+**Example**: A neighborhood mutual aid group runs its Network at `ayuda.mibarrio.org`. It's configured as public, has two button types ("Offering" and "Requesting"), and three coordinators.
 
 ---
 
@@ -44,7 +44,7 @@ Every button has a **Feed** — see below.
 
 ## ButtonTemplate
 
-A **ButtonTemplate** is what makes each Network unique. It defines extra fields beyond the base button structure — the Network admin creates templates that match their community's use case.
+A **ButtonTemplate** is what makes each Network unique. It defines extra fields beyond the base button structure — the Network coordinator creates templates that match their community's use case.
 
 A food-sharing network might add: food type, quantity, dietary info.
 A transport network might add: departure, destination, departure time, seats available.
@@ -52,7 +52,7 @@ An event network might add: date, duration, maximum participants.
 
 ButtonTemplates are defined in JSON and the frontend renders the appropriate form fields and filters automatically.
 
-**Example**: Admin creates a "Ride offer" template with fields: `from`, `to`, `departure_time`, `seats`. When users create a "Ride offer" button, they fill in those extra fields. The Explore page shows a "departure time" filter.
+**Example**: The coordinator creates a "Ride offer" template with fields: `from`, `to`, `departure_time`, `seats`. When users create a "Ride offer" button, they fill in those extra fields. The Explore page shows a "departure time" filter.
 
 ---
 
@@ -64,8 +64,8 @@ Key properties:
 - Users exist **across Networks** — their profile and reputation travel with them
 - Users can **join and leave** Networks freely (subject to privacy settings)
 - Users can **support** each other (positive endorsement, no ratings)
-- Users can be **blocked** by admins within a Network or globally
-- Admins can assign other users **admin roles** within their Network
+- Users can be **blocked** by coordinators within a Network or globally
+- Coordinators can assign other users **coordinator roles** within their Network
 
 There is no global reputation score — reputation is social, established through peer endorsements and community trust.
 
@@ -83,7 +83,7 @@ All private and group communication lives in the **Messages** section, separate 
 
 - **Button conversation**: opened from a specific button, it creates a one-to-one private chat between the user and the button's creator. Invisible to everyone else.
 - **Community forum**: a single group Activity Conversation open to all members of the Network.
-- **Admin forum**: a group Activity Conversation restricted to the Network's administrators.
+- **Coordinator forum**: a group Activity Conversation restricted to the Network's coordinators.
 
 ---
 
@@ -94,7 +94,7 @@ All private and group communication lives in the **Messages** section, separate 
 1. **Search and filter**: users can search buttons by tag across a Network
 2. **Notifications**: users can subscribe to tags in their settings and receive email notifications when new buttons with those tags are created
 
-Tags are free-form — anyone can create a tag when posting a button. Network admins can suggest or feature preferred tags in the Network's configuration.
+Tags are free-form — anyone can create a tag when posting a button. Network coordinators can suggest or feature preferred tags in the Network's configuration.
 
 ---
 

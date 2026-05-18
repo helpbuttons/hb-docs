@@ -33,6 +33,7 @@ Los usuarios se registran, navegan el mapa, filtran por etiquetas o tipo, se con
 
 ## Por dónde empezar
 
+- **Quiero aprender a usar o coordinar una red** → [Guía de usuarios y coordinadores](https://helpbuttons.org/helpbuttons-guia-de-coordinadores-y-usuarios/)
 - **Quiero instalarlo** → [Guía de instalación](instalacion.md)
 - **Quiero entender el código** → [Arquitectura](arquitectura.md) · [Conceptos](conceptos.md)
 - **Quiero contribuir** → [Normas de código](normas-codigo.md) · [Issues y PRs](issues-pr.md)

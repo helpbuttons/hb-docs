@@ -33,6 +33,7 @@ Users register, browse the map, filter by tags or type, contact each other via m
 
 ## Getting started
 
+- **I want to learn how to use or coordinate a network** → [User & Coordinator Guide](https://helpbuttons.org/helpbuttons-user-coordinator-guide/)
 - **I want to install it** → [Installation Guide](5installation.md)
 - **I want to understand the code** → [Architecture](6architecture.md) · [Core Concepts](concepts.md)
 - **I want to contribute** → [Contributing Guide](contributing.md)

@@ -10,11 +10,11 @@ A visual walkthrough of the main screens in a Helpbuttons Network. Screenshots a
 
 ![Home hero](../images/screencaps/1_home_a.jpg)
 
-The top of the home page shows the network's name, tagline, and background image — all set by the admin. Three main actions are always visible: **Explore**, **Publish**, and **Share**. Below the hero, a summary card shows how many buttons and users are active, followed by all available button types as quick-access chips.
+The top of the home page shows the network's name, tagline, and background image — all set by the coordinator. Three main actions are always visible: **Explore**, **Publish**, and **Share**. Below the hero, a summary card shows how many buttons and users are active, followed by all available button types as quick-access chips.
 
 ![Home tags and info](../images/screencaps/1_home.jpg)
 
-Scrolling down reveals the most-used tags across the network (useful for discovering what topics are active), the admin's curated list of recommended tags, and a section showing the administrators and assistance contacts. First-time visitors use this page to understand what the community is about before registering.
+Scrolling down reveals the most-used tags across the network (useful for discovering what topics are active), the coordinator's curated list of recommended tags, and a section showing the coordinators and assistance contacts. First-time visitors use this page to understand what the community is about before registering.
 
 ---
 
@@ -38,7 +38,7 @@ An overlay panel accessible from Explore. Users can filter buttons by date range
 
 ![Publish button form](../images/screencaps/2_crear_boton.jpg)
 
-The button creation form. On the left, the user selects the button type — each type has a custom icon and colour defined by the admin. On the right, the standard fields: title, description, keywords (tags), images, and location. If the selected type has extra fields (date, price, etc.) they appear in this same form. The location field opens a map picker for precise or approximate placement.
+The button creation form. On the left, the user selects the button type — each type has a custom icon and colour defined by the coordinator. On the right, the standard fields: title, description, keywords (tags), images, and location. If the selected type has extra fields (date, price, etc.) they appear in this same form. The location field opens a map picker for precise or approximate placement.
 
 ---
 
@@ -54,11 +54,11 @@ The full page for a single button. Shows the button's image gallery, title, type
 
 ![Messages — button conversation](../images/screencaps/2_messages.jpg)
 
-Three-panel messaging view. The left column lists all conversations — private direct messages, system notices, the community forum, and the admin forum. The centre shows the active thread. The right panel displays the button card when the conversation is linked to one. Private conversations between users are fully separate from button feeds and visible only to the two participants.
+Three-panel messaging view. The left column lists all conversations — private direct messages, system notices, the community forum, and the coordinator forum. The centre shows the active thread. The right panel displays the button card when the conversation is linked to one. Private conversations between users are fully separate from button feeds and visible only to the two participants.
 
 ![Messages — community forum](../images/screencaps/3_group_chat_comunidad.jpg)
 
-The **community forum** thread is a shared group chat open to all members of the network, independent of any specific button. Useful for general announcements, questions, and community conversation. The admin forum works the same way but is restricted to administrators.
+The **community forum** thread is a shared group chat open to all members of the network, independent of any specific button. Useful for general announcements, questions, and community conversation. The coordinator forum works the same way but is restricted to coordinators.
 
 ![Messages — notifications and event feed](../images/screencaps/2b_messages.jpg)
 
@@ -70,7 +70,7 @@ The messages inbox also surfaces **system notices** (avisos) — automatic notif
 
 ![User profile](../images/screencaps/3_profile.jpg)
 
-The user's public profile page. Shows their name, username, role badge (e.g. Administrator), and tabs for published, followed, and commented buttons. Admin users see quick-access buttons to edit their profile, configure the Network, access moderation, and log out.
+The user's public profile page. Shows their name, username, role badge (e.g. Coordinator), and tabs for published, followed, and commented buttons. Coordinator users see quick-access buttons to edit their profile, configure the Network, access moderation, and log out.
 
 ---
 
@@ -98,11 +98,11 @@ The PDF bulletin export generates a paginated document listing current buttons w
 
 ![FAQ page](../images/screencaps/15_faqs.jpg)
 
-The public FAQ and legal information page. Displays the network's description ("What is this network?"), privacy policy, ethics policy, and cookie policy — all written by the admin in the network configuration. The page footer shows the Helpbuttons version and the Mozilla Public License.
+The public FAQ and legal information page. Displays the network's description ("What is this network?"), privacy policy, ethics policy, and cookie policy — all written by the coordinator in the network configuration. The page footer shows the Helpbuttons version and the Mozilla Public License.
 
 ---
 
-## Network configuration (admin)
+## Network configuration (coordinator)
 
 All configuration pages are reached from Profile → Configure your Network. Changes take effect immediately.
 
@@ -123,7 +123,7 @@ The top-level configuration panel. All settings are grouped into five sections: 
 Controls three key access policies:
 
 - **QR-only registration** — when enabled, users can only register by scanning a QR invitation card, no open sign-up.
-- **Moderation** — when enabled, all buttons submitted by non-admins are held for review before appearing on the map.
+- **Moderation** — when enabled, all buttons submitted by non-coordinators are held for review before appearing on the map.
 - **Anonymous registration** — allows users to join without an email address, useful for low-barrier community tools (comes with a spam risk warning).
 
 ---
@@ -132,7 +132,7 @@ Controls three key access policies:
 
 ![Appearance settings](../images/screencaps/7_customize_network.jpg)
 
-Visual identity of the Network. Admins can rename what a "button" is called (singular and plural) so the interface speaks the community's language. Primary and secondary brand colours are set here (hex values). The network logo (400×400 px) and a background header image are uploaded in this section.
+Visual identity of the Network. Coordinators can rename what a "button" is called (singular and plural) so the interface speaks the community's language. Primary and secondary brand colours are set here (hex values). The network logo (400×400 px) and a background header image are uploaded in this section.
 
 ---
 
@@ -140,7 +140,7 @@ Visual identity of the Network. Admins can rename what a "button" is called (sin
 
 ![Location and key places settings](../images/screencaps/10_location_network_settings.jpg)
 
-Sets the geographic centre and default zoom level of the map — this is where the map snaps to every time someone opens the network. Admins can define **key locations** (named landmarks visible as special markers on the map), toggle whether exact button locations are hidden by default, and set the network's recommended tags shown on the home page.
+Sets the geographic centre and default zoom level of the map — this is where the map snaps to every time someone opens the network. Coordinators can define **key locations** (named landmarks visible as special markers on the map), toggle whether exact button locations are hidden by default, and set the network's recommended tags shown on the home page.
 
 ---
 
@@ -148,7 +148,7 @@ Sets the geographic centre and default zoom level of the map — this is where t
 
 ![Location picker modal](../images/screencaps/10_key_locations.jpg)
 
-The location picker modal used when setting the network centre or adding a key location. Admins type an address or click on the map to place a pin, and adjust the default zoom level with a slider. Used both for the network's home location and for each individual key place.
+The location picker modal used when setting the network centre or adding a key location. Coordinators type an address or click on the map to place a pin, and adjust the default zoom level with a slider. Used both for the network's home location and for each individual key place.
 
 ---
 
@@ -156,7 +156,7 @@ The location picker modal used when setting the network centre or adding a key l
 
 ![Button template list](../images/screencaps/8config_button_template_list.jpg)
 
-The list of all button types defined for this Network. Each type shows its label, emoji icon, and colour band. Icons on the right indicate whether the type has extra fields (price, date, scheduler). Admins can edit any type or add new ones.
+The list of all button types defined for this Network. Each type shows its label, emoji icon, and colour band. Icons on the right indicate whether the type has extra fields (price, date, scheduler). Coordinators can edit any type or add new ones.
 
 ---
 
@@ -164,7 +164,7 @@ The list of all button types defined for this Network. Each type shows its label
 
 ![Button template editor](../images/screencaps/9_button_template_form.jpg)
 
-The editor for a single button type. Admins set the type's name, icon (emoji), and colour. Below that, optional extra fields can be toggled on: **Add price** (enables buy/sell display), **Add date** (turns the type into an event type), **Add scheduler** (sets an automatic reactivation reminder). These extra fields appear in the publish form and as filters on the Explore page.
+The editor for a single button type. Coordinators set the type's name, icon (emoji), and colour. Below that, optional extra fields can be toggled on: **Add price** (enables buy/sell display), **Add date** (turns the type into an event type), **Add scheduler** (sets an automatic reactivation reminder). These extra fields appear in the publish form and as filters on the Explore page.
 
 ---
 
@@ -172,17 +172,17 @@ The editor for a single button type. Admins set the type's name, icon (emoji), a
 
 ![Supplementary info](../images/screencaps/11_custom_faqs_fields.jpg)
 
-The legal and contact section. Admins write the network's privacy policy and ethics policy in free-text fields. These texts are shown publicly on the FAQ page. A contact field allows publishing an email or phone number visible to all members.
+The legal and contact section. Coordinators write the network's privacy policy and ethics policy in free-text fields. These texts are shown publicly on the FAQ page. A contact field allows publishing an email or phone number visible to all members.
 
 ---
 
-## Moderation (admin)
+## Moderation (coordinator)
 
 ### Moderation panel
 
 ![Moderation panel](../images/screencaps/12_moderation.jpg)
 
-The moderation hub, accessible from the profile page. Sections: **Users** (manage accounts, block users), **Pending buttons** (buttons awaiting approval if moderation mode is on), **Published buttons** (full searchable list of all live buttons), **QR Invitations** (generate and manage invite codes), **Admin communications** (broadcast messages to the community).
+The moderation hub, accessible from the profile page. Sections: **Users** (manage accounts, block users), **Pending buttons** (buttons awaiting approval if moderation mode is on), **Published buttons** (full searchable list of all live buttons), **QR Invitations** (generate and manage invite codes), **Coordinator communications** (broadcast messages to the community).
 
 ---
 
@@ -190,7 +190,7 @@ The moderation hub, accessible from the profile page. Sections: **Users** (manag
 
 ![Moderation button list](../images/screencaps/13_moderation_buttons.jpg)
 
-A searchable table of all published buttons. Each row shows the title, type badge, tags, time since posting, and author. Admins can open any button from here to review, edit, or remove it.
+A searchable table of all published buttons. Each row shows the title, type badge, tags, time since posting, and author. Coordinators can open any button from here to review, edit, or remove it.
 
 ---
 

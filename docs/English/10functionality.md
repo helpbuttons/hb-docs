@@ -119,10 +119,10 @@
   `Tag seach Name`
   `Tag Id`
 
-- Set Net Admins
+- Set Net Coordinators
 
 
-- Set Net Admin User
+- Set Net Coordinator User
 
 - Support User
 

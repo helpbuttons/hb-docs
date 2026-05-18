@@ -30,7 +30,7 @@ Los usuarios pueden añadir un precio a un botón. Un precio de `0` muestra una 
 
 ## Plantillas de botón modulares
 
-La característica definitoria de Helpbuttons es el sistema de **Plantillas de Botón**. Los admins de la Red definen tipos de botón con campos personalizados: fecha, precio, booleano, lista, o cualquier tipo de campo que la comunidad desarrolle. Esto hace que el mismo código funcione para compartir comida, transporte, intercambio de habilidades, coordinación de emergencias o cualquier otro uso.
+La característica definitoria de Helpbuttons es el sistema de **Plantillas de Botón**. Los coordinadores de la Red definen tipos de botón con campos personalizados: fecha, precio, booleano, lista, o cualquier tipo de campo que la comunidad desarrolle. Esto hace que el mismo código funcione para compartir comida, transporte, intercambio de habilidades, coordinación de emergencias o cualquier otro uso.
 
 ---
 
@@ -56,10 +56,10 @@ Las Redes pueden insertar un widget de mapa de solo lectura en sitios web extern
 Cada botón tiene un feed — un hilo de conversación donde los usuarios pueden dejar mensajes, actualizaciones y notas de coordinación. Visible para todos los participantes.
 
 ### Mensajes privados
-Los usuarios pueden iniciar una conversación totalmente privada con cualquier otro usuario. Los mensajes privados están completamente separados de los feeds de botones — aparecen en la sección de Mensajes y nunca son visibles para otros miembros ni para los administradores.
+Los usuarios pueden iniciar una conversación totalmente privada con cualquier otro usuario. Los mensajes privados están completamente separados de los feeds de botones — aparecen en la sección de Mensajes y nunca son visibles para otros miembros ni para los coordinadores.
 
 ### Mensajería grupal
-Existen dos hilos de grupo fijos, independientes de botones concretos: un **foro de comunidad** abierto a todos los miembros, y un **foro de administradores** restringido a los administradores de la red. Estas son las únicas conversaciones grupales — los usuarios no pueden crear chats de grupo adicionales.
+Existen dos hilos de grupo fijos, independientes de botones concretos: un **foro de comunidad** abierto a todos los miembros, y un **foro de coordinadores** restringido a los coordinadores de la red. Estas son las únicas conversaciones grupales — los usuarios no pueden crear chats de grupo adicionales.
 
 ---
 
@@ -99,23 +99,23 @@ No hay sistema de puntuación por estrellas. Los usuarios pueden avalarse mutuam
 
 ---
 
-## Moderación y administración
+## Moderación y coordinación
 
-### Administración descentralizada
-Los propietarios de la Red pueden asignar tantos administradores adicionales como necesiten. Los admins pueden moderar, eliminar y bloquear contenido o usuarios. Múltiples admins distribuyen la carga de trabajo y aumentan la confianza comunitaria.
+### Coordinación descentralizada
+Los propietarios de la Red pueden asignar tantos coordinadores adicionales como necesiten. Los coordinadores pueden moderar, eliminar y bloquear contenido o usuarios. Múltiples coordinadores distribuyen la carga de trabajo y aumentan la confianza comunitaria.
 
 ### Bloqueo de usuarios
-Los admins pueden bloquear usuarios dentro de una Red o globalmente. Los usuarios bloqueados no pueden volver a unirse.
+Los coordinadores pueden bloquear usuarios dentro de una Red o globalmente. Los usuarios bloqueados no pueden volver a unirse.
 
 ### Redes solo por invitación
-Los admins pueden configurar una Red como privada. Los visitantes pueden ver los botones pero no interactuar sin una invitación. Los enlaces de invitación pueden limitarse por número de usos y tiempo de expiración.
+Los coordinadores pueden configurar una Red como privada. Los visitantes pueden ver los botones pero no interactuar sin una invitación. Los enlaces de invitación pueden limitarse por número de usos y tiempo de expiración.
 
 ---
 
 ## Personalización de la Red
 
 ### Apariencia
-Los admins pueden personalizar: colores, logo/avatar, nombre, descripción, etiquetas preferidas, tipos de botón, configuración predeterminada del mapa e idioma.
+Los coordinadores pueden personalizar: colores, logo/avatar, nombre, descripción, etiquetas preferidas, tipos de botón, configuración predeterminada del mapa e idioma.
 
 ### Ubicación y radio
 Cada Red tiene una ubicación principal y un radio geográfico que establece la vista predeterminada del mapa.

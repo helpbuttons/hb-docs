@@ -66,7 +66,7 @@ docker-compose up -d
 docker-compose run api yarn migration:run
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. The first time you visit, a setup wizard will guide you through creating the admin account and your first Network.
+Open [http://localhost:3000](http://localhost:3000) in your browser. The first time you visit, a setup wizard will guide you through creating the coordinator account and your first Network.
 
 ### Upgrade
 

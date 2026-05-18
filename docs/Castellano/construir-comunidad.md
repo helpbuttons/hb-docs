@@ -39,12 +39,12 @@ Las personas adoptan herramientas digitales cuando confían en las personas que 
 ### Predicar con el ejemplo
 
 - **Usa la herramienta tú mismo**. Publica botones reales. Responde a otros. Si crees en los principios, encárnalos — eso muestra a los demás cómo es la participación y por qué importa.
-- Los administradores que participan activamente crean redes mucho más activas que los que solo configuran y moderan.
+- Los coordinadores que participan activamente crean redes mucho más activas que los que solo configuran y moderan.
 
 ### Distribuir la responsabilidad
 
-- **Añade más administradores pronto**. La responsabilidad compartida reduce el agotamiento y aumenta el número de personas que sienten la Red como propia.
-- Cada nuevo administrador que incorpores también trae su propia red social y relaciones de confianza.
+- **Añade más coordinadores pronto**. La responsabilidad compartida reduce el agotamiento y aumenta el número de personas que sienten la Red como propia.
+- Cada nuevo coordinador que incorpores también trae su propia red social y relaciones de confianza.
 - La co-moderación también señala a los miembros que la comunidad no depende de una sola persona.
 
 ### Conectar con redes existentes

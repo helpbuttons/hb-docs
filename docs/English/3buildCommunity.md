@@ -39,12 +39,12 @@ People adopt digital tools when they trust the people behind them, not just the 
 ### Lead by example
 
 - **Use the tool yourself**. Post real buttons. Respond to others. If you believe in the principles, embody them — it shows others what participation looks like and why it matters.
-- Admins who are active participants create much more active networks than admins who only configure and moderate.
+- Coordinators who are active participants create much more active networks than coordinators who only configure and moderate.
 
 ### Distribute responsibility
 
-- **Add more administrators early**. Shared responsibility reduces burnout and increases the number of people who feel ownership of the network.
-- Each new admin you bring in also brings their own social network and trust relationships.
+- **Add more coordinators early**. Shared responsibility reduces burnout and increases the number of people who feel ownership of the network.
+- Each new coordinator you bring in also brings their own social network and trust relationships.
 - Co-moderation also signals to members that the community isn't dependent on a single person.
 
 ### Connect to existing networks

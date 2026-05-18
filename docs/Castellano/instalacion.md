@@ -66,7 +66,7 @@ docker-compose up -d
 docker-compose run api yarn migration:run
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador. La primera vez que visites, un asistente de configuración te guiará para crear la cuenta de administrador y tu primera Red.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador. La primera vez que visites, un asistente de configuración te guiará para crear la cuenta de coordinador y tu primera Red.
 
 ### Actualizar
 
